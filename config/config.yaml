@@ -1,0 +1,73 @@
+api_keys:
+  noaa: "${NOAA_API_KEY}"
+  eia: "${EIA_API_KEY}"
+
+data_paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  logs: "logs"
+  cache: "data/cache"
+
+cities:
+  - name: "New York"
+    state: "New York"
+    noaa_station: "GHCND:USW00094728"
+    eia_region: "NYIS"
+    lat: 40.7128
+    lon: -74.0060
+  - name: "Chicago"
+    state: "Illinois"
+    noaa_station: "GHCND:USW00094846"
+    eia_region: "PJM"
+    lat: 41.8781
+    lon: -87.6298
+  - name: "Houston"
+    state: "Texas"
+    noaa_station: "GHCND:USW00012960"
+    eia_region: "ERCO"
+    lat: 29.7604
+    lon: -95.3698
+  - name: "Phoenix"
+    state: "Arizona"
+    noaa_station: "GHCND:USW00023183"
+    eia_region: "AZPS"
+    lat: 33.4484
+    lon: -112.0740
+  - name: "Seattle"
+    state: "Washington"
+    noaa_station: "GHCND:USW00024233"
+    eia_region: "SCL"
+    lat: 47.6062
+    lon: -122.3321
+
+quality_checks:
+  temperature:
+    max_fahrenheit: 130
+    min_fahrenheit: -50
+  energy:
+    min_value: 0
+  freshness:
+    max_age_hours: 48
+  completeness:
+    max_missing_percentage: 10
+
+rate_limits:
+  noaa_requests_per_second: 5
+  eia_requests_per_second: 1
+  retry_attempts: 5
+  backoff_factor: 1.0
+  chunk_size_days: 30
+  max_fetch_days: 90
+  buffer_days: 5
+
+logging:
+  level: "INFO"
+  rotation: "10 MB"
+  retention: "7 days"
+
+city_colors:
+  New York: "#1f77b4"
+  Chicago: "#ff7f0e"
+  Houston: "#2ca02c"
+  Phoenix: "#d62728"
+  Seattle: "#9467bd"
