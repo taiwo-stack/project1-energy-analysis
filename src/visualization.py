@@ -121,6 +121,7 @@ class Dashboard(Analyzer):
             self.show_correlations = st.checkbox("📊 Show Correlations", value=True)
             self.show_last_day_change = st.checkbox("📈 Last Day Change", value=True)
             self.show_quality = st.checkbox("🔍 Data Quality", value=False)
+            self.show_historical_table = st.checkbox("📋 Historical Data Table", value=True, help="Show detailed historical data table")
             
             st.markdown("---")
             
@@ -164,6 +165,250 @@ class Dashboard(Analyzer):
         if self.selected_cities:
             df = df[df['city'].isin(self.selected_cities)]
         return df
+    
+    def _prepare_historical_table_data(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Prepare and format data for the historical table display."""
+        try:
+            if df.empty:
+                return pd.DataFrame()
+            
+            # Create a formatted version of the dataframe for display
+            display_df = df.copy()
+            
+            # Sort by date (newest first) and city
+            display_df = display_df.sort_values(['date', 'city'], ascending=[False, True])
+            
+            # Format columns for better display
+            formatted_data = []
+            for _, row in display_df.iterrows():
+                formatted_row = {
+                    '📅 Date': row['date'].strftime('%Y-%m-%d'),
+                    '🏙️ City': row['city'],
+                    '🌡️ Temp (°F)': f"{row.get('temperature_avg', row.get('temperature_max', 0)):.1f}",
+                    '⚡ Energy (MWh)': f"{row['energy_demand']:,.0f}",
+                    '📊 Day': row['day_of_week'],
+                    '📈 Weekend': '✅ Yes' if row.get('is_weekend', False) else '❌ No',
+                }
+                
+                # Add temperature range if available
+                if 'temperature_min' in row and 'temperature_max' in row:
+                    formatted_row['🌡️ Min/Max'] = f"{row['temperature_min']:.1f} / {row['temperature_max']:.1f}"
+                
+                # Add weather description if available
+                if 'weather_description' in row and pd.notna(row['weather_description']):
+                    formatted_row['🌤️ Weather'] = row['weather_description'].title()
+                
+                formatted_data.append(formatted_row)
+            
+            return pd.DataFrame(formatted_data)
+            
+        except Exception as e:
+            logger.error(f"Failed to prepare historical table data: {str(e)}")
+            return pd.DataFrame()
+    
+    def _show_historical_data_table(self, df: pd.DataFrame):
+        """Display enhanced historical data table with collapsible interface."""
+        if not self.show_historical_table or df.empty:
+            return
+        
+        # Prepare data for table
+        table_data = self._prepare_historical_table_data(df)
+        
+        if table_data.empty:
+            st.warning("⚠️ No historical data available for table display")
+            return
+        
+        # Create collapsible section with custom styling
+        st.markdown("---")
+        
+        # Custom CSS for the table
+        st.markdown("""
+        <style>
+        .historical-table-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .table-header {
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .table-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .dataframe {
+            font-size: 0.85rem !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        # Create expandable section
+        with st.expander("📋 **Historical Data Explorer** - Detailed Records & Analysis", expanded=False):
+            # Add container with custom styling
+            st.markdown('<div class="historical-table-container">', unsafe_allow_html=True)
+            
+            # Table header
+            st.markdown('<div class="table-header">📊 Historical Weather & Energy Data</div>', unsafe_allow_html=True)
+            
+            # Summary statistics
+            total_records = len(table_data)
+            date_range_str = f"{table_data['📅 Date'].iloc[-1]} to {table_data['📅 Date'].iloc[0]}"
+            cities_count = len(table_data['🏙️ City'].unique())
+            
+            st.markdown(f"""
+            <div class="table-stats">
+                <div class="stat-item">
+                    <div><strong>📊 Total Records</strong></div>
+                    <div>{total_records:,}</div>
+                </div>
+                <div class="stat-item">
+                    <div><strong>🏙️ Cities</strong></div>
+                    <div>{cities_count}</div>
+                </div>
+                <div class="stat-item">
+                    <div><strong>📅 Date Range</strong></div>
+                    <div>{date_range_str}</div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Add search and filter options
+            col1, col2, col3 = st.columns([2, 1, 1])
+            
+            with col1:
+                search_term = st.text_input(
+                    "🔍 Search cities or weather conditions:",
+                    placeholder="Type to filter records...",
+                    help="Search by city name or weather description"
+                )
+            
+            with col2:
+                sort_by = st.selectbox(
+                    "📊 Sort by:",
+                    options=['📅 Date', '🏙️ City', '⚡ Energy (MWh)', '🌡️ Temp (°F)'],
+                    index=0,
+                    help="Choose sorting column"
+                )
+            
+            with col3:
+                sort_order = st.selectbox(
+                    "🔄 Order:",
+                    options=['Descending', 'Ascending'],
+                    index=0,
+                    help="Sort order"
+                )
+            
+            # Apply search filter
+            filtered_table = table_data.copy()
+            if search_term:
+                mask = (
+                    filtered_table['🏙️ City'].str.contains(search_term, case=False, na=False) |
+                    (filtered_table.get('🌤️ Weather', pd.Series(dtype='object')).str.contains(search_term, case=False, na=False))
+                )
+                filtered_table = filtered_table[mask]
+            
+            # Apply sorting
+            if sort_by in filtered_table.columns:
+                ascending = (sort_order == 'Ascending')
+                if sort_by in ['⚡ Energy (MWh)', '🌡️ Temp (°F)']:
+                    # Convert to numeric for proper sorting
+                    sort_values = pd.to_numeric(filtered_table[sort_by].str.replace(',', ''), errors='coerce')
+                    filtered_table = filtered_table.iloc[sort_values.sort_values(ascending=ascending).index]
+                else:
+                    filtered_table = filtered_table.sort_values(sort_by, ascending=ascending)
+            
+            # Display record count after filtering
+            if len(filtered_table) != len(table_data):
+                st.info(f"📊 Showing {len(filtered_table):,} of {len(table_data):,} records (filtered)")
+            
+            # Display the table with fixed height and scrolling
+            if not filtered_table.empty:
+                # Configure table display options
+                st.markdown("### 📋 Data Table")
+                st.markdown("*Scroll within the table to view all records*")
+                
+                # Display table with pagination-like behavior
+                st.dataframe(
+                    filtered_table,
+                    use_container_width=True,
+                    hide_index=True,
+                    height=400,  # Fixed height for scrolling (approximately 14 rows)
+                    column_config={
+                        '📅 Date': st.column_config.TextColumn('📅 Date', width='medium'),
+                        '🏙️ City': st.column_config.TextColumn('🏙️ City', width='medium'),
+                        '🌡️ Temp (°F)': st.column_config.TextColumn('🌡️ Temp (°F)', width='small'),
+                        '⚡ Energy (MWh)': st.column_config.TextColumn('⚡ Energy (MWh)', width='medium'),
+                        '📊 Day': st.column_config.TextColumn('📊 Day', width='small'),
+                        '📈 Weekend': st.column_config.TextColumn('📈 Weekend', width='small'),
+                    }
+                )
+                
+                # Add download option
+                st.markdown("---")
+                col1, col2, col3 = st.columns([1, 1, 2])
+                
+                with col1:
+                    # Export to CSV
+                    csv_data = filtered_table.to_csv(index=False)
+                    st.download_button(
+                        label="📥 Download CSV",
+                        data=csv_data,
+                        file_name=f"historical_energy_data_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+                        mime="text/csv",
+                        help="Download filtered data as CSV file"
+                    )
+                
+                with col2:
+                    # Quick stats toggle
+                    if st.button("📊 Quick Stats", help="Show summary statistics"):
+                        st.session_state.show_quick_stats = not st.session_state.get('show_quick_stats', False)
+                
+                with col3:
+                    st.markdown(f"*📊 Table showing {len(filtered_table):,} records with 400px height for scrolling*")
+                
+                # Show quick stats if toggled
+                if st.session_state.get('show_quick_stats', False):
+                    st.markdown("#### 📊 Quick Statistics")
+                    
+                    # Extract numeric values for statistics - handle NaN values properly
+                    energy_values = pd.to_numeric(filtered_table['⚡ Energy (MWh)'].str.replace(',', ''), errors='coerce').dropna()
+                    temp_values = pd.to_numeric(filtered_table['🌡️ Temp (°F)'], errors='coerce').dropna()
+                    
+                    stat_col1, stat_col2, stat_col3, stat_col4 = st.columns(4)
+                    
+                    with stat_col1:
+                        avg_energy = energy_values.mean() if len(energy_values) > 0 else 0
+                        st.metric("⚡ Avg Energy", f"{avg_energy:,.0f} MWh")
+                    with stat_col2:
+                        avg_temp = temp_values.mean() if len(temp_values) > 0 else 0
+                        st.metric("🌡️ Avg Temp", f"{avg_temp:.1f}°F")
+                    with stat_col3:
+                        max_energy = energy_values.max() if len(energy_values) > 0 else 0
+                        st.metric("📈 Max Energy", f"{max_energy:,.0f} MWh")
+                    with stat_col4:
+                        max_temp = temp_values.max() if len(temp_values) > 0 else 0
+                        st.metric("🌡️ Max Temp", f"{max_temp:.1f}°F")
+            
+            else:
+                st.warning("⚠️ No records match your search criteria. Try adjusting your filters.")
     
     def calculate_last_day_change(self, df: pd.DataFrame) -> Dict[str, Dict[str, float]]:
         """Calculate last recorded day's energy usage % change from the previous day for all cities."""
@@ -827,6 +1072,9 @@ class Dashboard(Analyzer):
         
         # Show data quality if enabled
         self._show_data_quality(filtered_data)
+        
+        # Show historical data table
+        self._show_historical_data_table(filtered_data)
         
         # Create tabs for better organization
         tab1, tab2, tab3, tab4 = st.tabs(["🗺️ Geographic View", "📈 Time Series", "📊 Correlations", "🔥 Usage Patterns"])

@@ -1,5 +1,5 @@
 from data_processor import DataProcessor  # Replace 'your_module' with the actual module name where DataProcessor is defined
-from config import Config  # Make sure to replace 'config' with the actual module name if different
+from src.config import Config  # Make sure to replace 'config' with the actual module name if different
 
 def test_process_eia_data():
     processor = DataProcessor(Config.load())

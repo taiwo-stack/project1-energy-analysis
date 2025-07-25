@@ -1,10 +1,11 @@
 """Configuration management for energy analysis pipeline."""
+import os
 
 import yaml
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 from pathlib import Path
-import os
+
 from dotenv import load_dotenv
 from loguru import logger
 

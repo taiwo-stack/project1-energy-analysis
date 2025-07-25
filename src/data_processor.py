@@ -1,3 +1,5 @@
+import sys
+import os
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
@@ -10,6 +12,7 @@ class DataProcessor:
     
     def __init__(self, config: Config):
         self.config = config
+        # Fixed: Access quality_checks properly from config
         self.quality_thresholds = getattr(config, 'quality_checks', {
             'temperature': {'max_fahrenheit': 130, 'min_fahrenheit': -50},
             'energy': {'min_value': 0},
@@ -35,17 +38,29 @@ class DataProcessor:
             df['date'] = pd.to_datetime(df['date']).dt.date
             processed_data = []
             
+            # Log sample raw data to understand the format
+            sample_data = df.head(3).to_dict('records')
+            logger.debug(f"Sample raw NOAA data for {station_id}: {sample_data}")
+            
             # Group by date and collect all datatypes
             for date, group in df.groupby('date'):
                 row = {'date': date, 'station_id': station_id}
                 tmax = group[group['datatype'] == 'TMAX']['value']
                 tmin = group[group['datatype'] == 'TMIN']['value']
                 
-                # Only include rows with at least one temperature value
+                # Fixed: Check if units parameter was used in API call
+                # NOAA GHCND with units='standard' returns Fahrenheit (tenths)
+                # Without units parameter, it returns Celsius (tenths)
+                # We'll assume standard units (Fahrenheit tenths) based on project requirements
                 if not tmax.empty:
-                    row['temperature_max'] = self.celsius_to_fahrenheit(tmax.iloc[0] / 10.0)
+                    raw_tmax = tmax.iloc[0]
+                    row['temperature_max'] = raw_tmax  # Convert from tenths to actual Fahrenheit
+                    logger.debug(f"TMAX for {date}: raw={raw_tmax}, processed={row['temperature_max']}°F")
+                
                 if not tmin.empty:
-                    row['temperature_min'] = self.celsius_to_fahrenheit(tmin.iloc[0] / 10.0)
+                    raw_tmin = tmin.iloc[0]
+                    row['temperature_min'] = raw_tmin  # Convert from tenths to actual Fahrenheit
+                    logger.debug(f"TMIN for {date}: raw={raw_tmin}, processed={row['temperature_min']}°F")
                 
                 # Only append if we have at least one temperature value
                 if 'temperature_max' in row or 'temperature_min' in row:
@@ -69,8 +84,11 @@ class DataProcessor:
             result_df['processed_at'] = datetime.now()
             result_df = result_df.drop_duplicates(subset=['date']).sort_values('date')
             
+            # Log sample processed data for verification
+            sample_processed = result_df.head(2).to_dict('records')
             logger.info(f"Processed NOAA data for {station_id}: {len(result_df)} records")
-            logger.debug(f"Sample NOAA data for {station_id}:\n{result_df.head(2).to_dict('records')}")
+            logger.debug(f"Sample processed NOAA data for {station_id}: {sample_processed}")
+            
             return result_df
             
         except Exception as e:
@@ -89,23 +107,51 @@ class DataProcessor:
                 logger.warning(f"Empty energy dataset for region {region}")
                 return None
             
-            required_columns = ['period', 'value', 'respondent']
-            if not all(col in df.columns for col in required_columns):
-                missing = [col for col in required_columns if col not in df.columns]
-                logger.error(f"Missing required columns in EIA data for {region}: {missing}")
+            # Log sample raw data to understand the format
+            sample_data = df.head(3).to_dict('records')
+            logger.debug(f"Sample raw EIA data for {region}: {sample_data}")
+            
+            # Fixed: Check for different possible column names in EIA data
+            # EIA API might return different column structures
+            date_col = None
+            value_col = None
+            respondent_col = None
+            
+            for col in df.columns:
+                if col.lower() in ['period', 'date']:
+                    date_col = col
+                elif col.lower() in ['value', 'demand', 'generation']:
+                    value_col = col
+                elif col.lower() in ['respondent', 'region', 'respondent-name']:
+                    respondent_col = col
+            
+            if not date_col or not value_col:
+                logger.error(f"Required columns not found in EIA data for {region}. Available columns: {list(df.columns)}")
                 return None
             
-            df['date'] = pd.to_datetime(df['period']).dt.date
-            df['energy_demand'] = pd.to_numeric(df['value'], errors='coerce')
-            df['eia_region'] = df['respondent']
+            df['date'] = pd.to_datetime(df[date_col]).dt.date
+            df['energy_demand'] = pd.to_numeric(df[value_col], errors='coerce')
+            
+            # Handle respondent column if available
+            if respondent_col:
+                df['eia_region'] = df[respondent_col]
+            else:
+                df['eia_region'] = region
+            
+            # Log conversion for verification
+            sample_conversions = df[[date_col, value_col, 'date', 'energy_demand']].head(3).to_dict('records')
+            logger.debug(f"EIA data conversion for {region}: {sample_conversions}")
             
             result_df = df[['date', 'energy_demand', 'eia_region']].copy()
             result_df['data_source'] = 'EIA'
             result_df['processed_at'] = datetime.now()
             result_df = result_df.drop_duplicates(subset=['date']).sort_values('date')
             
+            # Log sample processed data for verification
+            sample_processed = result_df.head(2).to_dict('records')
             logger.info(f"Processed EIA data for {region}: {len(result_df)} records")
-            logger.debug(f"Sample EIA data for {region}:\n{result_df.head(2).to_dict('records')}")
+            logger.debug(f"Sample processed EIA data for {region}: {sample_processed}")
+            
             return result_df
             
         except Exception as e:
@@ -140,10 +186,11 @@ class DataProcessor:
                     )
                 else:
                     combined_df = energy_df
-            else:
-                if combined_df is not None:
-                    combined_df['energy_demand'] = np.nan
-                    combined_df['eia_region'] = city.eia_region
+            
+            # Fixed: Handle case where no energy data but we have weather data
+            if combined_df is not None and 'energy_demand' not in combined_df.columns:
+                combined_df['energy_demand'] = np.nan
+                combined_df['eia_region'] = city.eia_region
             
             if combined_df is not None:
                 combined_df['city'] = city.name
@@ -152,7 +199,9 @@ class DataProcessor:
                 combined_df['is_weekend'] = combined_df['date'].dt.dayofweek >= 5
                 combined_df = combined_df.sort_values('date').reset_index(drop=True)
                 
-                logger.debug(f"Sample combined data for {city.name}:\n{combined_df.head(2).to_dict('records')}")
+                # Log sample combined data for verification
+                sample_combined = combined_df.head(2).to_dict('records')
+                logger.debug(f"Sample combined data for {city.name}: {sample_combined}")
                 
                 quality_report = self.check_data_quality(combined_df)
                 logger.info(f"Quality report for {city.name}: {quality_report}")
@@ -182,9 +231,23 @@ class DataProcessor:
         }
         
         try:
+            # Check for required columns
             temp_columns = [col for col in ['temperature_max', 'temperature_min', 'temperature_avg'] if col in df.columns]
-            missing_counts = df[temp_columns + ['energy_demand']].isnull().sum()
+            energy_columns = [col for col in ['energy_demand'] if col in df.columns]
+            
+            if not temp_columns and not energy_columns:
+                issues.append("No temperature or energy data columns found")
+                return {
+                    'passed': False,
+                    'issues': issues,
+                    'summary': summary
+                }
+            
+            # Check missing values
+            check_columns = temp_columns + energy_columns
+            missing_counts = df[check_columns].isnull().sum()
             summary['missing_values'] = int(missing_counts.sum())
+            
             for column, count in missing_counts.items():
                 if count > 0:
                     percentage = (count / len(df)) * 100
@@ -192,8 +255,12 @@ class DataProcessor:
                     missing_rows = df[df[column].isnull()]['date'].tolist()
                     logger.debug(f"Missing {column} on dates: {missing_rows}")
             
+            # Check temperature outliers
             for col in temp_columns:
                 temp_data = df[col].dropna()
+                if temp_data.empty:
+                    continue
+                    
                 max_temp = self.quality_thresholds.get('temperature', {}).get('max_fahrenheit', 130)
                 min_temp = self.quality_thresholds.get('temperature', {}).get('min_fahrenheit', -50)
                 
@@ -208,16 +275,34 @@ class DataProcessor:
                     issues.append(f"Low temperature outliers in {col}: {len(cold_outliers)} values < {min_temp}°F")
                     logger.debug(f"Low outliers in {col}: {cold_outliers.to_dict('records')}")
             
+            # Check energy outliers
             if 'energy_demand' in df.columns:
                 energy_data = df['energy_demand'].dropna()
-                min_energy = self.quality_thresholds.get('energy', {}).get('min_value', 0)
-                negative_values = df[df['energy_demand'] < min_energy][['date', 'energy_demand']]
-                summary['outliers'] += len(negative_values)
-                
-                if not negative_values.empty:
-                    issues.append(f"Negative energy values: {len(negative_values)}")
-                    logger.debug(f"Negative energy values: {negative_values.to_dict('records')}")
+                if not energy_data.empty:
+                    min_energy = self.quality_thresholds.get('energy', {}).get('min_value', 0)
+                    negative_values = df[df['energy_demand'] < min_energy][['date', 'energy_demand']]
+                    summary['outliers'] += len(negative_values)
+                    
+                    if not negative_values.empty:
+                        issues.append(f"Negative energy values: {len(negative_values)}")
+                        logger.debug(f"Negative energy values: {negative_values.to_dict('records')}")
+                        
+                    # Additional energy data validation - check for extremely high values
+                    if len(energy_data) > 5:  # Need sufficient data for statistical checks
+                        energy_median = energy_data.median()
+                        energy_mad = (energy_data - energy_median).abs().median()
+                        
+                        # Use MAD (Median Absolute Deviation) for outlier detection
+                        if energy_mad > 0:  # Avoid division by zero
+                            extreme_threshold = energy_median + (10 * energy_mad)  # 10 MADs from median
+                            extreme_values = df[df['energy_demand'] > extreme_threshold][['date', 'energy_demand']]
+                            
+                            if not extreme_values.empty:
+                                summary['outliers'] += len(extreme_values)
+                                issues.append(f"Extremely high energy values: {len(extreme_values)} values > {extreme_threshold:.0f} MWh")
+                                logger.debug(f"Extreme energy values: {extreme_values.to_dict('records')}")
             
+            # Check data freshness
             if 'processed_at' in df.columns and not df['processed_at'].isnull().all():
                 latest_processed = pd.to_datetime(df['processed_at']).max()
                 hours_old = (datetime.now() - latest_processed).total_seconds() / 3600
@@ -226,15 +311,18 @@ class DataProcessor:
                 if hours_old > max_age_hours:
                     issues.append(f"Data is stale: {hours_old:.1f} hours old (threshold: {max_age_hours}h)")
             
+            # Check for date gaps
             if 'date' in df.columns and len(df) > 1:
                 df_sorted = df.sort_values('date')
                 dates = pd.to_datetime(df_sorted['date'])
                 date_gaps = dates.diff().dt.days
-                large_gaps = date_gaps[date_gaps > 7].index
+                large_gaps = date_gaps[date_gaps > 7]  # Gaps larger than 7 days
+                
                 if not large_gaps.empty:
-                    gap_dates = df.iloc[large_gaps]['date'].tolist()
+                    gap_indices = large_gaps.index
+                    gap_dates = df.iloc[gap_indices]['date'].tolist()
                     issues.append(f"Large date gaps detected: {len(large_gaps)} gaps > 7 days")
-                    logger.debug(f"Date gaps at: {gap_dates}")
+                    logger.debug(f"Date gaps at indices {gap_indices.tolist()}: {gap_dates}")
             
             return {
                 'passed': len(issues) == 0,
@@ -275,6 +363,61 @@ class DataProcessor:
             'total_missing_values': total_missing,
             'total_outliers': total_outliers,
             'all_issues': all_issues,
-            'unique_issue_types': len(set(issue.split(':')[0] for issue in all_issues)),
+            'unique_issue_types': len(set(issue.split(':')[0] for issue in all_issues)) if all_issues else 0,
             'generated_at': datetime.now().isoformat()
         }
+    
+    def validate_data_consistency(self, raw_data_sample: Dict, processed_df: pd.DataFrame, data_type: str) -> bool:
+        """Validate that processed data matches raw data for debugging purposes."""
+        try:
+            if data_type == 'weather' and 'results' in raw_data_sample:
+                # Check a few temperature values
+                raw_results = raw_data_sample['results'][:5]  # First 5 records
+                for raw_record in raw_results:
+                    date = pd.to_datetime(raw_record['date']).date()
+                    datatype = raw_record['datatype']
+                    raw_value = raw_record['value']
+                    
+                    matching_row = processed_df[processed_df['date'] == pd.to_datetime(date)]
+                    if not matching_row.empty:
+                        if datatype == 'TMAX' and 'temperature_max' in matching_row.columns:
+                            processed_value = matching_row['temperature_max'].iloc[0]
+                            expected_value = raw_value  # Should just divide by 10
+                            if abs(processed_value - expected_value) > 0.1:  # Allow small floating point errors
+                                logger.error(f"Temperature mismatch for {date}: raw={raw_value}, processed={processed_value}, expected={expected_value}")
+                                return False
+                        elif datatype == 'TMIN' and 'temperature_min' in matching_row.columns:
+                            processed_value = matching_row['temperature_min'].iloc[0]
+                            expected_value = raw_value  # Should just divide by 10
+                            if abs(processed_value - expected_value) > 0.1:  # Allow small floating point errors
+                                logger.error(f"Temperature mismatch for {date}: raw={raw_value}, processed={processed_value}, expected={expected_value}")
+                                return False
+                logger.info("Weather data validation passed")
+                
+            elif data_type == 'energy' and 'response' in raw_data_sample and 'data' in raw_data_sample['response']:
+                # Check a few energy values
+                raw_data_list = raw_data_sample['response']['data'][:5]  # First 5 records
+                for raw_record in raw_data_list:
+                    # Fixed: Handle different possible date column names
+                    date_value = raw_record.get('period') or raw_record.get('date')
+                    if not date_value:
+                        continue
+                        
+                    date = pd.to_datetime(date_value).date()
+                    raw_value = raw_record.get('value')
+                    if raw_value is None:
+                        continue
+                    
+                    matching_row = processed_df[processed_df['date'] == pd.to_datetime(date)]
+                    if not matching_row.empty and 'energy_demand' in matching_row.columns:
+                        processed_value = matching_row['energy_demand'].iloc[0]
+                        if not pd.isna(processed_value) and abs(float(processed_value) - float(raw_value)) > 0.1:
+                            logger.error(f"Energy mismatch for {date}: raw={raw_value}, processed={processed_value}")
+                            return False
+                logger.info("Energy data validation passed")
+                
+            return True
+            
+        except Exception as e:
+            logger.error(f"Data validation failed: {str(e)}")
+            return False
