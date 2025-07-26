@@ -1,6 +1,0 @@
-date,energy_demand,eia_region,data_source,processed_at,city,day_of_week,is_weekend,station_id,temperature_max,temperature_min,temperature_avg
-2025-07-20,509431,NYIS,EIA,2025-07-25 14:05:13.705571,New York,Sunday,True,,,,
-2025-07-20,2603364,PJM,EIA,2025-07-25 14:05:24.023476,Chicago,Sunday,True,,,,
-2025-07-20,1574575,ERCO,NOAA,2025-07-25 14:05:29.976570,Houston,Sunday,True,GHCND:USW00012960,206.6,174.2,190.39999999999998
-2025-07-20,119357,AZPS,NOAA,2025-07-25 14:05:36.149341,Phoenix,Sunday,True,GHCND:USW00023183,206.6,194.0,200.3
-2025-07-20,21332,SCL,NOAA,2025-07-25 14:05:43.765358,Seattle,Sunday,True,GHCND:USW00024233,149.0,123.8,136.4

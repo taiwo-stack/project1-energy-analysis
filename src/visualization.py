@@ -997,8 +997,8 @@ class Dashboard(Analyzer):
                     reverse=True
                 )
                 
-                change_cols = st.columns(min(4, len(sorted_changes)))
-                for idx, (city, change_data) in enumerate(sorted_changes[:4]):
+                change_cols = st.columns(min(5, len(sorted_changes)))
+                for idx, (city, change_data) in enumerate(sorted_changes[:5]):
                     with change_cols[idx]:
                         delta_color = "normal" if abs(change_data['pct_change']) < 5 else "inverse"
                         days_gap_text = f" ({change_data['days_between']}d)" if change_data['days_between'] > 1 else ""
@@ -1006,7 +1006,7 @@ class Dashboard(Analyzer):
                             f"{city}{days_gap_text}",
                             f"{change_data['latest_usage']:,.0f} MWh",
                             delta=f"{change_data['pct_change']:+.1f}%",
-                            delta_color=delta_color,
+                            
                             help=f"Change from {change_data['previous_date']} to {change_data['latest_date']}"
                         )
                 
