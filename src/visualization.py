@@ -1227,12 +1227,109 @@ class Dashboard(Analyzer):
             heatmap_fig = self.create_heatmap(filtered_data, self.selected_cities)
             st.plotly_chart(heatmap_fig, use_container_width=True)
 
+def should_run_pipeline(config):
+    """Check if pipeline should run based on data freshness (3+ days)."""
+    try:
+        from pathlib import Path
+        import os
+        from datetime import datetime
+        
+        data_dir = Path(config.data_paths.get('processed', 'data/processed'))
+        if not data_dir.exists():
+            return True
+            
+        # Check age of newest file
+        newest_file = max(data_dir.glob('*.csv'), key=os.path.getctime, default=None)
+        if not newest_file:
+            return True
+            
+        # Calculate file age in days
+        file_age_days = (datetime.now().timestamp() - os.path.getctime(newest_file)) / 86400  # 86400 seconds in a day
+        return file_age_days >= 3  # Run if data is 3 or more days old
+        
+    except Exception as e:
+        logger.warning(f"Pipeline check failed: {e}")
+        return True  # Run pipeline if check fails
+
+def run_pipeline_with_progress():
+    """Run pipeline with animated progress bar."""
+    import subprocess
+    import sys
+    import threading
+    import time
+    
+    # Create progress bar and status placeholders
+    progress_bar = st.progress(0)
+    status_text = st.empty()
+    
+    # Progress tracking
+    progress_value = 0
+    pipeline_complete = False
+    pipeline_result = None
+    
+    def run_pipeline():
+        nonlocal pipeline_complete, pipeline_result
+        try:
+            pipeline_result = subprocess.run([sys.executable, "pipeline.py"], 
+                                           capture_output=True, text=True)
+            pipeline_complete = True
+        except Exception as e:
+            pipeline_result = e
+            pipeline_complete = True
+    
+    # Start pipeline in background thread
+    pipeline_thread = threading.Thread(target=run_pipeline)
+    pipeline_thread.start()
+    
+    # Animate progress bar
+    while not pipeline_complete:
+        progress_value = min(progress_value + 2, 95)  # Increment by 2%, cap at 95%
+        progress_bar.progress(progress_value)
+        
+        # Update status message with rotating animation
+        dots = "." * ((int(time.time() * 2) % 3) + 1)
+        status_text.text(f"🔄 Processing data pipeline{dots} ({progress_value}%)")
+        
+        time.sleep(0.1)  # Small delay for smooth animation
+    
+    # Complete the progress bar
+    progress_bar.progress(100)
+    status_text.text("🔄 Finalizing... (100%)")
+    time.sleep(0.5)  # Brief pause to show completion
+    
+    # Clear progress indicators
+    progress_bar.empty()
+    status_text.empty()
+    
+    # Return pipeline result
+    pipeline_thread.join()  # Ensure thread completes
+    return pipeline_result
+
 def main():
     """Main entry point for the dashboard."""
     try:
         config = Config.load()
+        
+        # Check if pipeline should run (only if data is 3+ days old)
+        if should_run_pipeline(config):
+            st.info("🚀 Updating data pipeline...")
+            
+            # Run pipeline with animated progress
+            result = run_pipeline_with_progress()
+            
+            if isinstance(result, Exception):
+                st.error(f"❌ Pipeline failed: {str(result)}")
+            elif result.returncode == 0:
+                st.success("✅ Data pipeline completed successfully!")
+                st.balloons()  # Celebration animation!
+            else:
+                st.error(f"❌ Pipeline failed: {result.stderr}")
+        else:
+            st.info("📊 Using existing data (updated within last 3 days)")
+            
         dashboard = Dashboard(config)
         dashboard.display()
+        
     except Exception as e:
         st.error("❌ Failed to initialize dashboard. Please check the logs.")
         logger.critical(f"Dashboard failed: {str(e)}")
