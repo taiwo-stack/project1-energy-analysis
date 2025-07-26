@@ -11,3 +11,15 @@
 2025-07-26 00:48:20.050 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
 2025-07-26 00:48:20.174 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
 2025-07-26 00:48:20.174 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 01:28:23.940 | INFO     | analysis:load_data:50 - Loaded 150 records from 2025-06-21 to 2025-07-20
+2025-07-26 01:28:24.789 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 01:28:24.789 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 01:28:24.868 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 01:28:25.172 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 01:28:25.972 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 01:28:25.972 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 01:28:25.995 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 01:28:25.995 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 01:28:26.500 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 01:28:26.559 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 01:28:26.559 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
