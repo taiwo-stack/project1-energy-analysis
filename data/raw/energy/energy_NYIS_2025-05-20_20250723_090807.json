@@ -1,0 +1,990 @@
+{
+  "metadata": {
+    "fetch_timestamp": "2025-07-23T09:08:07.083236",
+    "data_type": "energy",
+    "region": "NYIS",
+    "date_requested": "2025-05-20",
+    "api_source": "EIA"
+  },
+  "raw_data": {
+    "response": {
+      "total": "86",
+      "dateFormat": "YYYY-MM-DD",
+      "frequency": "daily",
+      "data": [
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "345052",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "345178",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "345213",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "345125",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "345052",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "338462",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "322432",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "322668",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "323415",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "322472",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-20",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "322432",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "370697",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "370244",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "370021",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "370469",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "370697",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "339101",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "337665",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "336845",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "338543",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "339101",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "-31596",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "-32579",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "-33176",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "-31926",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-21",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "-31596",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "374864",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "374612",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "374452",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "374748",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "374864",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "359885",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "359449",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "359214",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "359676",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "359885",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "340424",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "341179",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "341273",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "340942",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "340424",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "-34440",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "-33433",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "-33179",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "-33806",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "-34440",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "364713",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "365001",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "365159",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "364854",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "364713",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "353785",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "353734",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "353673",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "353768",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "353785",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "324636",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "324806",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "324973",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "324664",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "324636",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "-40077",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "-40195",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "-40186",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "-40190",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-23",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "-40077",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "329213",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "329979",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "330395",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "329594",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "329213",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "328871",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "329518",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "329857",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "329193",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "328871",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "303995",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "304375",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "304764",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "304133",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "303995",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "-25218",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "-25604",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "-25631",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "-25461",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-24",
+          "respondent": "NYIS",
+          "respondent-name": "New York Independent System Operator",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "-25218",
+          "value-units": "megawatthours"
+        }
+      ],
+      "description": "Daily demand, day-ahead demand forecast, net generation, and interchange by balancing authority.  \n    Source: Form EIA-930\n    Product: Hourly Electric Grid Monitor"
+    },
+    "request": {
+      "command": "/v2/electricity/rto/daily-region-data/data/",
+      "params": {
+        "api_key": "unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck",
+        "frequency": "daily",
+        "data": [
+          "value"
+        ],
+        "facets": {
+          "respondent": [
+            "NYIS"
+          ]
+        },
+        "start": "2025-05-20",
+        "end": "2025-05-24",
+        "sort": [
+          {
+            "column": "period",
+            "direction": "asc"
+          }
+        ]
+      }
+    },
+    "apiVersion": "2.1.8",
+    "ExcelAddInVersion": "2.1.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "fetch_timestamp": "2025-07-21T11:53:38.018255",
+    "data_type": "weather",
+    "station_id": "GHCND:USW00094846",
+    "date_requested": "2025-07-20",
+    "api_source": "NOAA"
+  },
+  "raw_data": {}
+}

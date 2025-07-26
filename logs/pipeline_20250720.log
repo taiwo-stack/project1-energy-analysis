@@ -1,0 +1,316 @@
+2025-07-20 17:27:59.429 | INFO     | __main__:<module>:216 - Pipeline script started
+2025-07-20 17:27:59.777 | INFO     | __main__:run_pipeline_with_validation:178 - Starting daily pipeline at 2025-07-20 17:27:59.777764
+2025-07-20 17:27:59.802 | INFO     | __main__:run_daily_pipeline:12 - Starting daily pipeline
+2025-07-20 17:27:59.803 | INFO     | __main__:run_daily_pipeline:16 - Processing data for 2025-07-19
+2025-07-20 17:27:59.805 | INFO     | __main__:run_daily_pipeline:22 - Processing New York
+2025-07-20 17:27:59.808 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094728 from 2025-07-19 to 2025-07-19
+2025-07-20 17:28:11.330 | WARNING  | data_fetcher:_make_request_with_retry:31 - Connection error on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00094728&startdate=2025-07-19&enddate=2025-07-19&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025B841D61B0>: Failed to resolve 'www.ncei.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-07-20 17:28:11.332 | INFO     | data_fetcher:_make_request_with_retry:33 - Retrying in 2.0 seconds...
+2025-07-20 17:29:27.179 | WARNING  | data_fetcher:_make_request_with_retry:39 - Timeout error on attempt 2: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-07-20 17:29:27.183 | INFO     | data_fetcher:_make_request_with_retry:41 - Retrying in 4.0 seconds...
+2025-07-20 17:29:34.351 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 17:29:34.356 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for NYIS from 2025-07-19 to 2025-07-19
+2025-07-20 17:29:41.823 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for NYIS
+2025-07-20 17:29:41.827 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:29:41.830 | INFO     | __main__:run_daily_pipeline:22 - Processing Chicago
+2025-07-20 17:29:41.832 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094846 from 2025-07-19 to 2025-07-19
+2025-07-20 17:29:56.824 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 17:29:56.826 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for PJM from 2025-07-19 to 2025-07-19
+2025-07-20 17:30:01.762 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for PJM
+2025-07-20 17:30:01.771 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:30:01.776 | INFO     | __main__:run_daily_pipeline:22 - Processing Houston
+2025-07-20 17:30:01.777 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00012960 from 2025-07-19 to 2025-07-19
+2025-07-20 17:30:24.047 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 17:30:24.049 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for ERCO from 2025-07-19 to 2025-07-19
+2025-07-20 17:30:31.700 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for ERCO
+2025-07-20 17:30:31.701 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:30:31.702 | INFO     | __main__:run_daily_pipeline:22 - Processing Phoenix
+2025-07-20 17:30:31.703 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00023183 from 2025-07-19 to 2025-07-19
+2025-07-20 17:31:23.301 | WARNING  | data_fetcher:_make_request_with_retry:39 - Timeout error on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-07-20 17:31:23.316 | INFO     | data_fetcher:_make_request_with_retry:41 - Retrying in 2.0 seconds...
+2025-07-20 17:31:27.121 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 17:31:27.122 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for AZPS from 2025-07-19 to 2025-07-19
+2025-07-20 17:31:36.093 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for AZPS
+2025-07-20 17:31:36.143 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:31:36.144 | INFO     | __main__:run_daily_pipeline:22 - Processing Seattle
+2025-07-20 17:31:36.173 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00024233 from 2025-07-19 to 2025-07-19
+2025-07-20 17:31:37.695 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 17:31:37.697 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for SCL from 2025-07-19 to 2025-07-19
+2025-07-20 17:31:41.819 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for SCL
+2025-07-20 17:31:41.840 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:31:41.856 | ERROR    | __main__:run_daily_pipeline:70 - No data was successfully processed for any city
+2025-07-20 17:31:41.869 | INFO     | __main__:run_pipeline_with_validation:204 - Daily pipeline completed successfully in 0:03:42.091256
+2025-07-20 17:31:41.884 | INFO     | __main__:run_pipeline_with_validation:178 - Starting historical pipeline at 2025-07-20 17:31:41.884805
+2025-07-20 17:31:41.949 | INFO     | __main__:run_historical_pipeline:74 - Starting historical pipeline for 90 days
+2025-07-20 17:31:41.976 | INFO     | data_fetcher:fetch_historical_data:299 - Fetching 90 days of historical data from 2025-04-20 to 2025-07-19
+2025-07-20 17:31:41.984 | INFO     | data_fetcher:fetch_historical_data:310 - Processing chunk: 2025-04-20 to 2025-05-19
+2025-07-20 17:31:42.012 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094728 from 2025-04-20 to 2025-05-19
+2025-07-20 17:31:50.720 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 17:31:50.722 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for NYIS from 2025-04-20 to 2025-05-19
+2025-07-20 17:31:57.894 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for NYIS
+2025-07-20 17:31:57.894 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094846 from 2025-04-20 to 2025-05-19
+2025-07-20 17:31:59.363 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 17:31:59.364 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for PJM from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:03.794 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for PJM
+2025-07-20 17:32:03.795 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00012960 from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:26.695 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 17:32:26.697 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for ERCO from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:32.661 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for ERCO
+2025-07-20 17:32:32.663 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00023183 from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:41.176 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 17:32:41.178 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for AZPS from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:46.023 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for AZPS
+2025-07-20 17:32:46.026 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00024233 from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:48.844 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 17:32:48.844 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for SCL from 2025-04-20 to 2025-05-19
+2025-07-20 17:32:53.124 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for SCL
+2025-07-20 17:32:53.127 | INFO     | data_fetcher:fetch_historical_data:329 - Waiting 5 seconds before next chunk...
+2025-07-20 17:32:58.184 | INFO     | data_fetcher:fetch_historical_data:310 - Processing chunk: 2025-05-20 to 2025-06-18
+2025-07-20 17:32:58.204 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094728 from 2025-05-20 to 2025-06-18
+2025-07-20 17:32:59.567 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 17:32:59.567 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for NYIS from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:05.934 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for NYIS
+2025-07-20 17:33:05.935 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094846 from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:07.065 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 17:33:07.082 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for PJM from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:13.984 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for PJM
+2025-07-20 17:33:13.991 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00012960 from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:15.428 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 17:33:15.972 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for ERCO from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:21.385 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for ERCO
+2025-07-20 17:33:21.389 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00023183 from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:28.039 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 17:33:28.040 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for AZPS from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:34.268 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for AZPS
+2025-07-20 17:33:34.272 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00024233 from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:35.694 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 17:33:35.695 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for SCL from 2025-05-20 to 2025-06-18
+2025-07-20 17:33:40.165 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for SCL
+2025-07-20 17:33:40.168 | INFO     | data_fetcher:fetch_historical_data:329 - Waiting 5 seconds before next chunk...
+2025-07-20 17:33:45.171 | INFO     | data_fetcher:fetch_historical_data:310 - Processing chunk: 2025-06-19 to 2025-07-18
+2025-07-20 17:33:45.171 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094728 from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:07.516 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 17:34:07.519 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for NYIS from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:10.968 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for NYIS
+2025-07-20 17:34:10.969 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094846 from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:12.897 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 17:34:12.902 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for PJM from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:18.406 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for PJM
+2025-07-20 17:34:18.593 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00012960 from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:19.852 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 17:34:19.854 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for ERCO from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:23.480 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for ERCO
+2025-07-20 17:34:23.480 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00023183 from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:35.817 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 17:34:35.822 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for AZPS from 2025-06-19 to 2025-07-18
+2025-07-20 17:34:40.367 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for AZPS
+2025-07-20 17:34:40.373 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00024233 from 2025-06-19 to 2025-07-18
+2025-07-20 17:35:02.739 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 17:35:02.740 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for SCL from 2025-06-19 to 2025-07-18
+2025-07-20 17:35:05.692 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for SCL
+2025-07-20 17:35:05.706 | INFO     | data_fetcher:fetch_historical_data:329 - Waiting 5 seconds before next chunk...
+2025-07-20 17:35:10.722 | INFO     | data_fetcher:fetch_historical_data:310 - Processing chunk: 2025-07-19 to 2025-07-19
+2025-07-20 17:35:10.724 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094728 from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:17.895 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 17:35:17.896 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for NYIS from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:19.287 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for NYIS
+2025-07-20 17:35:19.290 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00094846 from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:20.478 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 17:35:20.478 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for PJM from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:21.878 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for PJM
+2025-07-20 17:35:21.879 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00012960 from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:22.971 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 17:35:22.976 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for ERCO from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:24.429 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for ERCO
+2025-07-20 17:35:24.441 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00023183 from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:47.564 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 17:35:47.565 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for AZPS from 2025-07-19 to 2025-07-19
+2025-07-20 17:35:48.772 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for AZPS
+2025-07-20 17:35:48.775 | INFO     | data_fetcher:fetch_noaa_data:73 - Fetching NOAA data for GHCND:USW00024233 from 2025-07-19 to 2025-07-19
+2025-07-20 17:36:53.075 | INFO     | data_fetcher:fetch_noaa_data:96 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 17:36:53.077 | INFO     | data_fetcher:fetch_eia_data:143 - Fetching EIA data for SCL from 2025-07-19 to 2025-07-19
+2025-07-20 17:36:54.468 | INFO     | data_fetcher:fetch_eia_data:173 - Successfully fetched EIA data for SCL
+2025-07-20 17:36:54.473 | INFO     | data_fetcher:fetch_historical_data:332 - Historical data fetch complete: 20 city records
+2025-07-20 17:36:54.475 | INFO     | __main__:run_historical_pipeline:81 - Retrieved 20 data chunks from historical fetch
+2025-07-20 17:36:54.483 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.625 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.639 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.650 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.665 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.668 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.670 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.671 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.672 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.680 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.686 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.687 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.688 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.689 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.689 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.691 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.691 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.692 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.693 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.693 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 17:36:54.694 | INFO     | __main__:run_historical_pipeline:108 - Historical processing complete: 0 successful, 20 failed
+2025-07-20 17:36:54.694 | ERROR    | __main__:run_historical_pipeline:131 - No historical data was successfully processed
+2025-07-20 17:36:54.717 | INFO     | __main__:run_pipeline_with_validation:204 - Historical pipeline completed successfully in 0:05:12.832587
+2025-07-20 17:36:54.718 | INFO     | __main__:<module>:234 - All pipelines completed successfully
+2025-07-20 17:36:54.719 | INFO     | __main__:<module>:245 - Pipeline script finished
+2025-07-20 18:04:01.370 | INFO     | __main__:<module>:216 - Pipeline script started
+2025-07-20 18:04:01.389 | INFO     | __main__:run_pipeline_with_validation:178 - Starting daily pipeline at 2025-07-20 18:04:01.389395
+2025-07-20 18:04:01.415 | INFO     | __main__:run_daily_pipeline:12 - Starting daily pipeline
+2025-07-20 18:04:01.416 | INFO     | __main__:run_daily_pipeline:16 - Processing data for 2025-07-19
+2025-07-20 18:04:01.670 | INFO     | __main__:run_daily_pipeline:22 - Processing New York
+2025-07-20 18:04:01.671 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094728 from 2025-07-19 to 2025-07-19
+2025-07-20 18:04:32.408 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 18:04:32.412 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for NYIS from 2025-07-19 to 2025-07-19
+2025-07-20 18:04:38.850 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for NYIS
+2025-07-20 18:04:38.851 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:04:38.852 | INFO     | __main__:run_daily_pipeline:22 - Processing Chicago
+2025-07-20 18:04:38.856 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094846 from 2025-07-19 to 2025-07-19
+2025-07-20 18:04:42.210 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 18:04:42.223 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for PJM from 2025-07-19 to 2025-07-19
+2025-07-20 18:04:44.317 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for PJM
+2025-07-20 18:04:44.320 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:04:44.321 | INFO     | __main__:run_daily_pipeline:22 - Processing Houston
+2025-07-20 18:04:44.323 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00012960 from 2025-07-19 to 2025-07-19
+2025-07-20 18:05:16.524 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 18:05:16.533 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for ERCO from 2025-07-19 to 2025-07-19
+2025-07-20 18:05:19.076 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for ERCO
+2025-07-20 18:05:19.118 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:05:19.134 | INFO     | __main__:run_daily_pipeline:22 - Processing Phoenix
+2025-07-20 18:05:19.148 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00023183 from 2025-07-19 to 2025-07-19
+2025-07-20 18:05:43.983 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 18:05:43.986 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for AZPS from 2025-07-19 to 2025-07-19
+2025-07-20 18:05:45.519 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for AZPS
+2025-07-20 18:05:45.520 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:05:45.521 | INFO     | __main__:run_daily_pipeline:22 - Processing Seattle
+2025-07-20 18:05:45.522 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00024233 from 2025-07-19 to 2025-07-19
+2025-07-20 18:05:48.322 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 18:05:48.341 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for BPAT from 2025-07-19 to 2025-07-19
+2025-07-20 18:05:51.180 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for BPAT
+2025-07-20 18:05:51.181 | ERROR    | __main__:run_daily_pipeline:46 - Pipeline failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:05:51.183 | ERROR    | __main__:run_daily_pipeline:70 - No data was successfully processed for any city
+2025-07-20 18:05:51.185 | INFO     | __main__:run_pipeline_with_validation:204 - Daily pipeline completed successfully in 0:01:49.796510
+2025-07-20 18:05:51.186 | INFO     | __main__:run_pipeline_with_validation:178 - Starting historical pipeline at 2025-07-20 18:05:51.186907
+2025-07-20 18:05:51.197 | INFO     | __main__:run_historical_pipeline:74 - Starting historical pipeline for 90 days
+2025-07-20 18:05:51.199 | INFO     | data_fetcher:fetch_historical_data:341 - Fetching 90 days of historical data from 2025-04-20 to 2025-07-19
+2025-07-20 18:05:51.200 | INFO     | data_fetcher:fetch_historical_data:352 - Processing chunk: 2025-04-20 to 2025-05-19
+2025-07-20 18:05:51.204 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094728 from 2025-04-20 to 2025-05-19
+2025-07-20 18:05:56.190 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 18:05:56.193 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for NYIS from 2025-04-20 to 2025-05-19
+2025-07-20 18:05:59.708 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for NYIS
+2025-07-20 18:05:59.710 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094846 from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:01.706 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 18:06:01.707 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for PJM from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:04.026 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for PJM
+2025-07-20 18:06:04.027 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00012960 from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:05.699 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 18:06:05.702 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for ERCO from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:07.280 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for ERCO
+2025-07-20 18:06:07.282 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00023183 from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:08.603 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 18:06:08.605 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for AZPS from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:11.262 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for AZPS
+2025-07-20 18:06:11.263 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00024233 from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:21.191 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 18:06:21.191 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for BPAT from 2025-04-20 to 2025-05-19
+2025-07-20 18:06:32.024 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for BPAT
+2025-07-20 18:06:32.024 | INFO     | data_fetcher:fetch_historical_data:371 - Waiting 5 seconds before next chunk...
+2025-07-20 18:06:37.026 | INFO     | data_fetcher:fetch_historical_data:352 - Processing chunk: 2025-05-20 to 2025-06-18
+2025-07-20 18:06:37.028 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094728 from 2025-05-20 to 2025-06-18
+2025-07-20 18:06:39.361 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 18:06:39.369 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for NYIS from 2025-05-20 to 2025-06-18
+2025-07-20 18:06:41.248 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for NYIS
+2025-07-20 18:06:41.249 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094846 from 2025-05-20 to 2025-06-18
+2025-07-20 18:06:48.520 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 18:06:48.524 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for PJM from 2025-05-20 to 2025-06-18
+2025-07-20 18:06:50.169 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for PJM
+2025-07-20 18:06:50.170 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00012960 from 2025-05-20 to 2025-06-18
+2025-07-20 18:07:04.094 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 18:07:04.100 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for ERCO from 2025-05-20 to 2025-06-18
+2025-07-20 18:07:06.344 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for ERCO
+2025-07-20 18:07:06.346 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00023183 from 2025-05-20 to 2025-06-18
+2025-07-20 18:07:09.305 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 18:07:09.307 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for AZPS from 2025-05-20 to 2025-06-18
+2025-07-20 18:07:11.233 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for AZPS
+2025-07-20 18:07:11.264 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00024233 from 2025-05-20 to 2025-06-18
+2025-07-20 18:07:16.761 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 18:07:16.784 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for BPAT from 2025-05-20 to 2025-06-18
+2025-07-20 18:07:22.010 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for BPAT
+2025-07-20 18:07:22.011 | INFO     | data_fetcher:fetch_historical_data:371 - Waiting 5 seconds before next chunk...
+2025-07-20 18:07:27.013 | INFO     | data_fetcher:fetch_historical_data:352 - Processing chunk: 2025-06-19 to 2025-07-18
+2025-07-20 18:07:27.017 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094728 from 2025-06-19 to 2025-07-18
+2025-07-20 18:07:57.766 | WARNING  | data_fetcher:_make_request_with_retry:39 - Timeout error on attempt 1: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-07-20 18:07:57.768 | INFO     | data_fetcher:_make_request_with_retry:41 - Retrying in 2.0 seconds...
+2025-07-20 18:08:23.953 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 18:08:23.954 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for NYIS from 2025-06-19 to 2025-07-18
+2025-07-20 18:08:25.850 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for NYIS
+2025-07-20 18:08:25.973 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094846 from 2025-06-19 to 2025-07-18
+2025-07-20 18:08:28.749 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 18:08:28.751 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for PJM from 2025-06-19 to 2025-07-18
+2025-07-20 18:08:32.119 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for PJM
+2025-07-20 18:08:32.127 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00012960 from 2025-06-19 to 2025-07-18
+2025-07-20 18:08:58.754 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 18:08:58.754 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for ERCO from 2025-06-19 to 2025-07-18
+2025-07-20 18:09:01.376 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for ERCO
+2025-07-20 18:09:01.761 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00023183 from 2025-06-19 to 2025-07-18
+2025-07-20 18:09:05.840 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 18:09:05.844 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for AZPS from 2025-06-19 to 2025-07-18
+2025-07-20 18:09:10.159 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for AZPS
+2025-07-20 18:09:10.172 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00024233 from 2025-06-19 to 2025-07-18
+2025-07-20 18:09:16.616 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 18:09:16.644 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for BPAT from 2025-06-19 to 2025-07-18
+2025-07-20 18:09:19.608 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for BPAT
+2025-07-20 18:09:19.610 | INFO     | data_fetcher:fetch_historical_data:371 - Waiting 5 seconds before next chunk...
+2025-07-20 18:09:24.612 | INFO     | data_fetcher:fetch_historical_data:352 - Processing chunk: 2025-07-19 to 2025-07-19
+2025-07-20 18:09:24.624 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094728 from 2025-07-19 to 2025-07-19
+2025-07-20 18:09:27.013 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-07-20 18:09:27.014 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for NYIS from 2025-07-19 to 2025-07-19
+2025-07-20 18:09:28.311 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for NYIS
+2025-07-20 18:09:28.312 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00094846 from 2025-07-19 to 2025-07-19
+2025-07-20 18:09:32.643 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-07-20 18:09:32.645 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for PJM from 2025-07-19 to 2025-07-19
+2025-07-20 18:09:33.925 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for PJM
+2025-07-20 18:09:33.927 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00012960 from 2025-07-19 to 2025-07-19
+2025-07-20 18:10:27.958 | WARNING  | data_fetcher:_make_request_with_retry:39 - Timeout error on attempt 1: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-07-20 18:10:27.960 | INFO     | data_fetcher:_make_request_with_retry:41 - Retrying in 2.0 seconds...
+2025-07-20 18:10:31.593 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-07-20 18:10:31.595 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for ERCO from 2025-07-19 to 2025-07-19
+2025-07-20 18:10:35.314 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for ERCO
+2025-07-20 18:10:35.317 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00023183 from 2025-07-19 to 2025-07-19
+2025-07-20 18:10:57.570 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-07-20 18:10:57.571 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for AZPS from 2025-07-19 to 2025-07-19
+2025-07-20 18:11:04.198 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for AZPS
+2025-07-20 18:11:04.199 | INFO     | data_fetcher:fetch_noaa_data:74 - Fetching NOAA data for GHCND:USW00024233 from 2025-07-19 to 2025-07-19
+2025-07-20 18:11:47.915 | INFO     | data_fetcher:fetch_noaa_data:103 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-07-20 18:11:47.916 | INFO     | data_fetcher:fetch_eia_data:152 - Fetching EIA data for BPAT from 2025-07-19 to 2025-07-19
+2025-07-20 18:11:52.017 | INFO     | data_fetcher:fetch_eia_data:182 - Successfully fetched EIA data for BPAT
+2025-07-20 18:11:52.017 | INFO     | data_fetcher:fetch_historical_data:374 - Historical data fetch complete: 20 city records
+2025-07-20 18:11:52.018 | INFO     | __main__:run_historical_pipeline:81 - Retrieved 20 data chunks from historical fetch
+2025-07-20 18:11:52.019 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.019 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.021 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.022 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.023 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.027 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.030 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.030 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.040 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.041 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.042 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.043 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.044 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.047 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.051 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.052 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for New York: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.053 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Chicago: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.054 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Houston: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.054 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Phoenix: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.055 | ERROR    | __main__:run_historical_pipeline:104 - Historical processing failed for Seattle: process_data() takes 2 positional arguments but 4 were given
+2025-07-20 18:11:52.055 | INFO     | __main__:run_historical_pipeline:108 - Historical processing complete: 0 successful, 20 failed
+2025-07-20 18:11:52.056 | ERROR    | __main__:run_historical_pipeline:131 - No historical data was successfully processed
+2025-07-20 18:11:52.057 | INFO     | __main__:run_pipeline_with_validation:204 - Historical pipeline completed successfully in 0:06:00.870836
+2025-07-20 18:11:52.058 | INFO     | __main__:<module>:234 - All pipelines completed successfully
+2025-07-20 18:11:52.059 | INFO     | __main__:<module>:245 - Pipeline script finished

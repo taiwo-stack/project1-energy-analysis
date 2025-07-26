@@ -1,0 +1,11 @@
+{
+  "total_datasets_checked": 5,
+  "datasets_passed": 5,
+  "pass_rate_percent": 100.0,
+  "total_data_rows": 5,
+  "total_missing_values": 0,
+  "total_outliers": 0,
+  "all_issues": [],
+  "unique_issue_types": 0,
+  "generated_at": "2025-07-25T01:39:33.946308"
+}

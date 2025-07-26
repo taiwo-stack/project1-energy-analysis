@@ -1,0 +1,18 @@
+{
+  "total_datasets_checked": 15,
+  "datasets_passed": 13,
+  "pass_rate_percent": 86.7,
+  "total_data_rows": 450,
+  "total_missing_values": 12,
+  "total_outliers": 0,
+  "all_issues": [
+    "Missing values in temperature_max: 2 (6.7%)",
+    "Missing values in temperature_min: 2 (6.7%)",
+    "Missing values in temperature_avg: 2 (6.7%)",
+    "Missing values in temperature_max: 2 (6.7%)",
+    "Missing values in temperature_min: 2 (6.7%)",
+    "Missing values in temperature_avg: 2 (6.7%)"
+  ],
+  "unique_issue_types": 3,
+  "generated_at": "2025-07-25T04:54:28.828583"
+}

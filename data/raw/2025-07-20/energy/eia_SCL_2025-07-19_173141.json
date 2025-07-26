@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "fetch_timestamp": "2025-07-20T17:31:41.308784",
+    "data_type": "energy",
+    "filename": "eia_SCL_2025-07-19"
+  },
+  "data": {
+    "response": {
+      "total": "20",
+      "dateFormat": "YYYY-MM-DD",
+      "frequency": "daily",
+      "data": [
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "21489",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "21600",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "21658",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "21533",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "21489",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "20981",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "21155",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "21254",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "21066",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "20981",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "8437",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "8513",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "8465",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "8505",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "8437",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "-13052",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "-13087",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "-13193",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "-13028",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-07-19",
+          "respondent": "SCL",
+          "respondent-name": "Seattle City Light",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "-13052",
+          "value-units": "megawatthours"
+        }
+      ],
+      "description": "Daily demand, day-ahead demand forecast, net generation, and interchange by balancing authority.  \n    Source: Form EIA-930\n    Product: Hourly Electric Grid Monitor"
+    },
+    "request": {
+      "command": "/v2/electricity/rto/daily-region-data/data/",
+      "params": {
+        "api_key": "unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck",
+        "frequency": "daily",
+        "data": [
+          "value"
+        ],
+        "facets": {
+          "respondent": [
+            "SCL"
+          ]
+        },
+        "start": "2025-07-19",
+        "end": "2025-07-19",
+        "sort": [
+          {
+            "column": "period",
+            "direction": "asc"
+          }
+        ]
+      }
+    },
+    "apiVersion": "2.1.8",
+    "ExcelAddInVersion": "2.1.0"
+  }
+}

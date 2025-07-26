@@ -1,0 +1,6 @@
+date,energy_demand,eia_region,data_source,processed_at,city,day_of_week,is_weekend,station_id,temperature_max,temperature_min,temperature_avg
+2025-07-20,509431,New York Independent System Operator,EIA,2025-07-25 17:52:07.591827,New York,Sunday,True,,,,
+2025-07-20,2603364,"PJM Interconnection, LLC",EIA,2025-07-25 17:52:16.627529,Chicago,Sunday,True,,,,
+2025-07-20,1574575,"Electric Reliability Council of Texas, Inc.",NOAA,2025-07-25 17:52:24.042861,Houston,Sunday,True,GHCND:USW00012960,97.0,79.0,88.0
+2025-07-20,119357,Arizona Public Service Company,NOAA,2025-07-25 17:52:29.616329,Phoenix,Sunday,True,GHCND:USW00023183,97.0,90.0,93.5
+2025-07-20,21332,Seattle City Light,NOAA,2025-07-25 17:52:41.991344,Seattle,Sunday,True,GHCND:USW00024233,65.0,51.0,58.0

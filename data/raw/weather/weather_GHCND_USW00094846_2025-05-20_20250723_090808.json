@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "fetch_timestamp": "2025-07-23T09:08:08.315560",
+    "data_type": "weather",
+    "station_id": "GHCND:USW00094846",
+    "date_requested": "2025-05-20",
+    "api_source": "NOAA"
+  },
+  "raw_data": {
+    "metadata": {
+      "resultset": {
+        "offset": 1,
+        "count": 10,
+        "limit": 1000
+      }
+    },
+    "results": [
+      {
+        "date": "2025-05-20T00:00:00",
+        "datatype": "TMAX",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 56.0
+      },
+      {
+        "date": "2025-05-20T00:00:00",
+        "datatype": "TMIN",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 48.0
+      },
+      {
+        "date": "2025-05-21T00:00:00",
+        "datatype": "TMAX",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 52.0
+      },
+      {
+        "date": "2025-05-21T00:00:00",
+        "datatype": "TMIN",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 48.0
+      },
+      {
+        "date": "2025-05-22T00:00:00",
+        "datatype": "TMAX",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 57.0
+      },
+      {
+        "date": "2025-05-22T00:00:00",
+        "datatype": "TMIN",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 46.0
+      },
+      {
+        "date": "2025-05-23T00:00:00",
+        "datatype": "TMAX",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 65.0
+      },
+      {
+        "date": "2025-05-23T00:00:00",
+        "datatype": "TMIN",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 42.0
+      },
+      {
+        "date": "2025-05-24T00:00:00",
+        "datatype": "TMAX",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 66.0
+      },
+      {
+        "date": "2025-05-24T00:00:00",
+        "datatype": "TMIN",
+        "station": "GHCND:USW00094846",
+        "attributes": ",,W,2400",
+        "value": 44.0
+      }
+    ]
+  }
+}

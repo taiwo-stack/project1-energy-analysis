@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "fetch_timestamp": "2025-07-21T14:11:50.282729",
+    "data_type": "weather",
+    "station_id": "GHCND:USW00023183",
+    "date_requested": "2025-05-22",
+    "api_source": "NOAA"
+  },
+  "raw_data": {
+    "metadata": {
+      "resultset": {
+        "offset": 1,
+        "count": 2,
+        "limit": 1000
+      }
+    },
+    "results": [
+      {
+        "date": "2025-05-22T00:00:00",
+        "datatype": "TMAX",
+        "station": "GHCND:USW00023183",
+        "attributes": ",,W,2400",
+        "value": 106.0
+      },
+      {
+        "date": "2025-05-22T00:00:00",
+        "datatype": "TMIN",
+        "station": "GHCND:USW00023183",
+        "attributes": ",,W,2400",
+        "value": 74.0
+      }
+    ]
+  }
+}

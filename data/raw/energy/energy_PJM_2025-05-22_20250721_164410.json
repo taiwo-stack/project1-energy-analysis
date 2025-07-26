@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "fetch_timestamp": "2025-07-21T16:44:10.798301",
+    "data_type": "energy",
+    "region": "PJM",
+    "date_requested": "2025-05-22",
+    "api_source": "EIA"
+  },
+  "raw_data": {
+    "response": {
+      "total": "20",
+      "dateFormat": "YYYY-MM-DD",
+      "frequency": "daily",
+      "data": [
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "1978006",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "1980259",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "1981700",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "1979087",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "D",
+          "type-name": "Demand",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "1978006",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "1949501",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "1950068",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "1950704",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "1949689",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "DF",
+          "type-name": "Day-ahead demand forecast",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "1949501",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "2068292",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "2066986",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "2066460",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "2067393",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "NG",
+          "type-name": "Net generation",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "2068292",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Arizona",
+          "timezone-description": "Arizona",
+          "value": "30942",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Central",
+          "timezone-description": "Central",
+          "value": "29379",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Eastern",
+          "timezone-description": "Eastern",
+          "value": "29446",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Mountain",
+          "timezone-description": "Mountain",
+          "value": "29479",
+          "value-units": "megawatthours"
+        },
+        {
+          "period": "2025-05-22",
+          "respondent": "PJM",
+          "respondent-name": "PJM Interconnection, LLC",
+          "type": "TI",
+          "type-name": "Total interchange",
+          "timezone": "Pacific",
+          "timezone-description": "Pacific",
+          "value": "30942",
+          "value-units": "megawatthours"
+        }
+      ],
+      "description": "Daily demand, day-ahead demand forecast, net generation, and interchange by balancing authority.  \n    Source: Form EIA-930\n    Product: Hourly Electric Grid Monitor"
+    },
+    "request": {
+      "command": "/v2/electricity/rto/daily-region-data/data/",
+      "params": {
+        "api_key": "unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck",
+        "frequency": "daily",
+        "data": [
+          "value"
+        ],
+        "facets": {
+          "respondent": [
+            "PJM"
+          ]
+        },
+        "start": "2025-05-22",
+        "end": "2025-05-22",
+        "sort": [
+          {
+            "column": "period",
+            "direction": "asc"
+          }
+        ]
+      }
+    },
+    "apiVersion": "2.1.8",
+    "ExcelAddInVersion": "2.1.0"
+  }
+}

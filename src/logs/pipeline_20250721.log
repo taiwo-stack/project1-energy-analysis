@@ -1,0 +1,12 @@
+2025-07-21 11:44:51.731 | INFO     | __main__:<module>:176 - Pipeline script started
+2025-07-21 11:44:51.734 | ERROR    | config:load:39 - Configuration file not found: config/config.yaml
+2025-07-21 11:44:51.735 | ERROR    | __main__:<module>:196 - Pipeline script failed with critical error: Configuration file not found: config/config.yaml
+2025-07-21 11:44:51.735 | INFO     | __main__:<module>:199 - Pipeline script finished
+2025-07-21 11:50:17.713 | INFO     | __main__:<module>:176 - Pipeline script started
+2025-07-21 11:50:17.713 | ERROR    | config:load:39 - Configuration file not found: config/config.yaml
+2025-07-21 11:50:17.713 | ERROR    | __main__:<module>:196 - Pipeline script failed with critical error: Configuration file not found: config/config.yaml
+2025-07-21 11:50:17.713 | INFO     | __main__:<module>:199 - Pipeline script finished
+2025-07-21 11:50:22.319 | INFO     | __main__:<module>:176 - Pipeline script started
+2025-07-21 11:50:22.319 | ERROR    | config:load:39 - Configuration file not found: config/config.yaml
+2025-07-21 11:50:22.324 | ERROR    | __main__:<module>:196 - Pipeline script failed with critical error: Configuration file not found: config/config.yaml
+2025-07-21 11:50:22.324 | INFO     | __main__:<module>:199 - Pipeline script finished
