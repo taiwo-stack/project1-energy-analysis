@@ -1,0 +1,17 @@
+{
+  "total_datasets_checked": 5,
+  "datasets_passed": 0,
+  "pass_rate_percent": 0.0,
+  "total_data_rows": 0,
+  "total_missing_values": 0,
+  "total_outliers": 0,
+  "all_issues": [
+    "Processing error for New York on 2025-07-24: Empty dataset after processing",
+    "Processing error for Chicago on 2025-07-24: Empty dataset after processing",
+    "Processing error for Houston on 2025-07-24: Empty dataset after processing",
+    "Processing error for Phoenix on 2025-07-24: Empty dataset after processing",
+    "Processing error for Seattle on 2025-07-24: Empty dataset after processing"
+  ],
+  "unique_issue_types": 5,
+  "generated_at": "2025-07-26T17:04:34.959024"
+}

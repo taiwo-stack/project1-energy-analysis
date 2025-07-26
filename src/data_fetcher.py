@@ -25,7 +25,7 @@ class Config:
             'eia_requests_per_second': 5,
             'chunk_size_days': 30,
             'max_fetch_days': 90,
-            'buffer_days': 5
+            'buffer_days': 2
         }
         self.cities = [
             City(name='New York', lat=40.7128, lon=-74.0060, noaa_station='GHCND:USW00094728', eia_region='NYIS'),
@@ -267,32 +267,34 @@ class DataFetcher:
             logger.error(f"Failed to fetch energy data for {city.name}: {str(e)}")
         return weather_data, energy_data
     
-    def fetch_historical_data(self, days: int = 90) -> List[Tuple[str, Optional[Dict], Optional[Dict]]]:
-        days = min(days, self.config.rate_limits['max_fetch_days'])
-        end_date = datetime.now().date() - timedelta(days=self.config.rate_limits['buffer_days'])
-        start_date = end_date - timedelta(days=days - 1)
-        logger.info(f"Fetching {days} days of historical data from {start_date} to {end_date}")
-        results = []
-        chunk_size = self.config.rate_limits['chunk_size_days']
-        current_start = start_date
-        while current_start <= end_date:
-            chunk_end = min(current_start + timedelta(days=chunk_size - 1), end_date)
-            logger.info(f"Processing chunk: {current_start} to {chunk_end}")
-            for city in self.config.cities:
-                try:
-                    weather_data, energy_data = self.fetch_city_data(
-                        city,
-                        current_start.strftime('%Y-%m-%d'),
-                        chunk_end.strftime('%Y-%m-%d')
-                    )
-                    results.append((city.name, weather_data, energy_data))
-                    logger.debug(f"Fetched data for {city.name}: {current_start} to {chunk_end}")
-                except Exception as e:
-                    logger.error(f"Failed to fetch data for {city.name} in chunk {current_start}-{chunk_end}: {str(e)}")
-                    results.append((city.name, None, None))
-            current_start = chunk_end + timedelta(days=1)
-            if current_start <= end_date:
-                logger.info("Waiting 5 seconds before next chunk...")
-                time.sleep(5)
-        logger.info(f"Historical data fetch complete: {len(results)} city records")
-        return results
+    
+def fetch_historical_data(self, days: int = 90) -> List[Tuple[str, Optional[Dict], Optional[Dict]]]:
+    days = min(days, self.config.rate_limits['max_fetch_days'])
+    # Stop 2 days before current day to prevent availability issues
+    end_date = datetime.now().date() - timedelta(days=2)
+    start_date = end_date - timedelta(days=days - 1)
+    logger.info(f"Fetching {days} days of historical data from {start_date} to {end_date}")
+    results = []
+    chunk_size = self.config.rate_limits['chunk_size_days']
+    current_start = start_date
+    while current_start <= end_date:
+        chunk_end = min(current_start + timedelta(days=chunk_size - 1), end_date)
+        logger.info(f"Processing chunk: {current_start} to {chunk_end}")
+        for city in self.config.cities:
+            try:
+                weather_data, energy_data = self.fetch_city_data(
+                    city,
+                    current_start.strftime('%Y-%m-%d'),
+                    chunk_end.strftime('%Y-%m-%d')
+                )
+                results.append((city.name, weather_data, energy_data))
+                logger.debug(f"Fetched data for {city.name}: {current_start} to {chunk_end}")
+            except Exception as e:
+                logger.error(f"Failed to fetch data for {city.name} in chunk {current_start}-{chunk_end}: {str(e)}")
+                results.append((city.name, None, None))
+        current_start = chunk_end + timedelta(days=1)
+        if current_start <= end_date:
+            logger.info("Waiting 5 seconds before next chunk...")
+            time.sleep(5)
+    logger.info(f"Historical data fetch complete: {len(results)} city records")
+    return results

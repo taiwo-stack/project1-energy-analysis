@@ -1,0 +1,6 @@
+date,energy_demand,eia_region,data_source,processed_at,city,day_of_week,is_weekend
+2025-07-24,532796,New York Independent System Operator,EIA,2025-07-26 18:28:11.246683,New York,Thursday,False
+2025-07-24,2931172,"PJM Interconnection, LLC",EIA,2025-07-26 18:28:15.520431,Chicago,Thursday,False
+2025-07-24,1660157,"Electric Reliability Council of Texas, Inc.",EIA,2025-07-26 18:28:19.044368,Houston,Thursday,False
+2025-07-24,127770,Arizona Public Service Company,EIA,2025-07-26 18:28:22.328632,Phoenix,Thursday,False
+2025-07-24,23383,Seattle City Light,EIA,2025-07-26 18:28:25.680841,Seattle,Thursday,False

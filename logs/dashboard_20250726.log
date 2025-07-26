@@ -23,3 +23,1188 @@
 2025-07-26 01:28:26.500 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
 2025-07-26 01:28:26.559 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
 2025-07-26 01:28:26.559 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:20:36.629 | INFO     | analysis:load_data:50 - Loaded 150 records from 2025-06-21 to 2025-07-20
+2025-07-26 15:20:37.402 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:20:37.402 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:20:37.542 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:20:37.730 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:20:39.011 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:20:39.011 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:20:39.011 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:20:39.011 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:20:39.058 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:20:39.089 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:20:39.058 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:20:39.089 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:38:18.744 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:38:18.746 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:38:18.792 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:38:18.744 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:38:18.744 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:38:18.746 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:38:18.746 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:38:18.792 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:38:18.792 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:38:18.825 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:38:18.825 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:38:18.825 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:42:30.600 | INFO     | analysis:load_data:50 - Loaded 450 records from 2025-04-22 to 2025-07-20
+2025-07-26 15:42:30.600 | INFO     | analysis:load_data:50 - Loaded 450 records from 2025-04-22 to 2025-07-20
+2025-07-26 15:42:30.600 | INFO     | analysis:load_data:50 - Loaded 450 records from 2025-04-22 to 2025-07-20
+2025-07-26 15:42:30.600 | INFO     | analysis:load_data:50 - Loaded 450 records from 2025-04-22 to 2025-07-20
+2025-07-26 15:42:31.110 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:42:31.110 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:42:31.110 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:42:31.110 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:42:31.125 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:42:31.125 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:42:31.125 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:42:31.125 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:42:31.413 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:42:31.413 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:42:31.413 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:42:31.466 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:42:31.466 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:42:31.466 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:42:31.466 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:45:54.164 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:45:54.164 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:45:54.164 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:45:54.164 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:45:54.164 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:45:54.174 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:45:54.174 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:45:54.174 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:45:54.174 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:45:54.174 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:45:54.222 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:45:54.222 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:45:54.222 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:45:54.222 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:45:54.222 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:45:54.247 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:45:54.247 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:45:54.247 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:45:54.247 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:45:54.247 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:46:49.755 | INFO     | analysis:load_data:50 - Loaded 300 records from 2025-05-22 to 2025-07-20
+2025-07-26 15:46:49.755 | INFO     | analysis:load_data:50 - Loaded 300 records from 2025-05-22 to 2025-07-20
+2025-07-26 15:46:49.755 | INFO     | analysis:load_data:50 - Loaded 300 records from 2025-05-22 to 2025-07-20
+2025-07-26 15:46:49.755 | INFO     | analysis:load_data:50 - Loaded 300 records from 2025-05-22 to 2025-07-20
+2025-07-26 15:46:49.755 | INFO     | analysis:load_data:50 - Loaded 300 records from 2025-05-22 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-13 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:46:49.991 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:46:50.044 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:46:50.044 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:46:50.044 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:46:50.044 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:46:50.044 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:46:50.044 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:46:50.067 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:46:50.067 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:46:50.067 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:46:50.067 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:46:50.067 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:46:50.067 | INFO     | analysis:get_usage_summary:294 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.940 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-09 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:09.942 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.136 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:10.206 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.012 | INFO     | analysis:calculate_usage_levels:180 - Calculating usage levels - Recent period: 2025-07-06 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.017 | INFO     | analysis:calculate_usage_levels:181 - Baseline period: 2025-06-20 to 2025-07-20
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.052 | INFO     | analysis:calculate_usage_levels:247 - Calculated usage levels for 5 cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 15:47:11.079 | INFO     | analysis:get_usage_summary:294 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:14:35.122 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:14:35.573 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:14:35.609 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:14:35.661 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:14:36.168 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:14:58.683 | INFO     | analysis:load_data:52 - Loaded 435 records from 2025-04-26 to 2025-07-21
+2025-07-26 17:14:58.683 | INFO     | analysis:load_data:52 - Loaded 435 records from 2025-04-26 to 2025-07-21
+2025-07-26 17:14:58.929 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:14:58.929 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:14:58.931 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:14:58.931 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:14:59.241 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:14:59.241 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:14:59.266 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:14:59.266 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:15:34.115 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:15:34.115 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:15:34.115 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:15:34.116 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:15:34.116 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:15:34.116 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:15:34.169 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:15:34.169 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:15:34.169 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:15:34.215 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:15:34.215 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:15:34.215 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:08.444 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.046 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.054 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.142 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:29:09.277 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:40:15.760 | INFO     | analysis:load_data:52 - Loaded 140 records from 2025-06-24 to 2025-07-21
+2025-07-26 17:40:16.057 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:40:16.059 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:40:16.153 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:40:16.292 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:40:29.520 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:40:29.520 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:40:29.526 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:40:29.526 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:40:29.614 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:40:29.614 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:40:29.668 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:40:29.668 | INFO     | analysis:get_usage_summary:296 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:40:41.344 | INFO     | analysis:load_data:52 - Loaded 435 records from 2025-04-26 to 2025-07-21
+2025-07-26 17:40:41.344 | INFO     | analysis:load_data:52 - Loaded 435 records from 2025-04-26 to 2025-07-21
+2025-07-26 17:40:41.344 | INFO     | analysis:load_data:52 - Loaded 435 records from 2025-04-26 to 2025-07-21
+2025-07-26 17:40:42.473 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:40:42.473 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:40:42.473 | INFO     | analysis:calculate_usage_levels:182 - Calculating usage levels - Recent period: 2025-07-14 to 2025-07-21
+2025-07-26 17:40:42.479 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:40:42.479 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:40:42.479 | INFO     | analysis:calculate_usage_levels:183 - Baseline period: 2025-06-21 to 2025-07-21
+2025-07-26 17:40:42.548 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:40:42.548 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:40:42.548 | INFO     | analysis:calculate_usage_levels:249 - Calculated usage levels for 5 cities
+2025-07-26 17:40:42.605 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:40:42.605 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:40:42.605 | INFO     | analysis:get_usage_summary:296 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:59:29.478 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 17:59:29.494 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 17:59:29.510 | INFO     | analysis:load_data:74 - Using specified date range: 2025-06-24 to 2025-07-24
+2025-07-26 17:59:29.520 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 140 records
+2025-07-26 17:59:29.535 | INFO     | analysis:load_data:112 - Final dataset: 140 records from 2025-06-24 to 2025-07-21 across 5 cities
+2025-07-26 17:59:30.040 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:30.040 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:30.046 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-14 to 2025-07-21 (7 days)
+2025-07-26 17:59:30.046 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-21 to 2025-07-21 (30 days)
+2025-07-26 17:59:30.114 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:30.276 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 17:59:30.586 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:31.159 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:31.177 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:31.255 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:42.309 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 17:59:42.309 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 17:59:42.322 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 17:59:42.322 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 17:59:42.327 | INFO     | analysis:load_data:74 - Using specified date range: 2025-04-25 to 2025-07-24
+2025-07-26 17:59:42.327 | INFO     | analysis:load_data:74 - Using specified date range: 2025-04-25 to 2025-07-24
+2025-07-26 17:59:42.331 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 435 records
+2025-07-26 17:59:42.331 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 435 records
+2025-07-26 17:59:42.341 | INFO     | analysis:load_data:112 - Final dataset: 435 records from 2025-04-26 to 2025-07-21 across 5 cities
+2025-07-26 17:59:42.341 | INFO     | analysis:load_data:112 - Final dataset: 435 records from 2025-04-26 to 2025-07-21 across 5 cities
+2025-07-26 17:59:42.763 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:42.771 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:42.771 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:42.771 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-14 to 2025-07-21 (7 days)
+2025-07-26 17:59:42.771 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-14 to 2025-07-21 (7 days)
+2025-07-26 17:59:42.771 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-21 to 2025-07-21 (30 days)
+2025-07-26 17:59:42.771 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-21 to 2025-07-21 (30 days)
+2025-07-26 17:59:42.829 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:42.829 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:42.854 | INFO     | analysis:get_usage_summary:424 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:59:42.854 | INFO     | analysis:get_usage_summary:424 - Usage summary: 2 high, 3 low usage cities
+2025-07-26 17:59:44.137 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:44.137 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:44.204 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:44.204 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:44.216 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:44.216 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:44.297 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:44.297 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:51.875 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:51.875 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:51.875 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:51.877 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:51.877 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:51.877 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:51.881 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:51.881 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:51.881 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:51.883 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-21 to 2025-07-21 (30 days)
+2025-07-26 17:59:51.883 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-21 to 2025-07-21 (30 days)
+2025-07-26 17:59:51.883 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-21 to 2025-07-21 (30 days)
+2025-07-26 17:59:51.985 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:51.985 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:51.985 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:52.019 | INFO     | analysis:get_usage_summary:424 - Usage summary: 0 high, 5 low usage cities
+2025-07-26 17:59:52.019 | INFO     | analysis:get_usage_summary:424 - Usage summary: 0 high, 5 low usage cities
+2025-07-26 17:59:52.019 | INFO     | analysis:get_usage_summary:424 - Usage summary: 0 high, 5 low usage cities
+2025-07-26 17:59:53.097 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:53.097 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:53.097 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:53.147 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:53.147 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:53.147 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:53.156 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:53.156 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:53.156 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:53.182 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:53.182 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:53.182 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:54.556 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 17:59:54.569 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:54.569 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:54.569 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:54.569 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 17:59:54.581 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 17:59:54.581 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 17:59:54.581 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 17:59:54.581 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 17:59:54.629 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:54.629 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:54.629 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:54.629 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 17:59:54.671 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 17:59:54.671 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 17:59:54.671 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 17:59:54.671 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 17:59:55.524 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.524 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.524 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.524 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.675 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 17:59:55.720 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:55.720 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 17:59:55.720 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:28.928 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:28.928 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:28.928 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:28.928 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:28.941 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:28.941 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:28.941 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:28.941 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:28.941 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:28.949 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:28.949 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:28.949 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:28.949 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:28.949 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:29.011 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:29.011 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:29.011 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:29.011 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:29.011 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:29.117 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:29.117 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:29.117 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:29.117 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:29.117 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:29.167 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:29.167 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:29.167 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:29.167 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:29.167 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:30.544 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.544 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.544 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.544 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.544 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.596 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:30.596 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:30.596 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:30.596 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:30.596 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:30.613 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.613 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.613 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.613 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.613 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:30.656 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:30.656 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:30.656 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:30.656 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:38.428 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 18:00:38.428 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 18:00:38.428 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 18:00:38.428 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 18:00:38.428 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 18:00:38.428 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-07-26 18:00:38.440 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 18:00:38.440 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 18:00:38.440 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 18:00:38.440 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 18:00:38.440 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 18:00:38.440 | INFO     | analysis:load_data:59 - Loaded 435 rows from data\processed\latest_historical.csv
+2025-07-26 18:00:38.448 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-25 to 2025-07-24
+2025-07-26 18:00:38.448 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-25 to 2025-07-24
+2025-07-26 18:00:38.448 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-25 to 2025-07-24
+2025-07-26 18:00:38.448 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-25 to 2025-07-24
+2025-07-26 18:00:38.448 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-25 to 2025-07-24
+2025-07-26 18:00:38.459 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 290 records
+2025-07-26 18:00:38.459 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 290 records
+2025-07-26 18:00:38.459 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 290 records
+2025-07-26 18:00:38.459 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 290 records
+2025-07-26 18:00:38.459 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 290 records
+2025-07-26 18:00:38.459 | INFO     | analysis:load_data:82 - Date filtering: 435 -> 290 records
+2025-07-26 18:00:38.471 | INFO     | analysis:load_data:112 - Final dataset: 290 records from 2025-05-25 to 2025-07-21 across 5 cities
+2025-07-26 18:00:38.471 | INFO     | analysis:load_data:112 - Final dataset: 290 records from 2025-05-25 to 2025-07-21 across 5 cities
+2025-07-26 18:00:38.471 | INFO     | analysis:load_data:112 - Final dataset: 290 records from 2025-05-25 to 2025-07-21 across 5 cities
+2025-07-26 18:00:38.471 | INFO     | analysis:load_data:112 - Final dataset: 290 records from 2025-05-25 to 2025-07-21 across 5 cities
+2025-07-26 18:00:38.471 | INFO     | analysis:load_data:112 - Final dataset: 290 records from 2025-05-25 to 2025-07-21 across 5 cities
+2025-07-26 18:00:38.471 | INFO     | analysis:load_data:112 - Final dataset: 290 records from 2025-05-25 to 2025-07-21 across 5 cities
+2025-07-26 18:00:38.804 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:38.804 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:38.804 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:38.804 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:38.804 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:38.804 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:38.824 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:00:38.833 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:38.833 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:38.833 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:38.833 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:38.833 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:38.833 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-06-19 to 2025-07-21 (32 days)
+2025-07-26 18:00:38.932 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:38.932 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:38.932 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:38.932 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:38.932 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:38.932 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:00:38.980 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:38.980 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:38.980 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:38.980 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:38.980 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:38.980 | INFO     | analysis:get_usage_summary:424 - Usage summary: 1 high, 4 low usage cities
+2025-07-26 18:00:39.492 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.492 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.492 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.492 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.492 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.492 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.599 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:39.599 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:39.599 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:39.599 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:39.599 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:39.599 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:00:39.610 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.610 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.610 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.610 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.610 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.610 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:00:39.644 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:39.644 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:39.644 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:39.644 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:39.644 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:00:39.644 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.188 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.195 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.201 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.217 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.376 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.454 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:02:43.991 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.991 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.991 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.991 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.991 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:43.991 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.050 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.066 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:02:44.099 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:00.470 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:00.470 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:00.470 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:00.470 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.480 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.488 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.494 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.551 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:00.608 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.352 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.387 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.396 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:03:01.431 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.166 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.174 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.182 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.189 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.226 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.255 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.728 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.756 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.769 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:14.802 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.778 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.790 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.800 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.811 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:15.898 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.411 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.503 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.527 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:16.581 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.108 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.124 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.142 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.150 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.216 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:04:28.247 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.622 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.777 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:04:28.843 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:04:29.031 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.772 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.783 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.787 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.795 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.861 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:48.900 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.938 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.971 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:49.980 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:08:50.013 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.379 | INFO     | analysis:calculate_usage_levels:300 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.387 | INFO     | analysis:calculate_usage_levels:307 - Usage level calculation periods:
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.399 | INFO     | analysis:calculate_usage_levels:308 -   Recent period: 2025-07-07 to 2025-07-21 (14 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.414 | INFO     | analysis:calculate_usage_levels:309 -   Baseline period: 2025-04-22 to 2025-07-21 (90 days)
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.450 | INFO     | analysis:calculate_usage_levels:376 - Calculated usage levels for 5 cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:14.473 | INFO     | analysis:get_usage_summary:424 - Usage summary: 4 high, 1 low usage cities
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.092 | INFO     | analysis:calculate_regression:222 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.205 | INFO     | analysis:calculate_regression:259 - Calculated regression stats for 5 cities
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.215 | INFO     | analysis:calculate_correlations:163 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities
+2025-07-26 18:09:15.264 | INFO     | analysis:calculate_correlations:181 - Calculated correlations for 5 cities

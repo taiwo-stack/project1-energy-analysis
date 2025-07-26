@@ -302,15 +302,29 @@ class DataProcessor:
                                 issues.append(f"Extremely high energy values: {len(extreme_values)} values > {extreme_threshold:.0f} MWh")
                                 logger.debug(f"Extreme energy values: {extreme_values.to_dict('records')}")
             
-            # Check data freshness
-            if 'processed_at' in df.columns and not df['processed_at'].isnull().all():
+                        # Check data freshness
+                        # Check data freshness - Updated to be more aligned with 2-day buffer approach
+            if 'date' in df.columns and not df['date'].isnull().all():
+                # Check based on actual data dates rather than processed_at timestamp
+                latest_date = pd.to_datetime(df['date']).max()
+                current_date = pd.Timestamp.now().normalize()  # Current date without time
+                days_old = (current_date - latest_date).days
+                summary['data_freshness_hours'] = days_old * 24  # Convert to hours for consistency
+                
+                # Use 3 days as threshold (2-day buffer + 1 day tolerance)
+                max_age_days = 3
+                if days_old > max_age_days:
+                    issues.append(f"Data is stale: {days_old} days old (threshold: {max_age_days} days)")
+                    
+            # Fallback: Check processing timestamp if available
+            elif 'processed_at' in df.columns and not df['processed_at'].isnull().all():
                 latest_processed = pd.to_datetime(df['processed_at']).max()
                 hours_old = (datetime.now() - latest_processed).total_seconds() / 3600
                 summary['data_freshness_hours'] = round(hours_old, 1)
-                max_age_hours = self.quality_thresholds.get('freshness', {}).get('max_age_hours', 48)
+                max_age_hours = self.quality_thresholds.get('freshness', {}).get('max_age_hours', 72)  # 3 days in hours
                 if hours_old > max_age_hours:
                     issues.append(f"Data is stale: {hours_old:.1f} hours old (threshold: {max_age_hours}h)")
-            
+                        
             # Check for date gaps
             if 'date' in df.columns and len(df) > 1:
                 df_sorted = df.sort_values('date')

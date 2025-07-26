@@ -40,6 +40,7 @@ class Dashboard(Analyzer):
         </div>
         """, unsafe_allow_html=True)
     
+    
     def _setup_controls(self):
         """Setup sidebar controls."""
         with st.sidebar:
@@ -56,8 +57,8 @@ class Dashboard(Analyzer):
                 help="Choose your analysis time period"
             )
             
-            # Calculate date range based on preset
-            end_date = datetime.now().date() - timedelta(days=self.buffer_days)
+            # Calculate date range based on preset - Updated to use 2-day buffer
+            end_date = datetime.now().date() - timedelta(days=2)  # Fixed 2-day buffer
             if date_preset == "Last 7 days":
                 start_date = end_date - timedelta(days=7)
                 self.date_range = (start_date, end_date)
@@ -143,7 +144,7 @@ class Dashboard(Analyzer):
                 if hasattr(self, 'date_range') and len(self.date_range) == 2:
                     days_selected = (self.date_range[1] - self.date_range[0]).days
                     st.write(f"**Period:** {days_selected} days")
-    
+
     def _setup_logging(self):
         """Configure dashboard-specific logging."""
         log_file = Path(self.config.data_paths['logs']) / f"dashboard_{datetime.now().strftime('%Y%m%d')}.log"
@@ -555,11 +556,12 @@ class Dashboard(Analyzer):
                 if len(valid_values) > 0:
                     all_values.extend(valid_values)
                 
-                # Prepare text for display - handle NaN values properly
+                # FIXED: Prepare text for display - Handle NaN values properly without casting warnings
                 text_values = np.where(
                     np.isnan(city_heatmap.values), 
                     '', 
-                    np.round(city_heatmap.values, 0).astype(int).astype(str)
+                    # Use vectorized approach to avoid casting NaN to int
+                    np.vectorize(lambda x: str(int(round(x))) if not np.isnan(x) else '')(city_heatmap.values)
                 )
                 
                 # Add heatmap

@@ -58,7 +58,7 @@ rate_limits:
   backoff_factor: 1.0
   chunk_size_days: 30
   max_fetch_days: 90
-  buffer_days: 5
+  buffer_days: 2
 
 logging:
   level: "INFO"

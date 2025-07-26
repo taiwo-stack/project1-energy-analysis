@@ -69,7 +69,7 @@ class Config:
         # Set default rate limits
         rate_limits = data.get('rate_limits', {})
         rate_limits.setdefault('max_fetch_days', 90)
-        rate_limits.setdefault('buffer_days', 5)
+        rate_limits.setdefault('buffer_days', 2)
         
         return cls(
             api_keys=api_keys,
