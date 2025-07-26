@@ -942,6 +942,68 @@ class Dashboard(Analyzer):
             st.error(f"❌ Geographic map failed: {str(e)}")
             return go.Figure()
     
+    def check_data_freshness(self, df: pd.DataFrame) -> Dict[str, any]:
+        """Check data freshness and flag if we're getting old data."""
+        try:
+            if df.empty:
+                return {
+                    'is_fresh': False,
+                    'latest_date': None,
+                    'days_old': None,
+                    'status': 'No data available',
+                    'warning_level': 'critical'
+                }
+            
+        
+            
+            # Get the most recent date in the dataset
+            latest_date = df['date'].max()
+            if isinstance(latest_date, pd.Timestamp):
+                latest_date = latest_date.date()
+            current_date = datetime.now().date()
+
+            # Calculate how many days old the data is
+            days_old = (current_date - latest_date).days
+
+
+
+
+            # Define freshness thresholds
+            if days_old <= 1:
+                status = 'Fresh - data is current'
+                warning_level = 'good'
+                is_fresh = True
+            elif days_old <= 3:
+                status = 'Slightly stale - data is 2-3 days old'
+                warning_level = 'warning'
+                is_fresh = True
+            elif days_old <= 7:
+                status = 'Stale - data is up to a week old'
+                warning_level = 'warning'
+                is_fresh = False
+            else:
+                status = 'Very stale - data is over a week old'
+                warning_level = 'critical'
+                is_fresh = False
+            
+            return {
+                'is_fresh': is_fresh,
+                'latest_date': latest_date.strftime('%Y-%m-%d'),
+                'days_old': days_old,
+                'status': status,
+                'warning_level': warning_level
+            }
+            
+        except Exception as e:
+            logger.error(f"Failed to check data freshness: {str(e)}")
+            return {
+                'is_fresh': False,
+                'latest_date': None,
+                'days_old': None,
+                'status': f'Error checking freshness: {str(e)}',
+                'warning_level': 'critical'
+            }
+    
     def _show_summary_metrics(self, df: pd.DataFrame):
         """Show key summary metrics at the top."""
         if df.empty:
@@ -991,25 +1053,35 @@ class Dashboard(Analyzer):
                 st.markdown("### 📈 Recent Energy Changes")
                 
                 # Show top 4 changes
+                # Show top 4 changes
                 sorted_changes = sorted(
                     last_day_changes.items(), 
                     key=lambda x: abs(x[1]['pct_change']), 
                     reverse=True
                 )
-                
+
                 change_cols = st.columns(min(5, len(sorted_changes)))
                 for idx, (city, change_data) in enumerate(sorted_changes[:5]):
                     with change_cols[idx]:
-                        delta_color = "normal" if abs(change_data['pct_change']) < 5 else "inverse"
+                        pct_change = change_data['pct_change']
+                        
                         days_gap_text = f" ({change_data['days_between']}d)" if change_data['days_between'] > 1 else ""
+                        
+                        # Try without the + sign and see if that helps
+                        delta_text = f"{pct_change:.1f}%" if pct_change >= 0 else f"{pct_change:.1f}%"
+                        
                         st.metric(
                             f"{city}{days_gap_text}",
                             f"{change_data['latest_usage']:,.0f} MWh",
-                            delta=f"{change_data['pct_change']:+.1f}%",
-                            
+                            delta=delta_text,
+                            delta_color="inverse",
                             help=f"Change from {change_data['previous_date']} to {change_data['latest_date']}"
                         )
-                
+                        
+                        
+
+
+
                 # Expandable section for all changes
                 if len(last_day_changes) > 4:
                     with st.expander(f"📋 View All {len(last_day_changes)} Cities' Changes"):
@@ -1027,7 +1099,7 @@ class Dashboard(Analyzer):
                         st.dataframe(change_df, use_container_width=True, hide_index=True)
     
     def _show_data_quality(self, df: pd.DataFrame):
-        """Display data quality report if enabled."""
+        """Display enhanced data quality report including data freshness."""
         if not self.show_quality or df.empty:
             return
         
@@ -1035,22 +1107,75 @@ class Dashboard(Analyzer):
             quality_report = self.generate_data_quality_report(df)
             summary = quality_report['summary']
             
-            # Quality metrics
-            col1, col2, col3 = st.columns(3)
+            # Check data freshness
+            freshness_info = self.check_data_freshness(df)
+            
+            # Quality metrics - now including freshness
+            col1, col2, col3, col4 = st.columns(4)
             with col1:
                 st.metric("📊 Total Records", summary['total_rows'])
             with col2:
                 st.metric("❌ Missing Values", summary['missing_values'])
             with col3:
                 st.metric("⚠️ Outliers", summary['outliers'])
+            with col4:
+                # Data freshness metric with color coding
+                if freshness_info['warning_level'] == 'good':
+                    st.metric("🟢 Data Freshness", "Fresh", delta=f"{freshness_info['days_old']} days old")
+                elif freshness_info['warning_level'] == 'warning':
+                    st.metric("🟡 Data Freshness", "Stale", delta=f"{freshness_info['days_old']} days old")
+                else:
+                    st.metric("🔴 Data Freshness", "Very Stale", delta=f"{freshness_info['days_old']} days old")
+            
+            # Freshness details
+            st.markdown("#### 📅 Data Freshness Analysis")
+            
+            # Show freshness status with appropriate styling
+            if freshness_info['warning_level'] == 'good':
+                st.success(f"✅ **{freshness_info['status']}**")
+            elif freshness_info['warning_level'] == 'warning':
+                st.warning(f"⚠️ **{freshness_info['status']}**")
+            else:
+                st.error(f"🚨 **{freshness_info['status']}**")
+            
+            # Additional freshness details
+            if freshness_info['latest_date']:
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    st.info(f"**Latest Data:** {freshness_info['latest_date']}")
+                with col_b:
+                    st.info(f"**Current Date:** {datetime.now().strftime('%Y-%m-%d')}")
             
             # Issues found
+            st.markdown("#### 🚨 Quality Issues")
+            all_issues = []
+            
+            # Add freshness issues
+            if not freshness_info['is_fresh']:
+                if freshness_info['days_old'] and freshness_info['days_old'] > 7:
+                    all_issues.append(f"⏱️ Data is {freshness_info['days_old']} days old - consider refreshing data sources")
+                elif freshness_info['days_old'] and freshness_info['days_old'] > 3:
+                    all_issues.append(f"⏱️ Data is {freshness_info['days_old']} days old - may impact real-time insights")
+            
+            # Add existing quality issues
             if quality_report['issues']:
-                st.markdown("**🚨 Issues Found:**")
-                for issue in quality_report['issues']:
+                all_issues.extend(quality_report['issues'])
+            
+            if all_issues:
+                for issue in all_issues:
                     st.write(f"• {issue}")
             else:
                 st.success("✅ No data quality issues detected!")
+            
+            # Recommendations based on freshness
+            if freshness_info['days_old'] and freshness_info['days_old'] > 1:
+                st.markdown("#### 💡Insight ")
+                if freshness_info['days_old'] > 7:
+                    st.write("• 📞 **Action:** Check data pipeline and API connections")
+                elif freshness_info['days_old'] > 3:
+                    st.write("• 📈 **Impact:** Recent trends may not be fully captured")
+                else:
+                    st.write("• 🔄 **Stale reason:** Data is 2 days delayed to wait for data availability before fetching")
     
     def display(self):
         """Main dashboard display method with improved layout."""
