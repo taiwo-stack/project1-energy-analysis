@@ -1285,6 +1285,51 @@ def should_run_pipeline(config):
         logger.warning(f"Pipeline check failed: {e}")
         return True  # Run pipeline if check fails
 
+def auto_push_to_github():
+    """Automatically push updated data to GitHub after pipeline success."""
+    import subprocess
+    import os
+    from datetime import datetime
+    
+    try:
+        # Check if we're in a git repository
+        result = subprocess.run(['git', 'status'], capture_output=True, text=True, cwd=os.getcwd())
+        if result.returncode != 0:
+            print("Not in a git repository or git not available")
+            return False, "Not in a git repository"
+        
+        # Check if there are any changes to commit
+        status_result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+        if not status_result.stdout.strip():
+            print("No changes to commit")
+            return True, "No changes to commit"
+        
+        # Add updated files (focus on data directories)
+        add_result = subprocess.run(['git', 'add', 'data/'], capture_output=True, text=True)
+        if add_result.returncode != 0:
+            return False, f"Failed to add files: {add_result.stderr}"
+        
+        # Commit with timestamp
+        commit_msg = f"Auto-update data: pipeline run {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        commit_result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)
+        
+        if commit_result.returncode != 0:
+            # Check if it's because there were no changes to commit
+            if "nothing to commit" in commit_result.stdout:
+                return True, "No changes to commit"
+            return False, f"Failed to commit: {commit_result.stderr}"
+        
+        # Push to origin
+        push_result = subprocess.run(['git', 'push'], capture_output=True, text=True)
+        if push_result.returncode != 0:
+            return False, f"Failed to push: {push_result.stderr}"
+        
+        print(f"Successfully pushed to GitHub: {commit_msg}")
+        return True, "Successfully pushed to GitHub"
+        
+    except Exception as e:
+        return False, f"Git operation failed: {str(e)}"
+
 def run_pipeline_with_progress():
     """Run pipeline with animated progress bar and engaging messages."""
     import subprocess
@@ -1474,6 +1519,21 @@ def main():
                 result_placeholder.success("✅ Data pipeline completed successfully!")
                 st.balloons()  # Celebration animation!
                 st.session_state.show_success_message = True
+                
+                # Attempt automatic GitHub push
+                push_status_placeholder = st.empty()
+                push_status_placeholder.info("📤 Pushing updated data to GitHub...")
+                
+                git_success, git_message = auto_push_to_github()
+                push_status_placeholder.empty()  # Clear the pushing message
+                
+                if git_success:
+                    if "No changes to commit" not in git_message:
+                        st.success("🚀 Successfully pushed updated data to GitHub!")
+                        st.info("🔄 Your Streamlit app will redeploy automatically with new data")
+                else:
+                    st.warning(f"⚠️ Pipeline succeeded but GitHub push failed: {git_message}")
+                    st.info("💡 You may need to manually push: `git add data/ && git commit -m 'Update data' && git push`")
             else:
                 result_placeholder.error(f"❌ Pipeline failed: {result.stderr}")
             
@@ -1502,6 +1562,21 @@ def main():
                 result_placeholder.success("✅ Data pipeline completed successfully!")
                 st.balloons()  # Celebration animation!
                 st.session_state.show_success_message = True
+                
+                # Attempt automatic GitHub push
+                push_status_placeholder = st.empty()
+                push_status_placeholder.info("📤 Pushing updated data to GitHub...")
+                
+                git_success, git_message = auto_push_to_github()
+                push_status_placeholder.empty()  # Clear the pushing message
+                
+                if git_success:
+                    if "No changes to commit" not in git_message:
+                        st.success("🚀 Successfully pushed updated data to GitHub!")
+                        st.info("🔄 Your Streamlit app will redeploy automatically with new data")
+                else:
+                    st.warning(f"⚠️ Pipeline succeeded but GitHub push failed: {git_message}")
+                    st.info("💡 You may need to manually push: `git add data/ && git commit -m 'Update data' && git push`")
             else:
                 result_placeholder.error(f"❌ Pipeline failed: {result.stderr}")
             
