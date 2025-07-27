@@ -1440,41 +1440,87 @@ def run_pipeline_with_progress():
 
 def main():
     """Main entry point for the dashboard."""
+    import time
+    
     try:
         config = Config.load()
         
+        # Initialize session state for message timing
+        if 'message_timestamp' not in st.session_state:
+            st.session_state.message_timestamp = None
+        if 'show_success_message' not in st.session_state:
+            st.session_state.show_success_message = False
+            
         # Check for manual refresh trigger
         if st.session_state.get('manual_refresh', False):
             st.session_state.manual_refresh = False  # Reset the trigger
-            st.info("🚀 Manually refreshing data pipeline...")
+            
+            # Create placeholder for the manual refresh message
+            manual_refresh_placeholder = st.empty()
+            manual_refresh_placeholder.info("🚀 Manually refreshing data pipeline...")
             
             # Run pipeline with animated progress
             result = run_pipeline_with_progress()
             
+            # Clear the manual refresh message
+            manual_refresh_placeholder.empty()
+            
+            # Create placeholder for success/error message
+            result_placeholder = st.empty()
+            
             if isinstance(result, Exception):
-                st.error(f"❌ Pipeline failed: {str(result)}")
+                result_placeholder.error(f"❌ Pipeline failed: {str(result)}")
             elif result.returncode == 0:
-                st.success("✅ Data pipeline completed successfully!")
+                result_placeholder.success("✅ Data pipeline completed successfully!")
                 st.balloons()  # Celebration animation!
+                st.session_state.show_success_message = True
             else:
-                st.error(f"❌ Pipeline failed: {result.stderr}")
+                result_placeholder.error(f"❌ Pipeline failed: {result.stderr}")
+            
+            # Set timestamp for message auto-hide (only for success messages)
+            if st.session_state.show_success_message:
+                st.session_state.message_timestamp = time.time()
         
         # Check if pipeline should run automatically (only if data is 3+ days old)
         elif should_run_pipeline(config):
-            st.info("🚀 Auto-updating data pipeline (data is 3+ days old)...")
+            # Create placeholder for the auto-update message
+            auto_refresh_placeholder = st.empty()
+            auto_refresh_placeholder.info("🚀 Auto-updating data pipeline (data is 3+ days old)...")
             
             # Run pipeline with animated progress
             result = run_pipeline_with_progress()
             
+            # Clear the auto-update message
+            auto_refresh_placeholder.empty()
+            
+            # Create placeholder for success/error message
+            result_placeholder = st.empty()
+            
             if isinstance(result, Exception):
-                st.error(f"❌ Pipeline failed: {str(result)}")
+                result_placeholder.error(f"❌ Pipeline failed: {str(result)}")
             elif result.returncode == 0:
-                st.success("✅ Data pipeline completed successfully!")
+                result_placeholder.success("✅ Data pipeline completed successfully!")
                 st.balloons()  # Celebration animation!
+                st.session_state.show_success_message = True
             else:
-                st.error(f"❌ Pipeline failed: {result.stderr}")
-        else:
-            # Show data status and manual refresh option
+                result_placeholder.error(f"❌ Pipeline failed: {result.stderr}")
+            
+            # Set timestamp for message auto-hide (only for success messages)
+            if st.session_state.show_success_message:
+                st.session_state.message_timestamp = time.time()
+        
+        # Check if success message should be hidden after 5 seconds
+        if (st.session_state.show_success_message and 
+            st.session_state.message_timestamp and 
+            time.time() - st.session_state.message_timestamp > 5):
+            st.session_state.show_success_message = False
+            st.session_state.message_timestamp = None
+            # Clear any cached data to ensure fresh data is loaded
+            st.cache_data.clear()
+            st.rerun()  # Refresh to hide the message and reload with fresh data
+        
+        # Show data status and manual refresh option (only if no success message is showing)
+        if not st.session_state.show_success_message:
             col1, col2 = st.columns([3, 1])
             with col1:
                 st.info("📊 Using existing data (updated within last 3 days)")
