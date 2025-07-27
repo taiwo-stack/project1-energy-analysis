@@ -1,0 +1,4 @@
+2025-07-27 00:54:10.150 | INFO     | __main__:<module>:276 - Pipeline script started
+2025-07-27 00:54:10.150 | ERROR    | config:load:48 - Configuration file not found: config/config.yaml
+2025-07-27 00:54:10.150 | ERROR    | __main__:<module>:320 - Pipeline script failed with critical error: Configuration file not found: config/config.yaml
+2025-07-27 00:54:10.156 | INFO     | __main__:<module>:323 - Pipeline script finished

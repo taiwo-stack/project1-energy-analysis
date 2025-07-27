@@ -1227,12 +1227,46 @@ class Dashboard(Analyzer):
             heatmap_fig = self.create_heatmap(filtered_data, self.selected_cities)
             st.plotly_chart(heatmap_fig, use_container_width=True)
 
+def check_pipeline_exists():
+    """Check if pipeline.py exists and return its path."""
+    from pathlib import Path
+    import os
+    
+    # Get the actual current working directory
+    current_dir = Path.cwd()
+    
+    # List of possible locations for pipeline.py
+    possible_paths = [
+        current_dir / "pipeline.py",  # Current directory (src)
+        current_dir / "src" / "pipeline.py",  # In case we're in parent dir
+        current_dir.parent / "src" / "pipeline.py",  # Parent/src structure
+        Path(__file__).parent / "pipeline.py" if '__file__' in globals() else current_dir / "pipeline.py",
+    ]
+    
+    # Debug: show where we're looking
+    print(f"Current working directory: {current_dir}")
+    print(f"Looking for pipeline.py in these locations:")
+    for i, path in enumerate(possible_paths, 1):
+        exists = path.exists()
+        print(f"  {i}. {path} {'✓' if exists else '✗'}")
+        if exists:
+            return path, True
+    
+    return possible_paths[0], False  # Return first path as default, but indicate not found
+
 def should_run_pipeline(config):
     """Check if pipeline should run based on data freshness (3+ days)."""
     try:
         from pathlib import Path
         import os
         from datetime import datetime
+        
+        # First check if pipeline.py exists
+        pipeline_path, exists = check_pipeline_exists()
+        if not exists:
+            st.warning(f"⚠️ pipeline.py not found at expected location: {pipeline_path}")
+            st.info("Please make sure pipeline.py is in the same directory as your main script.")
+            return False  # Don't try to run if file doesn't exist
         
         data_dir = Path(config.data_paths.get('processed', 'data/processed'))
         if not data_dir.exists():
@@ -1252,11 +1286,13 @@ def should_run_pipeline(config):
         return True  # Run pipeline if check fails
 
 def run_pipeline_with_progress():
-    """Run pipeline with animated progress bar."""
+    """Run pipeline with animated progress bar and engaging messages."""
     import subprocess
     import sys
     import threading
     import time
+    import random
+    from pathlib import Path
     
     # Create progress bar and status placeholders
     progress_bar = st.progress(0)
@@ -1266,12 +1302,88 @@ def run_pipeline_with_progress():
     progress_value = 0
     pipeline_complete = False
     pipeline_result = None
+    message_index = 0
+    
+    # Engaging messages for different stages
+    progress_messages = [
+        # 0-10%: Starting up
+        "🚀 Initializing data pipeline...",
+        "📡 Connecting to data sources...",
+        "🔍 Scanning for available datasets...",
+        
+        # 10-30%: Data fetching
+        "📊 Fetching energy consumption data...",
+        "🌡️ Downloading weather information...",
+        "📈 Retrieving historical trends...",
+        "🔄 Synchronizing data streams...",
+        
+        # 30-50%: Processing
+        "⚙️ Processing raw data files...",
+        "🧹 Cleaning and validating datasets...",
+        "🔗 Linking weather and energy data...",
+        "📏 Normalizing data formats...",
+        
+        # 50-70%: Analysis
+        "🔬 Analyzing consumption patterns...",
+        "📊 Computing statistical correlations...",
+        "🎯 Identifying peak usage periods...",
+        "🌟 Detecting seasonal trends...",
+        
+        # 70-90%: Finalization
+        "💾 Saving processed datasets...",
+        "📋 Generating summary reports...",
+        "🔧 Optimizing data structures...",
+        "✨ Preparing visualizations...",
+        
+        # 90-95%: Final steps
+        "🎨 Finalizing dashboard components...",
+        "🔍 Running quality checks...",
+        "📦 Packaging results..."
+    ]
     
     def run_pipeline():
         nonlocal pipeline_complete, pipeline_result
         try:
-            pipeline_result = subprocess.run([sys.executable, "pipeline.py"], 
-                                           capture_output=True, text=True)
+            # Get the pipeline path
+            pipeline_path, exists = check_pipeline_exists()
+            
+            if not exists:
+                raise FileNotFoundError(f"pipeline.py not found at any expected location")
+            
+            print(f"Found pipeline.py at: {pipeline_path}")
+            
+            # Set working directory to where pipeline.py is located
+            working_dir = pipeline_path.parent
+            print(f"Running pipeline from directory: {working_dir}")
+            
+            # Check if config directory exists in the working directory
+            config_dir = working_dir / "config"
+            if not config_dir.exists():
+                # Try to find config directory in parent or other locations
+                possible_config_dirs = [
+                    working_dir.parent / "config",  # Parent directory
+                    working_dir / ".." / "config",  # Relative parent
+                    Path.cwd() / "config",  # Current working directory
+                ]
+                
+                for config_path in possible_config_dirs:
+                    if config_path.exists():
+                        print(f"Found config directory at: {config_path.resolve()}")
+                        # Update working directory to parent of config
+                        working_dir = config_path.parent
+                        break
+                else:
+                    print(f"Warning: config directory not found. Searched in:")
+                    for cp in [config_dir] + possible_config_dirs:
+                        print(f"  - {cp}")
+            
+            # Run pipeline with correct working directory
+            pipeline_result = subprocess.run(
+                [sys.executable, str(pipeline_path)], 
+                capture_output=True, 
+                text=True, 
+                cwd=str(working_dir)
+            )
             pipeline_complete = True
         except Exception as e:
             pipeline_result = e
@@ -1281,21 +1393,42 @@ def run_pipeline_with_progress():
     pipeline_thread = threading.Thread(target=run_pipeline)
     pipeline_thread.start()
     
-    # Animate progress bar
+    # Animate progress bar - much slower for 2-3 minute process
+    start_time = time.time()
     while not pipeline_complete:
-        progress_value = min(progress_value + 2, 95)  # Increment by 2%, cap at 95%
-        progress_bar.progress(progress_value)
+        elapsed_time = time.time() - start_time
         
-        # Update status message with rotating animation
-        dots = "." * ((int(time.time() * 2) % 3) + 1)
-        status_text.text(f"🔄 Processing data pipeline{dots} ({progress_value}%)")
+        # Slower, more realistic progress calculation
+        # Assume 150 seconds (2.5 minutes) total time
+        expected_duration = 150  # seconds
+        time_based_progress = min(int((elapsed_time / expected_duration) * 90), 90)  # Cap at 90%
         
-        time.sleep(0.1)  # Small delay for smooth animation
+        # Gradual increment with some randomness
+        if progress_value < time_based_progress:
+            progress_value = min(progress_value + random.uniform(0.5, 1.5), time_based_progress)
+        
+        # Update progress bar
+        progress_bar.progress(int(progress_value))
+        
+        # Update message based on progress
+        message_stage = min(int(progress_value / 4), len(progress_messages) - 1)
+        if message_stage != message_index:
+            message_index = message_stage
+        
+        current_message = progress_messages[message_index]
+        
+        # Add animated dots and time info
+        dots = "." * ((int(elapsed_time * 2) % 3) + 1)
+        elapsed_str = f"{int(elapsed_time//60)}:{int(elapsed_time%60):02d}"
+        
+        status_text.text(f"{current_message}{dots} ({int(progress_value)}%) - {elapsed_str}")
+        
+        time.sleep(0.8)  # Slower update interval
     
     # Complete the progress bar
     progress_bar.progress(100)
-    status_text.text("🔄 Finalizing... (100%)")
-    time.sleep(0.5)  # Brief pause to show completion
+    status_text.text("🎉 Pipeline completed successfully! (100%)")
+    time.sleep(1)  # Brief pause to show completion
     
     # Clear progress indicators
     progress_bar.empty()
@@ -1310,9 +1443,25 @@ def main():
     try:
         config = Config.load()
         
-        # Check if pipeline should run (only if data is 3+ days old)
-        if should_run_pipeline(config):
-            st.info("🚀 Updating data pipeline...")
+        # Check for manual refresh trigger
+        if st.session_state.get('manual_refresh', False):
+            st.session_state.manual_refresh = False  # Reset the trigger
+            st.info("🚀 Manually refreshing data pipeline...")
+            
+            # Run pipeline with animated progress
+            result = run_pipeline_with_progress()
+            
+            if isinstance(result, Exception):
+                st.error(f"❌ Pipeline failed: {str(result)}")
+            elif result.returncode == 0:
+                st.success("✅ Data pipeline completed successfully!")
+                st.balloons()  # Celebration animation!
+            else:
+                st.error(f"❌ Pipeline failed: {result.stderr}")
+        
+        # Check if pipeline should run automatically (only if data is 3+ days old)
+        elif should_run_pipeline(config):
+            st.info("🚀 Auto-updating data pipeline (data is 3+ days old)...")
             
             # Run pipeline with animated progress
             result = run_pipeline_with_progress()
@@ -1325,7 +1474,14 @@ def main():
             else:
                 st.error(f"❌ Pipeline failed: {result.stderr}")
         else:
-            st.info("📊 Using existing data (updated within last 3 days)")
+            # Show data status and manual refresh option
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.info("📊 Using existing data (updated within last 3 days)")
+            with col2:
+                if st.button("🔄 Refresh Now", key="manual_refresh_btn", help="Manually refresh data pipeline"):
+                    st.session_state.manual_refresh = True
+                    st.rerun()
             
         dashboard = Dashboard(config)
         dashboard.display()
