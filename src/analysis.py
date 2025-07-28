@@ -126,8 +126,11 @@ class Analyzer:
             logger.error(f"Failed to load data: {str(e)}")
             return pd.DataFrame()
     
+    
+
+
     def calculate_correlations(self, df: pd.DataFrame, selected_cities: List[str] = None) -> Dict[str, float]:
-        """Calculate correlations between temperature and energy demand by city."""
+        """Calculate correlations between temperature and energy demand by city with improved accuracy."""
         try:
             if df.empty:
                 logger.warning("No data for correlation calculation")
@@ -142,15 +145,24 @@ class Analyzer:
             
             df = df.copy()
             
-            # Handle temperature_avg creation if needed
-            if df['temperature_avg'].isna().all():
-                logger.info("All temperature_avg values are NaN, attempting to recreate from other columns")
+            # Improved temperature_avg handling with better fallback logic
+            if df['temperature_avg'].isna().all() or 'temperature_avg' not in df.columns:
+                logger.info("Creating temperature_avg from available temperature data")
                 if 'temperature_max' in df.columns and 'temperature_min' in df.columns:
+                    # Use both min and max for more accurate average
                     df['temperature_avg'] = (df['temperature_max'] + df['temperature_min']) / 2
+                    logger.debug("Created temperature_avg from temperature_max and temperature_min")
                 elif 'temperature_max' in df.columns:
-                    df['temperature_avg'] = df['temperature_max']
+                    # Use max but apply correction factor (typically 5-8°F higher than average)
+                    df['temperature_avg'] = df['temperature_max'] - 5  # Conservative correction
+                    logger.debug("Using temperature_max minus 5°F as temperature_avg approximation")
                 elif 'temperature_min' in df.columns:
-                    df['temperature_avg'] = df['temperature_min']
+                    # Use min but apply correction factor (typically 10-15°F lower than average)
+                    df['temperature_avg'] = df['temperature_min'] + 12  # Conservative correction
+                    logger.debug("Using temperature_min plus 12°F as temperature_avg approximation")
+                else:
+                    df['temperature_avg'] = np.nan
+                    logger.warning("No temperature columns found, setting temperature_avg to NaN")
             
             correlations = {}
             
@@ -163,28 +175,62 @@ class Analyzer:
                 logger.info(f"Processing correlations for selected cities: {cities_to_process}")
             
             for city in cities_to_process:
-                city_df = df[df['city'] == city].dropna(subset=['temperature_avg', 'energy_demand'])
+                city_df = df[df['city'] == city].copy()
                 
-                if len(city_df) < 2:
-                    logger.warning(f"Insufficient data for correlation in {city}: {len(city_df)} records")
+                # Remove outliers that could skew correlation (using IQR method)
+                for col in ['temperature_avg', 'energy_demand']:
+                    if col in city_df.columns:
+                        Q1 = city_df[col].quantile(0.25)
+                        Q3 = city_df[col].quantile(0.75)
+                        IQR = Q3 - Q1
+                        lower_bound = Q1 - 1.5 * IQR
+                        upper_bound = Q3 + 1.5 * IQR
+                        
+                        # Log outliers before removal
+                        outliers = city_df[(city_df[col] < lower_bound) | (city_df[col] > upper_bound)]
+                        if len(outliers) > 0:
+                            logger.debug(f"Removing {len(outliers)} outliers in {col} for {city}")
+                        
+                        city_df = city_df[(city_df[col] >= lower_bound) & (city_df[col] <= upper_bound)]
+                
+                # Final data cleaning
+                city_df = city_df.dropna(subset=['temperature_avg', 'energy_demand'])
+                
+                # Require minimum data points for reliable correlation
+                min_points = max(10, len(df[df['city'] == city]) * 0.7)  # At least 10 points or 70% of original data
+                if len(city_df) < min_points:
+                    logger.warning(f"Insufficient data for reliable correlation in {city}: {len(city_df)} records (need {min_points:.0f})")
                     correlations[city] = np.nan
                     continue
                 
                 try:
-                    corr = city_df['temperature_avg'].corr(city_df['energy_demand'])
-                    correlations[city] = round(corr, 3) if not np.isnan(corr) else np.nan
-                    logger.debug(f"Correlation for {city}: {corr:.3f} (based on {len(city_df)} records)")
+                    # Calculate Pearson correlation with significance test
+                    from scipy.stats import pearsonr
+                    corr_coef, p_value = pearsonr(city_df['temperature_avg'], city_df['energy_demand'])
+                    
+                    # Only use correlation if it's statistically significant (p < 0.05)
+                    if p_value < 0.05:
+                        correlations[city] = round(corr_coef, 3)
+                        logger.debug(f"Correlation for {city}: {corr_coef:.3f} (p={p_value:.4f}, n={len(city_df)}) - Significant")
+                    else:
+                        correlations[city] = np.nan
+                        logger.debug(f"Correlation for {city}: {corr_coef:.3f} (p={p_value:.4f}, n={len(city_df)}) - Not significant")
+                        
                 except Exception as corr_error:
                     logger.warning(f"Correlation calculation failed for {city}: {str(corr_error)}")
                     correlations[city] = np.nan
             
-            logger.info(f"Calculated correlations for {len(correlations)} cities")
+            # Log summary statistics
+            valid_corrs = [v for v in correlations.values() if not np.isnan(v)]
+            if valid_corrs:
+                logger.info(f"Calculated {len(valid_corrs)} significant correlations. Range: {min(valid_corrs):.3f} to {max(valid_corrs):.3f}")
+            
             return correlations
             
         except Exception as e:
             logger.error(f"Failed to calculate correlations: {str(e)}")
             return {}
-    
+        
     def calculate_regression(self, df: pd.DataFrame, selected_cities: List[str] = None) -> Dict[str, Dict[str, float]]:
         """Calculate linear regression stats for temperature vs. energy demand."""
         try:
