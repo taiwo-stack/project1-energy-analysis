@@ -1,5 +1,7 @@
 """Interactive Streamlit dashboard for weather and energy visualizations."""
-
+import subprocess
+import os
+import tempfile
 import streamlit as st
 from streamlit.runtime.caching import cache_data
 import pandas as pd
@@ -12,6 +14,10 @@ from config import Config
 from analysis import Analyzer
 from loguru import logger
 from pathlib import Path
+
+
+
+
 
 class Dashboard(Analyzer):
     """Interactive dashboard extending Analyzer for visualizations."""
@@ -1483,6 +1489,123 @@ def run_pipeline_with_progress():
     pipeline_thread.join()  # Ensure thread completes
     return pipeline_result
 
+
+
+
+def setup_git_credentials(github_token, username, email):
+    """Setup git credentials for authentication"""
+    try:
+        # Configure git user (use --global to ensure it's set)
+        subprocess.run(['git', 'config', '--global', 'user.name', username], check=True)
+        subprocess.run(['git', 'config', '--global', 'user.email', email], check=True)
+        
+        # Also set local config as backup
+        subprocess.run(['git', 'config', 'user.name', username], check=True)
+        subprocess.run(['git', 'config', 'user.email', email], check=True)
+        
+        # Setup token authentication
+        subprocess.run([
+            'git', 'config', 'credential.helper', 
+            f'store --file=/tmp/git-credentials'
+        ], check=True)
+        
+        # Store credentials
+        with open('/tmp/git-credentials', 'w') as f:
+            f.write(f'https://{username}:{github_token}@github.com\n')
+        
+        return True
+    except subprocess.CalledProcessError as e:
+        return False
+
+def push_to_github_safe(file_paths, commit_message):
+    """
+    Safely push files to GitHub with proper error handling
+    Returns (success: bool, message: str)
+    """
+    try:
+        # Get credentials from Streamlit secrets
+        github_token = st.secrets.get("GITHUB_TOKEN", "")
+        github_username = st.secrets.get("GITHUB_USERNAME", "")
+        github_email = st.secrets.get("GITHUB_EMAIL", "")
+        
+        if not all([github_token, github_username, github_email]):
+            return False, "GitHub credentials not configured in Streamlit secrets"
+        
+        # Setup credentials
+        if not setup_git_credentials(github_token, github_username, github_email):
+            return False, "Failed to setup git credentials"
+        
+        # Add files
+        files_added = []
+        for file_path in file_paths:
+            if os.path.exists(file_path):
+                result = subprocess.run(['git', 'add', file_path], 
+                                      capture_output=True, text=True)
+                if result.returncode == 0:
+                    files_added.append(file_path)
+                else:
+                    return False, f"Failed to add {file_path}: {result.stderr}"
+            # Don't fail if file doesn't exist, just skip it
+        
+        if not files_added:
+            return True, "No files to commit"
+        
+        # Check if there are changes to commit
+        result = subprocess.run(['git', 'diff', '--cached', '--quiet'], 
+                              capture_output=True)
+        if result.returncode == 0:
+            return True, "No changes to commit"
+        
+        # Commit changes with explicit author
+        result = subprocess.run([
+            'git', 'commit', 
+            '-m', commit_message,
+            '--author', f'{github_username} <{github_email}>'
+        ], capture_output=True, text=True)
+        
+        if result.returncode != 0:
+            return False, f"Failed to commit: {result.stderr}"
+        
+        # Push to GitHub
+        result = subprocess.run([
+            'git', 'push', 'origin', 'main'
+        ], capture_output=True, text=True)
+        
+        if result.returncode != 0:
+            return False, f"Failed to push: {result.stderr}"
+        
+        return True, f"Successfully committed and pushed {len(files_added)} files"
+        
+    except Exception as e:
+        return False, f"Error during git operations: {str(e)}"
+    finally:
+        # Clean up credentials file
+        if os.path.exists('/tmp/git-credentials'):
+            try:
+                os.remove('/tmp/git-credentials')
+            except:
+                pass
+
+def auto_push_to_github():
+    """
+    Enhanced version of your existing auto_push_to_github function
+    Returns (success: bool, message: str)
+    """
+    # Define files that might be created/updated by your pipeline
+    potential_files = [
+        "data/processed_data.csv",
+        "data/weather_data.csv", 
+        "data/energy_data.csv",
+        "data/analysis_results.json",
+        "logs/pipeline.log",
+        "results/",
+    ]
+    
+    # Create commit message with timestamp
+    commit_msg = f"Auto-update data pipeline - {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}"
+    
+    return push_to_github_safe(potential_files, commit_msg)
+
 def main():
     """Main entry point for the dashboard."""
     import time
@@ -1520,7 +1643,7 @@ def main():
                 st.balloons()  # Celebration animation!
                 st.session_state.show_success_message = True
                 
-                # Attempt automatic GitHub push
+                # Attempt automatic GitHub push with improved error handling
                 push_status_placeholder = st.empty()
                 push_status_placeholder.info("📤 Pushing updated data to GitHub...")
                 
@@ -1528,12 +1651,33 @@ def main():
                 push_status_placeholder.empty()  # Clear the pushing message
                 
                 if git_success:
-                    if "No changes to commit" not in git_message:
+                    if "No changes to commit" not in git_message and "No files to commit" not in git_message:
                         st.success("🚀 Successfully pushed updated data to GitHub!")
                         st.info("🔄 Your Streamlit app will redeploy automatically with new data")
+                    else:
+                        st.info("📝 Pipeline completed - no new changes to push to GitHub")
                 else:
                     st.warning(f"⚠️ Pipeline succeeded but GitHub push failed: {git_message}")
-                    st.info("💡 You may need to manually push: `git add data/ && git commit -m 'Update data' && git push`")
+                    st.info("💡 You may need to check your GitHub credentials in Streamlit secrets")
+                    
+                    # Add debug button for troubleshooting
+                    if st.button("🔍 Debug GitHub Config", key="debug_git"):
+                        st.write("**GitHub Configuration Debug:**")
+                        token_present = bool(st.secrets.get("GITHUB_TOKEN", ""))
+                        username_present = bool(st.secrets.get("GITHUB_USERNAME", ""))
+                        email_present = bool(st.secrets.get("GITHUB_EMAIL", ""))
+                        
+                        st.write(f"- Token configured: {'✅' if token_present else '❌'}")
+                        st.write(f"- Username configured: {'✅' if username_present else '❌'}")
+                        st.write(f"- Email configured: {'✅' if email_present else '❌'}")
+                        
+                        if not all([token_present, username_present, email_present]):
+                            st.error("Please configure all GitHub credentials in Streamlit secrets:")
+                            st.code("""
+GITHUB_TOKEN = "your_github_token_here"
+GITHUB_USERNAME = "your_github_username"
+GITHUB_EMAIL = "your_email@example.com"
+                            """)
             else:
                 result_placeholder.error(f"❌ Pipeline failed: {result.stderr}")
             
@@ -1563,7 +1707,7 @@ def main():
                 st.balloons()  # Celebration animation!
                 st.session_state.show_success_message = True
                 
-                # Attempt automatic GitHub push
+                # Attempt automatic GitHub push with improved error handling
                 push_status_placeholder = st.empty()
                 push_status_placeholder.info("📤 Pushing updated data to GitHub...")
                 
@@ -1571,12 +1715,14 @@ def main():
                 push_status_placeholder.empty()  # Clear the pushing message
                 
                 if git_success:
-                    if "No changes to commit" not in git_message:
+                    if "No changes to commit" not in git_message and "No files to commit" not in git_message:
                         st.success("🚀 Successfully pushed updated data to GitHub!")
                         st.info("🔄 Your Streamlit app will redeploy automatically with new data")
+                    else:
+                        st.info("📝 Pipeline completed - no new changes to push to GitHub")
                 else:
                     st.warning(f"⚠️ Pipeline succeeded but GitHub push failed: {git_message}")
-                    st.info("💡 You may need to manually push: `git add data/ && git commit -m 'Update data' && git push`")
+                    st.info("💡 You may need to check your GitHub credentials in Streamlit secrets")
             else:
                 result_placeholder.error(f"❌ Pipeline failed: {result.stderr}")
             
