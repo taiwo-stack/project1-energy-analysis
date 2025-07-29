@@ -1744,7 +1744,7 @@ GITHUB_EMAIL = "your_email@example.com"
         if not st.session_state.show_success_message:
             col1, col2 = st.columns([3, 1])
             with col1:
-                st.info("📊 Using existing data (updated within last 3 days)")
+                st.info("📊 Using existing data (updated within last 3 days) >>> You can refresh here >> Note::  up 10min to complete")
             with col2:
                 if st.button("🔄 Refresh Now", key="manual_refresh_btn", help="Manually refresh data pipeline"):
                     st.session_state.manual_refresh = True
