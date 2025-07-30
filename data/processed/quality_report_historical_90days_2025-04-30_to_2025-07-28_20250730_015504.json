@@ -1,0 +1,28 @@
+{
+  "total_datasets_checked": 15,
+  "datasets_passed": 3,
+  "pass_rate_percent": 20.0,
+  "total_data_rows": 450,
+  "total_missing_values": 12,
+  "total_outliers": 0,
+  "all_issues": [
+    "Data is stale: 63 days old (threshold: 3 days)",
+    "Data is stale: 63 days old (threshold: 3 days)",
+    "Data is stale: 63 days old (threshold: 3 days)",
+    "Data is stale: 63 days old (threshold: 3 days)",
+    "Data is stale: 63 days old (threshold: 3 days)",
+    "Data is stale: 33 days old (threshold: 3 days)",
+    "Data is stale: 33 days old (threshold: 3 days)",
+    "Data is stale: 33 days old (threshold: 3 days)",
+    "Data is stale: 33 days old (threshold: 3 days)",
+    "Data is stale: 33 days old (threshold: 3 days)",
+    "Missing values in temperature_max: 2 (6.7%)",
+    "Missing values in temperature_min: 2 (6.7%)",
+    "Missing values in temperature_avg: 2 (6.7%)",
+    "Missing values in temperature_max: 2 (6.7%)",
+    "Missing values in temperature_min: 2 (6.7%)",
+    "Missing values in temperature_avg: 2 (6.7%)"
+  ],
+  "unique_issue_types": 4,
+  "generated_at": "2025-07-30T01:55:04.228748"
+}

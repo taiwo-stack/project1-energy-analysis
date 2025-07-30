@@ -1014,7 +1014,7 @@ class Dashboard(Analyzer):
         """Show key summary metrics at the top."""
         if df.empty:
             return
-            
+          
         # Calculate basic stats
         total_cities = len(df['city'].unique())
         date_range_days = (df['date'].max() - df['date'].min()).days
@@ -1055,6 +1055,7 @@ class Dashboard(Analyzer):
         # Show last day changes if enabled
         if self.show_last_day_change:
             last_day_changes = self.calculate_last_day_change(df)
+            
             if last_day_changes:
                 st.markdown("### 📈 Recent Energy Changes")
                 

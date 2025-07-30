@@ -10,16 +10,14 @@ from data_processor import DataProcessor
 from config import Config
 import time
 
-# Constants for consistency - Updated to match 2-day buffer approach
-MAX_FETCH_DAYS = 90
-BUFFER_DAYS = 2  # Changed from 5 to 2 to match data fetcher
-PROCESSING_DELAY = 2  # seconds between date processing
-
-def get_date_range(days_back: int, max_days: int = MAX_FETCH_DAYS, buffer_days: int = BUFFER_DAYS) -> tuple[datetime, datetime, str]:
-    """Get consistent date range with constraints - Updated for 2-day buffer."""
+def get_date_range(config: Config, days_back: int) -> tuple[datetime, datetime, str]:
+    """Get consistent date range with constraints from config."""
+    max_days = config.rate_limits['max_fetch_days']
+    buffer_days = config.rate_limits['buffer_days']
+    
     limited_days = min(days_back, max_days)
     today = datetime.now().date()
-    end_date = today - timedelta(days=buffer_days)  # 2-day buffer: if today is 25th, end_date is 23rd
+    end_date = today - timedelta(days=buffer_days)
     start_date = end_date - timedelta(days=limited_days - 1)
     
     # For daily pipeline (days_back=1), we want just the end_date
@@ -127,8 +125,12 @@ def save_processed_data(config: Config, combined_df: pd.DataFrame, quality_check
     
     return True
 
-def run_pipeline(config: Config, pipeline_type: str, days: int = MAX_FETCH_DAYS) -> bool:
+def run_pipeline(config: Config, pipeline_type: str, days: int = None) -> bool:
     """Generic pipeline runner for different pipeline types."""
+    # Use config default if days not specified
+    if days is None:
+        days = config.rate_limits['max_fetch_days']
+    
     logger.info(f"Starting {pipeline_type} pipeline for {days} days")
     
     fetcher = DataFetcher(config)
@@ -138,9 +140,13 @@ def run_pipeline(config: Config, pipeline_type: str, days: int = MAX_FETCH_DAYS)
     successful_cities = 0
     total_cities = len(config.cities)
     
+    # Get processing delay from config
+    processing_delay = config.rate_limits.get('processing_delay_seconds', 2)
+    
     if pipeline_type == "daily":
-        _, end_date, date_str = get_date_range(1)  # Get the actual end_date for daily processing
-        logger.info(f"Processing daily data for {date_str} (with {BUFFER_DAYS}-day buffer from today)")
+        _, end_date, date_str = get_date_range(config, 1)  # Get the actual end_date for daily processing
+        buffer_days = config.rate_limits['buffer_days']
+        logger.info(f"Processing daily data for {date_str} (with {buffer_days}-day buffer from today)")
         
         for city in config.cities:
             logger.info(f"Processing {city.name}")
@@ -156,7 +162,7 @@ def run_pipeline(config: Config, pipeline_type: str, days: int = MAX_FETCH_DAYS)
             quality_checks.append(quality_report)
     
     else:  # recent or historical
-        start_date, end_date, _ = get_date_range(days)
+        start_date, end_date, _ = get_date_range(config, days)
         logger.info(f"Processing {pipeline_type} data from {start_date} to {end_date} across {total_cities} cities")
         chunk_size = config.rate_limits['chunk_size_days']
         current_start = start_date
@@ -200,17 +206,20 @@ def run_pipeline(config: Config, pipeline_type: str, days: int = MAX_FETCH_DAYS)
             
             current_start = chunk_end + timedelta(days=1)
             if current_start <= end_date:
-                time.sleep(PROCESSING_DELAY)
+                time.sleep(processing_delay)
     
     # Log summary of processing results
     logger.info(f"Processing summary: {successful_cities}/{total_cities} cities processed successfully")
     
     if all_data:
         combined_df = pd.concat(all_data, ignore_index=True)
-        actual_days = min(days, MAX_FETCH_DAYS)
-        # Updated to use 2-day buffer consistently
-        start_range = (datetime.now().date() - timedelta(days=actual_days + 2 - 1)).strftime('%Y-%m-%d')
-        end_range = (datetime.now().date() - timedelta(days=2)).strftime('%Y-%m-%d')
+        max_days = config.rate_limits['max_fetch_days']
+        buffer_days = config.rate_limits['buffer_days']
+        actual_days = min(days, max_days)
+        
+        # Updated to use buffer_days from config consistently
+        start_range = (datetime.now().date() - timedelta(days=actual_days + buffer_days - 1)).strftime('%Y-%m-%d')
+        end_range = (datetime.now().date() - timedelta(days=buffer_days)).strftime('%Y-%m-%d')
         date_info = f'{actual_days}days_{start_range}_to_{end_range}' if pipeline_type != 'daily' else date_str
         
         success = save_processed_data(config, combined_df, quality_checks, pipeline_type, date_info)
@@ -220,10 +229,12 @@ def run_pipeline(config: Config, pipeline_type: str, days: int = MAX_FETCH_DAYS)
     else:
         logger.warning(f"No {pipeline_type} data was successfully processed from any city")
         # Still save quality reports even with no data
-        actual_days = min(days, MAX_FETCH_DAYS)
-        start_range = (datetime.now().date() - timedelta(days=actual_days + 2 - 1)).strftime('%Y-%m-%d')
-        end_range = (datetime.now().date() - timedelta(days=2)).strftime('%Y-%m-%d')
-        date_info = f'{actual_days}days_{start_range}_to_{end_range}' if pipeline_type != 'daily' else get_date_range(1)[2]
+        max_days = config.rate_limits['max_fetch_days']
+        buffer_days = config.rate_limits['buffer_days']
+        actual_days = min(days, max_days)
+        start_range = (datetime.now().date() - timedelta(days=actual_days + buffer_days - 1)).strftime('%Y-%m-%d')
+        end_range = (datetime.now().date() - timedelta(days=buffer_days)).strftime('%Y-%m-%d')
+        date_info = f'{actual_days}days_{start_range}_to_{end_range}' if pipeline_type != 'daily' else get_date_range(config, 1)[2]
         
         save_processed_data(config, pd.DataFrame(), quality_checks, pipeline_type, date_info, allow_empty=True)
         
@@ -234,7 +245,7 @@ def run_pipeline(config: Config, pipeline_type: str, days: int = MAX_FETCH_DAYS)
         else:
             return False
 
-def run_pipeline_with_validation(config: Config, pipeline_type: str = "daily", days: int = MAX_FETCH_DAYS) -> bool:
+def run_pipeline_with_validation(config: Config, pipeline_type: str = "daily", days: int = None) -> bool:
     """Run pipeline with comprehensive validation and error handling."""
     start_time = datetime.now()
     logger.info(f"Starting {pipeline_type} pipeline at {start_time}")
@@ -270,19 +281,30 @@ def run_pipeline_with_validation(config: Config, pipeline_type: str = "daily", d
         return False
 
 if __name__ == "__main__":
-    log_file = f"logs/pipeline_{datetime.now().strftime('%Y%m%d')}.log"
-    os.makedirs('logs', exist_ok=True)
-    logger.add(log_file, rotation="10 MB", level="INFO")
-    logger.info("Pipeline script started")
-    
     try:
+        # Load config first to get logging configuration
         config = Config.load()
+        
+        # Setup logging based on config
+        log_file = os.path.join(config.data_paths['logs'], f"pipeline_{datetime.now().strftime('%Y%m%d')}.log")
+        os.makedirs(config.data_paths['logs'], exist_ok=True)
+        
+        logger.add(
+            log_file, 
+            rotation=config.logging.get('rotation', '10 MB'), 
+            level=config.logging.get('level', 'INFO'),
+            retention=config.logging.get('retention', '7 days')
+        )
+        logger.info("Pipeline script started")
+        
+        # Get max_fetch_days from config
+        max_fetch_days = config.rate_limits['max_fetch_days']
         
         # Run historical pipeline first
         logger.info("=" * 50)
         logger.info("STARTING HISTORICAL PIPELINE")
         logger.info("=" * 50)
-        historical_success = run_pipeline_with_validation(config, "historical", days=MAX_FETCH_DAYS)
+        historical_success = run_pipeline_with_validation(config, "historical", days=max_fetch_days)
         
         # Run daily pipeline
         logger.info("=" * 50)

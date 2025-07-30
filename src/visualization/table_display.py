@@ -232,6 +232,7 @@ class SummaryMetrics:
         date_range_days = (df['date'].max() - df['date'].min()).days
         avg_energy = df['energy_demand'].mean()
         avg_temp = df['temperature_avg'].mean() if 'temperature_avg' in df.columns else 0
+        latest_date = df['date'].max().strftime('%Y-%m-%d')
         
         # Show metrics in columns
         col1, col2, col3, col4 = st.columns(4)
@@ -266,11 +267,48 @@ class SummaryMetrics:
         
         # Show last day changes if enabled
         if show_last_day_change:
+            # Custom CSS for better visibility and readability
+            st.markdown("""
+            <style>
+            .small-metrics-header {
+                font-size: 1.3rem !important;
+                font-weight: 600;
+                margin: 15px 0 8px 0;
+                color: white;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            }
+            .metric-annotation {
+                font-size: 0.9rem !important;
+                color: white;
+                font-style: italic;
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+            .stMetric > div {
+                font-size: 0.95rem !important;
+            }
+            .stMetric > div > div {
+                font-size: 0.9rem !important;
+            }
+            .stMetric label {
+                font-weight: 600 !important;
+                color: white !important;
+            }
+            </style>
+            """, unsafe_allow_html=True)
+            
+            # Get energy changes
             last_day_changes = self.data_manager.calculate_last_day_change(df)
+            
+            # Calculate weather changes (assuming you have a similar method or we'll create the logic)
+            weather_changes = self.data_manager.calculate_weather_change(df) if hasattr(self.data_manager, 'calculate_weather_change') else {}
+            
             if last_day_changes:
-                st.markdown("### 📈 Recent Energy Changes (last available day) ")
+                # Energy changes section
+                st.markdown(f'<div class="small-metrics-header">📈 Latest Energy Records ({latest_date})</div>', unsafe_allow_html=True)
+                st.markdown('<div class="metric-annotation">Latest energy recorded data and percentage changes</div>', unsafe_allow_html=True)
                 
-                # Show top 5 changes
+                # Show top 5 energy changes
                 sorted_changes = sorted(
                     last_day_changes.items(), 
                     key=lambda x: abs(x[1]['pct_change']), 
@@ -294,9 +332,13 @@ class SummaryMetrics:
                             help=f"Change from {change_data['previous_date']} to {change_data['latest_date']}"
                         )
 
-                # Expandable section for all changes
+
+                 # Expandable sections for detailed views
+               
+                
+                # Energy changes expandable section
                 if len(last_day_changes) > 4:
-                    with st.expander(f"📋 View All {len(last_day_changes)} Cities' Changes"):
+                    with st.expander(f"📋 View All {len(last_day_changes)} Cities' Energy Changes"):
                         change_df = pd.DataFrame([
                             {
                                 'City': city,
@@ -309,3 +351,51 @@ class SummaryMetrics:
                             for city, data in sorted_changes
                         ])
                         st.dataframe(change_df, use_container_width=True, hide_index=True)
+
+                # Weather changes section (if weather data is available)
+                if weather_changes:
+                    st.markdown("---")  # Add separator between energy and weather sections
+                    st.markdown(f'<div class="small-metrics-header">🌡️ Latest Weather Records ({latest_date})</div>', unsafe_allow_html=True)
+                    st.markdown('<div class="metric-annotation">Latest weather recorded data and temperature changes</div>', unsafe_allow_html=True)
+                    
+                    # Show top 5 weather changes
+                    sorted_weather_changes = sorted(
+                        weather_changes.items(), 
+                        key=lambda x: abs(x[1]['temp_change']), 
+                        reverse=True
+                    )
+
+                    weather_cols = st.columns(min(5, len(sorted_weather_changes)))
+                    for idx, (city, weather_data) in enumerate(sorted_weather_changes[:5]):
+                        with weather_cols[idx]:
+                            temp_change = weather_data['temp_change']
+                            
+                            days_gap_text = f" ({weather_data['days_between']}d)" if weather_data['days_between'] > 1 else ""
+                            
+                            delta_text = f"{temp_change:+.1f}°F"
+                            
+                            st.metric(
+                                f"{city}{days_gap_text}",
+                                f"{weather_data['latest_temp']:.1f}°F",
+                                delta=delta_text,
+                                delta_color="normal",
+                                help=f"Temperature change from {weather_data['previous_date']} to {weather_data['latest_date']}"
+                            )
+
+               
+                
+                # Weather changes expandable section
+                if weather_changes and len(weather_changes) > 4:
+                    with st.expander(f"📋 View All {len(weather_changes)} Cities' Weather Changes"):
+                        weather_df = pd.DataFrame([
+                            {
+                                'City': city,
+                                'Latest Temp (°F)': f"{data['latest_temp']:.1f}",
+                                'Previous Temp (°F)': f"{data['previous_temp']:.1f}",
+                                'Change (°F)': f"{data['temp_change']:+.1f}",
+                                'Latest Date': data['latest_date'],
+                                'Previous Date': data['previous_date']
+                            }
+                            for city, data in sorted_weather_changes
+                        ])
+                        st.dataframe(weather_df, use_container_width=True, hide_index=True)

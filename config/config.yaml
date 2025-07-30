@@ -44,12 +44,29 @@ quality_checks:
   temperature:
     max_fahrenheit: 130
     min_fahrenheit: -50
+    max_to_avg_correction: 5    # Degrees to subtract from max temp to estimate avg
+    min_to_avg_correction: 12   # Degrees to add to min temp to estimate avg
   energy:
     min_value: 0
   freshness:
     max_age_hours: 48
   completeness:
     max_missing_percentage: 10
+    min_correlation_points: 10     # Minimum data points for correlation analysis
+    min_regression_points: 2       # Minimum data points for regression analysis
+  correlation:
+    outlier_method: "iqr"          # Method for outlier removal: "iqr" or "none"
+    iqr_multiplier: 1.5            # IQR multiplier for outlier detection
+    significance_threshold: 0.05    # P-value threshold for statistical significance
+  usage_analysis:
+    baseline_days: 30              # Days of historical data for baseline calculation
+    recent_days: 7                 # Days of recent data for current usage calculation
+    high_threshold_std_multiplier: 0.5  # Standard deviation multiplier for high usage threshold
+    low_threshold_std_multiplier: 0.5   # Standard deviation multiplier for low usage threshold
+    min_data_points: 10            # Minimum total data points required
+    min_baseline_points: 5         # Minimum baseline data points required
+    high_usage_color: "#d62728"    # Color for high usage cities (red)
+    low_usage_color: "#2ca02c"     # Color for low usage cities (green)
 
 rate_limits:
   noaa_requests_per_second: 5
@@ -58,7 +75,8 @@ rate_limits:
   backoff_factor: 1.0
   chunk_size_days: 30
   max_fetch_days: 90
-  buffer_days: 2
+  buffer_days: 3
+  processing_delay_seconds: 2
 
 logging:
   level: "INFO"

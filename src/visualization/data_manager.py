@@ -87,6 +87,7 @@ class DataManager(Analyzer):
         """Calculate last recorded day's energy usage % change from the previous day for all cities."""
         try:
             if df.empty:
+                logger.warning("Empty DataFrame provided for last day change calculation")
                 return {}
             
             changes = {}
@@ -95,6 +96,7 @@ class DataManager(Analyzer):
                 city_df = df[df['city'] == city].sort_values('date')
                 
                 if len(city_df) < 2:
+                    logger.debug(f"Insufficient data for {city}: only {len(city_df)} records")
                     continue
                 
                 # Get the last two available data points for this city
@@ -106,25 +108,57 @@ class DataManager(Analyzer):
                     latest_date = last_two.iloc[-1]['date']
                     previous_date = last_two.iloc[-2]['date']
                     
-                    if previous_usage != 0:
+                    # Additional validation for realistic energy values
+                    if pd.isna(latest_usage) or pd.isna(previous_usage):
+                        logger.warning(f"Missing energy data for {city}")
+                        continue
+                    
+                    if latest_usage < 0 or previous_usage < 0:
+                        logger.warning(f"Negative energy values detected for {city}")
+                        continue
+                    
+                    if previous_usage == 0:
+                        # Handle division by zero case
+                        if latest_usage == 0:
+                            pct_change = 0.0
+                            logger.debug(f"Both values are zero for {city}")
+                        else:
+                            # When previous is 0 but current isn't, it's infinite % increase
+                            # We'll represent this as a very large number or special case
+                            pct_change = float('inf')
+                            logger.warning(f"Previous usage was zero for {city}, infinite change")
+                            continue  # Skip infinite changes
+                    else:
+                        # Standard percentage change calculation
                         pct_change = ((latest_usage - previous_usage) / previous_usage) * 100
-                        days_between = (latest_date - previous_date).days
-                        
-                        changes[city] = {
-                            'latest_usage': round(latest_usage, 2),
-                            'previous_usage': round(previous_usage, 2),
-                            'pct_change': round(pct_change, 1),
-                            'latest_date': latest_date.strftime('%Y-%m-%d'),
-                            'previous_date': previous_date.strftime('%Y-%m-%d'),
-                            'days_between': days_between
-                        }
+                    
+                    days_between = (latest_date - previous_date).days
+                    
+                    # Validate the time gap is reasonable (not too large)
+                    if days_between > 7:
+                        logger.warning(f"Large gap between data points for {city}: {days_between} days")
+                    
+                    changes[city] = {
+                        'latest_usage': round(float(latest_usage), 2),
+                        'previous_usage': round(float(previous_usage), 2),
+                        'absolute_change': round(float(latest_usage - previous_usage), 2),
+                        'pct_change': round(float(pct_change), 1),
+                        'latest_date': latest_date.strftime('%Y-%m-%d'),
+                        'previous_date': previous_date.strftime('%Y-%m-%d'),
+                        'days_between': days_between
+                    }
+                    
+                    logger.debug(f"Calculated change for {city}: {pct_change:.1f}% "
+                            f"({previous_usage:.2f} → {latest_usage:.2f})")
             
+            logger.info(f"Successfully calculated changes for {len(changes)} cities")
             return changes
             
         except Exception as e:
             logger.error(f"Failed to calculate last day's change: {str(e)}")
             return {}
-    
+
+            
     def prepare_historical_table_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """Prepare and format data for the historical table display."""
         try:
@@ -165,6 +199,32 @@ class DataManager(Analyzer):
             logger.error(f"Failed to prepare historical table data: {str(e)}")
             return pd.DataFrame()
 
+
+    def calculate_weather_change(self, df: pd.DataFrame) -> dict:
+        """Calculate weather changes similar to energy changes."""
+        changes = {}
+        
+        for city in df['city'].unique():
+            city_data = df[df['city'] == city].sort_values('date')
+            
+            if len(city_data) >= 2:
+                latest = city_data.iloc[-1]
+                previous = city_data.iloc[-2]
+                
+                temp_change = latest['temperature_avg'] - previous['temperature_avg']
+                days_between = (latest['date'] - previous['date']).days
+                
+                changes[city] = {
+                    'latest_temp': latest['temperature_avg'],
+                    'previous_temp': previous['temperature_avg'],
+                    'temp_change': temp_change,
+                    'latest_date': latest['date'].strftime('%Y-%m-%d'),
+                    'previous_date': previous['date'].strftime('%Y-%m-%d'),
+                    'days_between': days_between
+                }
+        
+        return changes    
+        
 
 class DataQualityChecker:
     """Handles data quality assessment and reporting."""

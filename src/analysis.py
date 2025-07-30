@@ -16,7 +16,7 @@ class Analyzer:
         self.config = config
         self.max_fetch_days = self.config.rate_limits.get('max_fetch_days', 90)
         # Use fixed 2-day buffer to match the main pipeline changes
-        self.buffer_days = 2
+        self.buffer_days = 3
         logger.debug(f"Analyzer initialized with {self.buffer_days}-day buffer")
     
     def get_available_date_range(self) -> Tuple[datetime.date, datetime.date]:
@@ -332,7 +332,7 @@ class Analyzer:
             return {}
     
     def calculate_usage_levels(self, df: pd.DataFrame, selected_cities: List[str] = None, 
-                             lookback_days: int = 30, recent_days: int = 7) -> Dict[str, Dict[str, any]]:
+                         lookback_days: int = 30, recent_days: int = 7) -> Dict[str, Dict[str, any]]:
         """
         Calculate high/low energy usage levels for geographical mapping.
         
@@ -367,14 +367,15 @@ class Analyzer:
                 cities_to_process = selected_cities
                 logger.info(f"Processing usage levels for selected cities: {cities_to_process}")
             
-            # Get recent date range for current usage calculation
+            # Get date ranges - SEPARATE baseline and recent periods
             max_date = df['date'].max()
-            recent_cutoff = max_date - pd.Timedelta(days=recent_days)
-            baseline_cutoff = max_date - pd.Timedelta(days=lookback_days)
+            recent_start = max_date - pd.Timedelta(days=recent_days - 1)  # Include today
+            baseline_end = recent_start - pd.Timedelta(days=1)  # End baseline before recent period starts
+            baseline_start = baseline_end - pd.Timedelta(days=lookback_days - 1)
             
             logger.info(f"Usage level calculation periods:")
-            logger.info(f"  Recent period: {recent_cutoff.date()} to {max_date.date()} ({recent_days} days)")
-            logger.info(f"  Baseline period: {baseline_cutoff.date()} to {max_date.date()} ({lookback_days} days)")
+            logger.info(f"  Baseline period: {baseline_start.date()} to {baseline_end.date()} ({lookback_days} days)")
+            logger.info(f"  Recent period: {recent_start.date()} to {max_date.date()} ({recent_days} days)")
             
             for city in cities_to_process:
                 city_df = df[df['city'] == city].dropna(subset=['energy_demand'])
@@ -389,46 +390,47 @@ class Analyzer:
                     logger.warning(f"City configuration not found for {city}")
                     continue
                 
-                # Calculate baseline statistics using historical data
-                baseline_df = city_df[city_df['date'] >= baseline_cutoff]
+                # Calculate baseline statistics using ONLY historical data (excluding recent period)
+                baseline_df = city_df[
+                    (city_df['date'] >= baseline_start) & 
+                    (city_df['date'] <= baseline_end)
+                ]
+                
                 if len(baseline_df) < 5:
                     logger.warning(f"Insufficient baseline data for {city}: {len(baseline_df)} records")
                     continue
                 
-                # Calculate median for threshold (more robust than mean)
-                baseline_median = baseline_df['energy_demand'].median()
-                baseline_std = baseline_df['energy_demand'].std()
-                
-                # Calculate current/recent average
-                recent_df = city_df[city_df['date'] >= recent_cutoff]
+                # Calculate recent period statistics
+                recent_df = city_df[city_df['date'] >= recent_start]
                 if len(recent_df) == 0:
                     logger.warning(f"No recent data for {city}")
                     continue
                 
+                # Calculate baseline median for comparison
+                baseline_median = baseline_df['energy_demand'].median()
+                
+                # Current usage (recent period average)
                 current_usage = recent_df['energy_demand'].mean()
                 
-                # Determine status using median + standard deviation threshold
-                # High usage: above median + 0.5 * std deviation
-                # Low usage: below median - 0.5 * std deviation
-                high_threshold = baseline_median + (0.5 * baseline_std)
-                low_threshold = baseline_median - (0.5 * baseline_std)
+                # Calculate percentage change from baseline
+                change_percentage = ((current_usage - baseline_median) / baseline_median * 100)
                 
-                if current_usage >= high_threshold:
+                # Simple binary classification: above baseline = high, below = low
+                if current_usage > baseline_median:
                     status = 'high'
                     color = '#d62728'  # Red
-                    status_description = f"Above average (+{((current_usage - baseline_median) / baseline_median * 100):.1f}%)"
+                    status_description = f"Above baseline (+{change_percentage:.1f}%)"
                 else:
                     status = 'low'
-                    color = '#2ca02c'  # Green  
-                    status_description = f"Below average ({((current_usage - baseline_median) / baseline_median * 100):.1f}%)"
+                    color = '#2ca02c'  # Green
+                    status_description = f"Below baseline ({change_percentage:.1f}%)"
                 
                 usage_levels[city] = {
                     'lat': city_config.lat,
                     'lon': city_config.lon,
                     'current_usage': round(current_usage, 2),
                     'baseline_median': round(baseline_median, 2),
-                    'high_threshold': round(high_threshold, 2),
-                    'low_threshold': round(low_threshold, 2),
+                    'change_percentage': round(change_percentage, 2),
                     'status': status,
                     'color': color,
                     'city_name': city,
@@ -436,10 +438,13 @@ class Analyzer:
                     'status_description': status_description,
                     'recent_data_points': len(recent_df),
                     'baseline_data_points': len(baseline_df),
-                    'last_updated': max_date.strftime('%Y-%m-%d')
+                    'last_updated': max_date.strftime('%Y-%m-%d'),
+                    'baseline_period': f"{baseline_start.date()} to {baseline_end.date()}",
+                    'recent_period': f"{recent_start.date()} to {max_date.date()}"
                 }
                 
-                logger.debug(f"Usage level for {city}: {status} (current: {current_usage:.2f}, median: {baseline_median:.2f})")
+                logger.debug(f"Usage level for {city}: {status} (current: {current_usage:.2f}, "
+                            f"baseline: {baseline_median:.2f}, change: {change_percentage:+.1f}%)")
             
             logger.info(f"Calculated usage levels for {len(usage_levels)} cities")
             return usage_levels
@@ -447,6 +452,8 @@ class Analyzer:
         except Exception as e:
             logger.error(f"Failed to calculate usage levels: {str(e)}")
             return {}
+
+
     
     def get_usage_summary(self, usage_levels: Dict[str, Dict[str, any]]) -> Dict[str, any]:
         """
