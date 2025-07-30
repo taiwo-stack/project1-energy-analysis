@@ -380,7 +380,7 @@ class ChartGenerator:
             return go.Figure()
     
     def create_geographic_map(self, df: pd.DataFrame, selected_cities: List[str], 
-                            lookback_days: int, recent_days: int, show_last_day_change: bool) -> go.Figure:
+                        lookback_days: int, recent_days: int, show_last_day_change: bool) -> go.Figure:
         """Create interactive map visualization."""
         try:
             if df.empty:
@@ -426,7 +426,12 @@ class ChartGenerator:
                     'color': city_data['color'],
                     'status_description': city_data['status_description'],
                     'last_updated': city_data['last_updated'],
-                    'change_text': change_text
+                    'change_text': change_text,
+                    # New dynamic labels
+                    'recent_label': city_data['recent_label'],
+                    'baseline_label': city_data['baseline_label'],
+                    'recent_period': city_data['recent_period'],
+                    'baseline_period': city_data['baseline_period']
                 })
             
             map_df = pd.DataFrame(map_data)
@@ -452,11 +457,14 @@ class ChartGenerator:
                     lambda x: (
                         f"<b>{x['city']}, {x['state']}</b><br>"
                         f"📊 Status: <b>{x['status'].upper()}</b><br>"
-                        f"⚡ Current: {x['current_usage']:,.1f} MWh<br>"
-                        f"📈 Baseline: {x['baseline_median']:,.1f} MWh<br>"
+                        f"⚡ {x['recent_label']}: {x['current_usage']:,.1f} MWh<br>"
+                        f"📊 {x['baseline_label']}: {x['baseline_median']:,.1f} MWh<br>"
                         f"🔄 {x['status_description']}<br>"
-                        f"📅 Updated: {x['last_updated']}"
                         f"{x['change_text']}"
+                        f"📅 Recent Period: {x['recent_period']}<br>"
+                        f"📅 Baseline Period: {x['baseline_period']}<br>"
+                        
+                        
                     ),
                     axis=1
                 ),

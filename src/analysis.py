@@ -330,7 +330,7 @@ class Analyzer:
         except Exception as e:
             logger.error(f"Failed to calculate regression: {str(e)}")
             return {}
-    
+        
     def calculate_usage_levels(self, df: pd.DataFrame, selected_cities: List[str] = None, 
                          lookback_days: int = 30, recent_days: int = 7) -> Dict[str, Dict[str, any]]:
         """
@@ -376,6 +376,10 @@ class Analyzer:
             logger.info(f"Usage level calculation periods:")
             logger.info(f"  Baseline period: {baseline_start.date()} to {baseline_end.date()} ({lookback_days} days)")
             logger.info(f"  Recent period: {recent_start.date()} to {max_date.date()} ({recent_days} days)")
+            
+            # Create dynamic labels based on the time periods
+            recent_label = self._get_period_label(recent_days)
+            baseline_label = f"Baseline ({lookback_days} days)"
             
             for city in cities_to_process:
                 city_df = df[df['city'] == city].dropna(subset=['energy_demand'])
@@ -440,7 +444,12 @@ class Analyzer:
                     'baseline_data_points': len(baseline_df),
                     'last_updated': max_date.strftime('%Y-%m-%d'),
                     'baseline_period': f"{baseline_start.date()} to {baseline_end.date()}",
-                    'recent_period': f"{recent_start.date()} to {max_date.date()}"
+                    'recent_period': f"{recent_start.date()} to {max_date.date()}",
+                    # New dynamic labels
+                    'recent_label': recent_label,
+                    'baseline_label': baseline_label,
+                    'recent_days': recent_days,
+                    'lookback_days': lookback_days
                 }
                 
                 logger.debug(f"Usage level for {city}: {status} (current: {current_usage:.2f}, "
@@ -453,8 +462,31 @@ class Analyzer:
             logger.error(f"Failed to calculate usage levels: {str(e)}")
             return {}
 
-
-    
+    def _get_period_label(self, days: int) -> str:
+        """
+        Generate appropriate label for time period based on number of days.
+        
+        Args:
+            days: Number of days in the period
+            
+        Returns:
+            String label for the time period
+        """
+        if days == 1:
+            return "Last 24hrs"
+        elif days == 7:
+            return "Last 7 days"
+        elif days == 14:
+            return "Last 14 days"
+        elif days == 30:
+            return "Last 30 days"
+        elif days < 7:
+            return f"Last {days} days"
+        elif days < 30:
+            return f"Last {days} days"
+        else:
+            return f"Last {days} days"  
+        
     def get_usage_summary(self, usage_levels: Dict[str, Dict[str, any]]) -> Dict[str, any]:
         """
         Generate summary statistics from usage levels calculation.
