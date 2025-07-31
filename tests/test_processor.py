@@ -16,7 +16,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 from unittest.mock import Mock, patch
-from src.data_processor import DataProcessor
+from data_processor import DataProcessor
 from config import Config, City
 
 

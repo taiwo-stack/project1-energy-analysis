@@ -425,9 +425,7 @@ class ChartGenerator:
                     'status': city_data['status'],
                     'color': city_data['color'],
                     'status_description': city_data['status_description'],
-                    'last_updated': city_data['last_updated'],
                     'change_text': change_text,
-                    # New dynamic labels
                     'recent_label': city_data['recent_label'],
                     'baseline_label': city_data['baseline_label'],
                     'recent_period': city_data['recent_period'],
@@ -460,11 +458,9 @@ class ChartGenerator:
                         f"⚡ {x['recent_label']}: {x['current_usage']:,.1f} MWh<br>"
                         f"📊 {x['baseline_label']}: {x['baseline_median']:,.1f} MWh<br>"
                         f"🔄 {x['status_description']}<br>"
-                        f"{x['change_text']}"
+                        f"{x['change_text']}<br>"
                         f"📅 Recent Period: {x['recent_period']}<br>"
                         f"📅 Baseline Period: {x['baseline_period']}<br>"
-                        
-                        
                     ),
                     axis=1
                 ),

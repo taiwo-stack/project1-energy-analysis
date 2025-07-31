@@ -1,6 +1,4 @@
 """
-Test suite for analysis.py module.
-
 This module tests the Analyzer class functionality including:
 - Data loading and filtering
 - Correlation calculations
@@ -17,11 +15,8 @@ from pathlib import Path
 from unittest.mock import Mock, patch, MagicMock
 import tempfile
 import os
-
-# Import the classes to test
-from src.analysis import Analyzer
+from analysis import Analyzer
 from config import Config, City
-
 
 class TestAnalyzer:
     """Test suite for the Analyzer class."""
