@@ -1,109 +1,127 @@
-US Weather + Energy Analysis Pipeline
-Overview
-This project provides a production-grade pipeline for analyzing correlations between weather and energy consumption across five US cities (New York, Chicago, Houston, Phoenix, Seattle). It fetches daily data from NOAA (weather) and EIA (energy) APIs, performs rigorous data quality checks, and presents insights via an advanced Streamlit dashboard. Designed for energy companies, it supports demand forecasting to minimize costs and prevent outages.
-Features
+# Run Instructions for Energy Analysis Project
 
-Data Pipeline: Fetches and processes daily and historical (90-day) data with exponential backoff for reliability.
-Quality Assurance: Checks for missing data, outliers, and freshness, with detailed reports.
-Advanced Dashboard:
-Interactive US map with energy usage and temperature.
-Dual-axis time series with weekend shading and unified hover.
-Correlation scatter plot with regression line and statistical annotations.
-Heatmap of energy usage by temperature and day of week.
-KPI cards for average temperature, energy, and data freshness.
-Data export functionality.
+This guide provides the project file structure and step-by-step commands to set up and run the `project1-energy-analysis` project using `uv` and launch the Streamlit dashboard.
 
-
-
-Setup
-
-Install Dependencies:uv sync
-
-
-Register for APIs:
-NOAA: https://www.ncdc.noaa.gov/cdo-web/token
-EIA: https://www.eia.gov/opendata/register.php
-Set environment variables:export NOAA_API_TOKEN="your-noaa-token"
-export EIA_API_TOKEN="your-eia-token"
-
-On Windows:setx NOAA_API_TOKEN "your-noaa-token"
-setx EIA_API_TOKEN "your-eia-token"
-
-
-
-
-Directory Structure:project1-energy-analysis/
-├── README.md
-├── AI_USAGE.md
-├── pyproject.toml
-├── .gitignore
-├── config/
-│   └── config.yaml
-├── src/
-│   ├── config.py
-│   ├── data_fetcher.py
-│   ├── data_processor.py
-│   ├── analysis.py
-│   └── pipeline.py
-├── dashboards/
-│   └── app.py
-├── logs/
-│   └── pipeline.log
+## Project File Structure
+```
+project1-energy-analysis/
+├── .pytest_cache/                # Cache for pytest
+├── .venv/                        # Virtual environment
+├── build/                        # Build artifacts
+├── config/                       # Configuration files
+├── Dashboard/
+│   └── main_dashboard.py         # Streamlit dashboard script
 ├── data/
-│   ├── raw/
-│   └── processed/
-│       └── quality/
-├── notebooks/
-│   └── exploration.ipynb
-├── tests/
-│   └── test_pipeline.py
-└── video_link.md
+│   ├── cache/                   # Cached data
+│   ├── logs/                    # Data logs
+│   ├── processed/               # Processed data (e.g., daily_*.csv, latest_historical.csv)
+│   └── raw/                     # Raw NOAA/EIA data
+├── logs/                        # Pipeline logs (e.g., pipeline_*.log)
+├── notebooks/                   # Jupyter notebooks
+├── src/
+│   ├── logs/                    # Source logs
+│   ├── us_weather_energy_analysis.egg-info/  # Package metadata
+│   ├── visualization/
+│   │   ├── __pycache__/         # Compiled Python files
+│   │   ├── dashboard_config.py   # Dashboard config
+│   │   ├── data_manager.py      # Data utilities
+│   │   ├── pipeline_manager.py  # Pipeline utilities
+│   │   ├── table_display.py     # Table visualization
+│   │   └── visualization.py     # Visualization logic
+│   ├── __pycache__/             # Compiled Python files
+│   ├── analysis.py              # Data analysis (thresholds, correlations)
+│   ├── config.py               # Project config (cities, API keys)
+│   ├── data_fetcher.py         # NOAA/EIA data fetching
+│   ├── data_processor.py       # Data processing
+│   └── pipeline.py             # Data pipeline
+├── tests/                       # Unit tests
+├── __pycache__/                 # Compiled Python files
+├── .env                         # API keys
+├── .gitignore                   # Git ignore
+├── AI_USAGE.md                  # AI usage doc
+├── pyproject.toml               # Project metadata, dependencies
+├── README.md                    # Project doc
+├── requirements.txt             # Legacy dependencies
+├── uv.lock                      # uv dependency lock
+└── video_link.md                # Video link
+```
 
+## Prerequisites
+1. **Install `uv`**:
+   ```powershell
+   Invoke-WebRequest -Uri https://astral.sh/uv/install.ps1 | Invoke-Expression
+   uv --version
+   ```
+2. **Install Python**: Ensure Python 3.8+ (`python --version`). Download: https://www.python.org/downloads/
+3. **API Keys**: Add to `.env`:
+   ```
+   NOAA_API_KEY=your_noaa_key
+   EIA_API_KEY=your_eia_key
+   ```
+   Request keys: NOAA (https://www.ncdc.noaa.gov/cdo-web/token), EIA (https://www.eia.gov/opendata/register.cfm).
 
+## Setup and Run
+1. **Navigate to Project**:
+   ```powershell
+   cd C:\Users\HP\Desktop\BYU-pathway\pioneeracademy\project1-energy-analysis
+   dir
+   ```
+   Confirm: `pyproject.toml`, `uv.lock`, `src/`, `Dashboard/`.
 
-Usage
+2. **Set Up Virtual Environment**:
+   ```powershell
+   uv venv
+   .\.venv\Scripts\Activate.ps1
+   uv sync
+   ```
+   Verify: `(us-weather-energy-analysis)` in prompt.
 
-Run Pipeline:uv run python src/pipeline.py
+3. **Run Data Pipeline**:
+   ```powershell
+   cd src
+   uv run python pipeline.py
+   ```
+   Outputs: `data/processed/daily_*.csv`, `latest_historical.csv`.
+   Logs: `type ..\logs\pipeline_*.log`.
 
+4. **Launch Streamlit Dashboard**:
+   ```powershell
+   cd ..\Dashboard
+   uv run streamlit run main_dashboard.py
+   ```
+   Open: `http://localhost:8501`.
 
-Fetches daily and historical data, performs quality checks, and saves to data/processed/.
+## Dashboard Features
+- **Time Series**: Select city. View temperature (solid blue, left axis), energy (dotted red, right axis, red/green/yellow markers).
+- **Geographic Map**: Cities with red (high), green (low), yellow (neutral), grey (missing) markers.
+- **Sidebar**: Adjust date range, cities, seasonal thresholds, percentiles.
 
+## Troubleshooting
+- **Pipeline Errors**:
+  - Check: `type logs\pipeline_*.log`.
+  - Verify `.env` keys.
+  - Ensure `data/raw/` has data.
+- **Dashboard Issues**:
+  - Confirm: `data/processed/latest_historical.csv`.
+  - Check terminal for Streamlit errors.
+- **No Markers/Map Colors**:
+  - Check logs for “Insufficient energy data”.
+  - Update `analysis.py`, `visualization.py` (ask lead).
 
-View Dashboard:uv run streamlit run dashboards/app.py
+## Visual Debugging
+- **VS Code**:
+  ```powershell
+  code .
+  ```
+  Open: `data/processed/*.csv`, `logs/pipeline_*.log`.
+- **Jupyter**:
+  ```powershell
+  cd notebooks
+  uv run jupyter notebook
+  ```
+  Open: `http://localhost:8888`.
 
-
-Access at http://localhost:8501.
-
-
-Schedule Daily Runs (cron):0 2 * * * /path/to/uv run python /path/to/project/src/pipeline.py
-
-
-Run Tests:uv run pytest tests/test_pipeline.py
-
-
-
-Data Sources
-
-NOAA: https://www.ncei.noaa.gov/cdo-web/api/v2
-EIA: https://api.eia.gov/v2/electricity/
-Backup: NOAA datasets, EIA data browser
-
-Quality Checks
-
-Missing values: >10% flagged.
-Outliers: Temperatures >130°F or <-50°F, negative energy consumption.
-Freshness: Data older than 24 hours flagged.
-
-Dashboard Highlights
-
-Geographic Overview: Mapbox-powered map with dynamic sizing and color scales.
-Time Series: Dual-axis chart with weekend shading and unified hover for insights.
-Correlation: Scatter plot with regression line and R²/correlation metrics.
-Heatmap: Energy usage patterns by temperature and day of week.
-Export: Download filtered data as CSV.
-
-Troubleshooting
-
-Check logs/pipeline.log for errors.
-Verify environment variables with echo $NOAA_API_TOKEN.
-Ensure API keys are valid and quotas are not exceeded.
+## Notes
+- Run `uv run python pipeline.py --days 270` for longer data (if supported).
+- Check `README.md` for details.
+- Contact lead for API keys or errors.

@@ -197,8 +197,10 @@ class ChartGenerator:
             st.error(f"❌ Heatmap failed: {str(e)}")
             return go.Figure()
     
+
+
     def create_correlation_plot(self, df: pd.DataFrame, selected_cities: List[str], show_correlations: bool = True) -> go.Figure:
-        """Create enhanced scatter plot with regression line."""
+        """Create enhanced scatter plot with regression line and comprehensive statistics."""
         try:
             if df.empty:
                 st.warning("⚠️ No data for correlation plot")
@@ -214,6 +216,9 @@ class ChartGenerator:
             
             colors = px.colors.qualitative.Set1
             
+            # Store all statistics for prominent display
+            all_stats = []
+            
             for idx, city in enumerate(selected_cities):
                 if city not in df['city'].unique():
                     continue
@@ -224,90 +229,198 @@ class ChartGenerator:
                 
                 color = colors[idx % len(colors)]
                 
-                # Add scatter points
+                # Add scatter points with enhanced hover information
                 fig.add_trace(go.Scatter(
                     x=city_df['temperature_avg'],
                     y=city_df['energy_demand'],
                     mode='markers',
-                    name=f'{city}',
-                    marker=dict(color=color, size=6, opacity=0.7),
+                    name=f'{city} Data',
+                    marker=dict(color=color, size=8, opacity=0.7, line=dict(width=1, color='white')),
                     text=city_df['date'].dt.strftime('%Y-%m-%d'),
+                    customdata=np.column_stack((city_df['temperature_avg'], city_df['energy_demand'])),
                     hovertemplate=(
                         f'<b>{city}</b><br>'
-                        'Date: %{text}<br>'
-                        'Temperature: %{x:.1f}°F<br>'
-                        'Energy: %{y:,.0f} MWh<br>'
+                        '<b>Date:</b> %{text}<br>'
+                        '<b>Temperature:</b> %{x:.1f}°F<br>'
+                        '<b>Energy Demand:</b> %{y:,.0f} MWh<br>'
                         '<extra></extra>'
                     )
                 ))
                 
-                # Add regression line
+                # Add regression line with equation
                 stats = regression_stats.get(city, {})
-                if not np.isnan(stats.get('slope', np.nan)):
-                    x_range = [city_df['temperature_avg'].min(), city_df['temperature_avg'].max()]
+                corr_value = correlations.get(city, np.nan)
+                
+                if not np.isnan(stats.get('slope', np.nan)) and not np.isnan(stats.get('intercept', np.nan)):
+                    # Calculate regression line points
+                    x_range = [city_df['temperature_avg'].min() - 2, city_df['temperature_avg'].max() + 2]
                     y_pred = [stats['slope'] * x + stats['intercept'] for x in x_range]
                     
-                    corr_value = correlations.get(city, np.nan)
+                    # Create regression equation string
+                    slope = stats['slope']
+                    intercept = stats['intercept']
+                    if intercept >= 0:
+                        equation = f"y = {slope:.2f}x + {intercept:.0f}"
+                    else:
+                        equation = f"y = {slope:.2f}x - {abs(intercept):.0f}"
+                    
+                    # Add regression line
                     fig.add_trace(go.Scatter(
                         x=x_range,
                         y=y_pred,
                         mode='lines',
-                        name=f'{city} Trend (r={corr_value:.3f})',
-                        line=dict(color=color, dash='dash', width=2),
-                        showlegend=False,
+                        name=f'{city} Regression',
+                        line=dict(color=color, dash='dash', width=3),
+                        showlegend=True,
                         hovertemplate=(
-                            f'<b>{city} Regression</b><br>'
-                            f'Slope: {stats["slope"]:.2f}<br>'
-                            f'R²: {stats["r_squared"]:.3f}<br>'
-                            f'Correlation: {corr_value:.3f}<br>'
+                            f'<b>{city} Regression Line</b><br>'
+                            f'<b>Equation:</b> {equation}<br>'
+                            f'<b>R² Value:</b> {stats.get("r_squared", "N/A"):.3f}<br>'
+                            f'<b>Correlation (r):</b> {corr_value:.3f}<br>'
+                            f'<b>Data Points:</b> {stats.get("data_points", len(city_df))}<br>'
                             '<extra></extra>'
                         )
                     ))
+                    
+                    # Store stats for summary display
+                    all_stats.append({
+                        'city': city,
+                        'equation': equation,
+                        'r_squared': stats.get('r_squared', np.nan),
+                        'correlation': corr_value,
+                        'slope': slope,
+                        'data_points': stats.get('data_points', len(city_df))
+                    })
             
-            # Enhanced correlation annotation
-            if show_correlations and correlations:
-                corr_text = "<b>📊 Correlations (r):</b><br>"
-                sorted_corr = sorted(correlations.items(), key=lambda x: abs(x[1]) if not np.isnan(x[1]) else 0, reverse=True)
+            # Create comprehensive statistics annotation
+            if show_correlations and all_stats:
+                # Sort by R-squared value for better display
+                all_stats.sort(key=lambda x: abs(x['r_squared']) if not np.isnan(x['r_squared']) else 0, reverse=True)
                 
-                for city, corr in sorted_corr:
-                    if not np.isnan(corr):
-                        strength = "Strong" if abs(corr) > 0.7 else "Moderate" if abs(corr) > 0.3 else "Weak"
-                        corr_text += f"• {city}: {corr:.3f} ({strength})<br>"
+                stats_text = "<b>📈 REGRESSION ANALYSIS</b><br>"
+                stats_text += "━━━━━━━━━━━━━━━━━━━━━━<br>"
                 
+                for stat in all_stats:
+                    if not np.isnan(stat['r_squared']) and not np.isnan(stat['correlation']):
+                        # Determine correlation strength
+                        corr_abs = abs(stat['correlation'])
+                        if corr_abs > 0.7:
+                            strength = "Strong"
+                            strength_color = "#28a745"  # Green
+                        elif corr_abs > 0.4:
+                            strength = "Moderate"
+                            strength_color = "#ffc107"  # Yellow
+                        else:
+                            strength = "Weak" 
+                            strength_color = "#dc3545"  # Red
+                        
+                        stats_text += f"<b>{stat['city']}:</b><br>"
+                        stats_text += f"  • Equation: {stat['equation']}<br>"
+                        stats_text += f"  • R²: {stat['r_squared']:.3f}<br>"
+                        stats_text += f"  • Correlation: {stat['correlation']:.3f} ({strength})<br>"
+                        stats_text += f"  • Points: {stat['data_points']}<br>"
+                        stats_text += "<br>"
+                
+                # Add the annotation box - moved to far left
                 fig.add_annotation(
-                    x=0.02, y=0.98,
+                    x=0.01, y=0.99,
                     xref='paper', yref='paper',
-                    text=corr_text,
+                    text=stats_text,
                     showarrow=False,
-                    bgcolor='rgba(0, 0, 0, 0.95)',
-                    bordercolor='#1f77b4',
+                    bgcolor='rgba(20, 20, 20, 0.95)',
+                    bordercolor='#00d4ff',
                     borderwidth=2,
+                    borderpad=8,
                     align='left',
-                    font=dict(size=10)
+                    font=dict(size=10, color='#ffffff'),
+                    width=260,
+                    valign='top',
+                    xanchor='left',
+                    yanchor='top'
                 )
             
+            # Add overall summary statistics if multiple cities
+            if len(all_stats) > 1:
+                valid_corrs = [s['correlation'] for s in all_stats if not np.isnan(s['correlation'])]
+                valid_r2 = [s['r_squared'] for s in all_stats if not np.isnan(s['r_squared'])]
+                
+                if valid_corrs and valid_r2:
+                    summary_text = f"<b>📊 SUMMARY STATISTICS</b><br>"
+                    summary_text += f"Cities Analyzed: {len(all_stats)}<br>"
+                    summary_text += f"Avg Correlation: {np.mean(valid_corrs):.3f}<br>"
+                    summary_text += f"Avg R²: {np.mean(valid_r2):.3f}<br>"
+                    summary_text += f"Range (r): {min(valid_corrs):.3f} to {max(valid_corrs):.3f}"
+                    
+                    fig.add_annotation(
+                        x=0.99, y=0.05,
+                        xref='paper', yref='paper',
+                        text=summary_text,
+                        showarrow=False,
+                        bgcolor='rgba(20, 20, 20, 0.95)',
+                        bordercolor='#00ff88',
+                        borderwidth=2,
+                        borderpad=6,
+                        align='left',
+                        font=dict(size=10, color='#ffffff'),
+                        xanchor='right',
+                        yanchor='bottom'
+                    )
+            
+            # Enhanced layout with dark theme
             fig.update_layout(
                 title=dict(
-                    text='📊 Temperature vs. Energy Demand Correlation',
+                    text='📊 Temperature vs. Energy Demand - Correlation Analysis',
                     x=0.5,
-                    font=dict(size=18, color='#1f77b4')
+                    font=dict(size=20, color='#00d4ff', family='Arial Black')
                 ),
-                xaxis_title='🌡️ Average Temperature (°F)',
-                yaxis_title='⚡ Energy Demand (MWh)',
-                height=500,
+                xaxis=dict(
+                    title=dict(text='🌡️ Average Temperature (°F)', font=dict(size=14, color='#ffffff')),
+                    tickfont=dict(size=12, color='#ffffff'),
+                    gridcolor='rgba(255, 255, 255, 0.1)',
+                    showgrid=True,
+                    zeroline=False
+                ),
+                yaxis=dict(
+                    title=dict(text='⚡ Energy Demand (MWh)', font=dict(size=14, color='#ffffff')),
+                    tickfont=dict(size=12, color='#ffffff'),
+                    gridcolor='rgba(255, 255, 255, 0.1)',
+                    showgrid=True,
+                    zeroline=False
+                ),
+                height=600,
+                width=1200,
                 showlegend=True,
-                legend=dict(yanchor="top", y=0.99, xanchor="right", x=0.99),
+                legend=dict(
+                    yanchor="top", 
+                    y=0.99, 
+                    xanchor="right", 
+                    x=0.99,
+                    bgcolor='rgba(20, 20, 20, 0.9)',
+                    bordercolor='rgba(255, 255, 255, 0.3)',
+                    borderwidth=1,
+                    font=dict(size=10, color='#ffffff')
+                ),
                 hovermode='closest',
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0.5)'
+                paper_bgcolor='rgba(15, 15, 15, 1)',
+                plot_bgcolor='rgba(25, 25, 25, 1)',
+                margin=dict(l=60, r=60, t=60, b=60),
+                font=dict(color='#ffffff')
             )
+            
+            # Add subtle grid lines with dark theme
+            fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='rgba(255, 255, 255, 0.1)')
+            fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='rgba(255, 255, 255, 0.1)')
+            
             return fig
             
         except Exception as e:
             logger.error(f"Failed to create correlation plot: {str(e)}")
             st.error(f"❌ Correlation plot failed: {str(e)}")
             return go.Figure()
-    
+
+
+
+
     def create_time_series(self, df: pd.DataFrame, selected_cities: List[str]) -> go.Figure:
         """Create time series plot for temperature and energy demand."""
         try:
