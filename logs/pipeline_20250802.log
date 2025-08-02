@@ -1,0 +1,477 @@
+2025-08-02 15:03:51.850 | INFO     | __main__:<module>:299 - Pipeline script started
+2025-08-02 15:03:51.851 | INFO     | __main__:<module>:305 - ==================================================
+2025-08-02 15:03:51.863 | INFO     | __main__:<module>:306 - STARTING HISTORICAL PIPELINE
+2025-08-02 15:03:51.863 | INFO     | __main__:<module>:307 - ==================================================
+2025-08-02 15:03:51.863 | INFO     | __main__:run_pipeline_with_validation:252 - Starting historical pipeline at 2025-08-02 15:03:51.863191
+2025-08-02 15:03:51.878 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-02 15:03:51.894 | INFO     | __main__:run_pipeline:135 - Starting historical pipeline for 90 days
+2025-08-02 15:03:51.896 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-02, Buffer=3 days, End date=2025-07-30, Start date=2025-05-02
+2025-08-02 15:03:51.896 | INFO     | __main__:run_pipeline:167 - Processing historical data from 2025-05-02 to 2025-07-30 across 5 cities
+2025-08-02 15:03:51.896 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-05-02 to 2025-05-31
+2025-08-02 15:03:51.907 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-05-02 to 2025-05-31
+2025-08-02 15:04:03.771 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:04:03.774 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-05-02 to 2025-05-31
+2025-08-02 15:04:40.010 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:05:13.526 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:05:47.240 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:06:22.158 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:06:55.647 | ERROR    | data_fetcher:_make_request_with_retry:78 - Failed after 5 attempts: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:06:55.647 | ERROR    | data_fetcher:fetch_eia_data:166 - Failed fetching EIA data for NYIS: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:06:55.647 | INFO     | data_fetcher:_fetch_eia_alternative:183 - Trying alternative EIA request for NYIS
+2025-08-02 15:07:07.816 | WARNING  | data_fetcher:_make_request_with_retry:65 - HTTP error on attempt 1: 504 Server Error: Gateway Timeout for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=NYIS&start=2025-05-02&end=2025-05-31
+2025-08-02 15:07:40.088 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:07:46.514 | INFO     | data_fetcher:_fetch_eia_alternative:197 - Successfully fetched alternative EIA data for NYIS
+2025-08-02 15:07:52.819 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-02 15:07:52.881 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-02 15:07:53.321 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:07:53.352 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-02 15:07:53.373 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-05-02 to 2025-05-31
+2025-08-02 15:07:56.020 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:07:56.022 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-05-02 to 2025-05-31
+2025-08-02 15:08:06.187 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:08:06.297 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-02 15:08:06.329 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-02 15:08:06.376 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:08:06.391 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-02 15:08:06.407 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-05-02 to 2025-05-31
+2025-08-02 15:08:08.411 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:08:08.411 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-05-02 to 2025-05-31
+2025-08-02 15:08:20.840 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:08:20.957 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-02 15:08:21.004 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-02 15:08:21.052 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:08:21.073 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-02 15:08:21.073 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-05-02 to 2025-05-31
+2025-08-02 15:08:23.794 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:08:23.794 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-05-02 to 2025-05-31
+2025-08-02 15:08:42.240 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:08:42.498 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-02 15:08:42.535 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-02 15:08:42.581 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:08:42.598 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-02 15:08:42.598 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-05-02 to 2025-05-31
+2025-08-02 15:08:45.053 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:08:45.055 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-05-02 to 2025-05-31
+2025-08-02 15:09:13.888 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:09:14.023 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-02 15:09:14.054 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-02 15:09:14.101 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:09:14.117 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-02 15:09:16.129 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-06-01 to 2025-06-30
+2025-08-02 15:09:16.129 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-06-01 to 2025-06-30
+2025-08-02 15:09:19.376 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:09:19.378 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-06-01 to 2025-06-30
+2025-08-02 15:09:47.118 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:09:47.269 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-02 15:09:47.300 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-02 15:09:47.367 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:09:47.395 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-02 15:09:47.395 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-06-01 to 2025-06-30
+2025-08-02 15:09:51.962 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:09:51.962 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-06-01 to 2025-06-30
+2025-08-02 15:10:21.976 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:10:55.054 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:11:28.368 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:11:43.172 | WARNING  | data_fetcher:_make_request_with_retry:65 - HTTP error on attempt 4: 504 Server Error: Gateway Timeout for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=PJM&start=2025-06-01&end=2025-06-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc
+2025-08-02 15:11:47.349 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:11:47.512 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-02 15:11:47.561 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-02 15:11:47.609 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:11:47.639 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-02 15:11:47.654 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-06-01 to 2025-06-30
+2025-08-02 15:11:50.761 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:11:50.761 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-06-01 to 2025-06-30
+2025-08-02 15:11:54.620 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:11:54.888 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-02 15:11:54.982 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-02 15:11:55.029 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:11:55.076 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-02 15:11:55.076 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-06-01 to 2025-06-30
+2025-08-02 15:11:56.684 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:11:56.684 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-06-01 to 2025-06-30
+2025-08-02 15:12:00.767 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:12:00.990 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-02 15:12:01.019 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-02 15:12:01.078 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:12:01.098 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-02 15:12:01.098 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-06-01 to 2025-06-30
+2025-08-02 15:12:03.078 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:12:03.078 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-06-01 to 2025-06-30
+2025-08-02 15:12:05.663 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:12:05.930 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-02 15:12:05.975 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-02 15:12:06.085 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:12:06.133 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-02 15:12:08.142 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-07-01 to 2025-07-30
+2025-08-02 15:12:08.142 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:10.397 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:12:10.397 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:19.454 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:12:19.670 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 29 records
+2025-08-02 15:12:19.717 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-02 15:12:20.717 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Missing values in temperature_max: 1 (3.3%)', 'Missing values in temperature_min: 1 (3.3%)', 'Missing values in temperature_avg: 1 (3.3%)'], 'summary': {'total_rows': 30, 'missing_values': 3, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:12:20.746 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-02 15:12:20.746 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:22.217 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:12:22.217 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:33.512 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:12:33.631 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 29 records
+2025-08-02 15:12:33.662 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-02 15:12:33.709 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Missing values in temperature_max: 1 (3.3%)', 'Missing values in temperature_min: 1 (3.3%)', 'Missing values in temperature_avg: 1 (3.3%)'], 'summary': {'total_rows': 30, 'missing_values': 3, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:12:33.740 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-02 15:12:33.740 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:34.913 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:12:34.913 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:50.035 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:12:50.284 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-02 15:12:50.310 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-02 15:12:50.340 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': True, 'issues': [], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:12:50.361 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-02 15:12:50.361 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-07-01 to 2025-07-30
+2025-08-02 15:12:51.810 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:12:51.810 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-07-01 to 2025-07-30
+2025-08-02 15:13:21.820 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:13:55.502 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:14:28.697 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:15:02.248 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:15:15.513 | ERROR    | data_fetcher:_make_request_with_retry:78 - Failed after 5 attempts: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDB140>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:15.516 | ERROR    | data_fetcher:fetch_eia_data:166 - Failed fetching EIA data for AZPS: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDB140>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:15.519 | INFO     | data_fetcher:_fetch_eia_alternative:183 - Trying alternative EIA request for AZPS
+2025-08-02 15:15:15.530 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDB320>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:17.540 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162B3C4D0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:19.543 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162D839B0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:26.786 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162DB3C50>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:28.792 | ERROR    | data_fetcher:_make_request_with_retry:78 - Failed after 5 attempts: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162DB0DA0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:28.792 | ERROR    | data_fetcher:_fetch_eia_alternative:201 - Alternative EIA request failed for AZPS: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162DB0DA0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:28.913 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-02 15:15:28.944 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Missing values in energy_demand: 30 (100.0%)'], 'summary': {'total_rows': 30, 'missing_values': 30, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:15:28.970 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-02 15:15:28.976 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-07-01 to 2025-07-30
+2025-08-02 15:15:28.976 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-07-01&enddate=2025-07-30&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016160B97BF0>: Failed to resolve 'www.ncdc.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:30.984 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-07-01&enddate=2025-07-30&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDBB30>: Failed to resolve 'www.ncdc.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:32.992 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-07-01&enddate=2025-07-30&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDB650>: Failed to resolve 'www.ncdc.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:35.026 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-07-01&enddate=2025-07-30&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDB950>: Failed to resolve 'www.ncdc.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:37.028 | ERROR    | data_fetcher:_make_request_with_retry:78 - Failed after 5 attempts: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-07-01&enddate=2025-07-30&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED8470>: Failed to resolve 'www.ncdc.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:37.028 | ERROR    | data_fetcher:fetch_noaa_data:125 - Failed fetching NOAA data for GHCND:USW00024233: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-07-01&enddate=2025-07-30&datatypeid=TMAX%2CTMIN&limit=1000&units=standard (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED8470>: Failed to resolve 'www.ncdc.noaa.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:37.028 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-07-01 to 2025-07-30
+2025-08-02 15:15:37.047 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED9310>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:40.052 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162EDA900>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:42.060 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED9760>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:44.064 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162F105F0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:46.073 | ERROR    | data_fetcher:_make_request_with_retry:78 - Failed after 5 attempts: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED9DC0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:46.080 | ERROR    | data_fetcher:fetch_eia_data:166 - Failed fetching EIA data for SCL: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED9DC0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:46.080 | INFO     | data_fetcher:_fetch_eia_alternative:183 - Trying alternative EIA request for SCL
+2025-08-02 15:15:46.080 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED9190>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:15:48.099 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED95B0>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:16:01.407 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED9F70>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:16:03.410 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='api.eia.gov', port=443): Max retries exceeded with url: /v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016162ED8440>: Failed to resolve 'api.eia.gov' ([Errno 11001] getaddrinfo failed)"))
+2025-08-02 15:16:17.815 | ERROR    | data_fetcher:_make_request_with_retry:69 - Failed after 5 attempts: 504 Server Error: Gateway Timeout for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30
+2025-08-02 15:16:17.815 | ERROR    | data_fetcher:_fetch_eia_alternative:201 - Alternative EIA request failed for SCL: 504 Server Error: Gateway Timeout for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=SCL&start=2025-07-01&end=2025-07-30
+2025-08-02 15:16:17.831 | WARNING  | __main__:run_pipeline:187 - No data from APIs for Seattle in chunk 2025-07-01-2025-07-30
+2025-08-02 15:16:17.831 | INFO     | __main__:run_pipeline:213 - Processing summary: 14/5 cities processed successfully
+2025-08-02 15:16:17.846 | INFO     | __main__:save_processed_data:107 - Saved quality report to data/processed\quality_report_historical_90days_2025-05-02_to_2025-07-30_20250802_151617.json
+2025-08-02 15:16:19.189 | INFO     | __main__:save_processed_data:120 - Saved data to data/processed\historical_90days_2025-05-02_to_2025-07-30_20250802_151617.csv: 420 records
+2025-08-02 15:16:19.220 | INFO     | __main__:save_processed_data:125 - Saved latest historical data to data/processed\latest_historical.csv
+2025-08-02 15:16:19.220 | INFO     | __main__:run_pipeline:228 - Historical pipeline completed with data from 14 cities
+2025-08-02 15:16:19.220 | INFO     | __main__:run_pipeline_with_validation:273 - Historical pipeline completed successfully in 0:12:27.357222
+2025-08-02 15:16:19.220 | INFO     | __main__:<module>:311 - ==================================================
+2025-08-02 15:16:19.220 | INFO     | __main__:<module>:312 - STARTING DAILY PIPELINE
+2025-08-02 15:16:19.220 | INFO     | __main__:<module>:313 - ==================================================
+2025-08-02 15:16:19.220 | INFO     | __main__:run_pipeline_with_validation:252 - Starting daily pipeline at 2025-08-02 15:16:19.220413
+2025-08-02 15:16:19.236 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-02 15:16:19.251 | INFO     | __main__:run_pipeline:135 - Starting daily pipeline for 90 days
+2025-08-02 15:16:19.251 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-02, Buffer=3 days, End date=2025-07-30, Start date=2025-07-30
+2025-08-02 15:16:19.251 | INFO     | __main__:run_pipeline:150 - Processing daily data for 2025-07-30 (with 3-day buffer from today)
+2025-08-02 15:16:19.251 | INFO     | __main__:run_pipeline:153 - Processing New York
+2025-08-02 15:16:19.251 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:20.975 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:16:21.053 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:26.956 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:16:27.001 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 1 records
+2025-08-02 15:16:27.032 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:16:27.051 | INFO     | __main__:process_city_data_safe:80 - Successfully processed New York for 2025-07-30: 1 records
+2025-08-02 15:16:27.051 | INFO     | __main__:run_pipeline:159 - Successfully processed data for New York: 1 records
+2025-08-02 15:16:27.063 | INFO     | __main__:run_pipeline:153 - Processing Chicago
+2025-08-02 15:16:27.063 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:28.412 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:16:28.412 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:36.073 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:16:36.119 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 1 records
+2025-08-02 15:16:36.124 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:16:36.140 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Chicago for 2025-07-30: 1 records
+2025-08-02 15:16:36.140 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Chicago: 1 records
+2025-08-02 15:16:36.140 | INFO     | __main__:run_pipeline:153 - Processing Houston
+2025-08-02 15:16:36.140 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:40.208 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:16:40.208 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:52.596 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:16:52.613 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 1 records
+2025-08-02 15:16:52.642 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 1 records
+2025-08-02 15:16:52.689 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:16:52.704 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Houston for 2025-07-30: 1 records
+2025-08-02 15:16:52.704 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Houston: 1 records
+2025-08-02 15:16:52.704 | INFO     | __main__:run_pipeline:153 - Processing Phoenix
+2025-08-02 15:16:52.720 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-07-30 to 2025-07-30
+2025-08-02 15:16:54.106 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:16:54.106 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-07-30 to 2025-07-30
+2025-08-02 15:17:11.906 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:17:11.954 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 1 records
+2025-08-02 15:17:12.009 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 1 records
+2025-08-02 15:17:12.090 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:17:12.122 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Phoenix for 2025-07-30: 1 records
+2025-08-02 15:17:12.122 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Phoenix: 1 records
+2025-08-02 15:17:12.122 | INFO     | __main__:run_pipeline:153 - Processing Seattle
+2025-08-02 15:17:12.130 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-07-30 to 2025-07-30
+2025-08-02 15:17:14.538 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:17:14.538 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-07-30 to 2025-07-30
+2025-08-02 15:17:35.966 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:17:36.128 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 1 records
+2025-08-02 15:17:36.166 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 1 records
+2025-08-02 15:17:36.311 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:17:36.388 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Seattle for 2025-07-30: 1 records
+2025-08-02 15:17:36.388 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Seattle: 1 records
+2025-08-02 15:17:36.388 | INFO     | __main__:run_pipeline:213 - Processing summary: 5/5 cities processed successfully
+2025-08-02 15:17:36.398 | INFO     | __main__:save_processed_data:107 - Saved quality report to data/processed\quality_report_daily_2025-07-30_20250802_151736.json
+2025-08-02 15:17:36.404 | INFO     | __main__:save_processed_data:120 - Saved data to data/processed\daily_2025-07-30_20250802_151736.csv: 5 records
+2025-08-02 15:17:36.409 | INFO     | __main__:save_processed_data:125 - Saved latest daily data to data/processed\latest_daily.csv
+2025-08-02 15:17:36.410 | INFO     | __main__:run_pipeline:228 - Daily pipeline completed with data from 5 cities
+2025-08-02 15:17:36.413 | INFO     | __main__:run_pipeline_with_validation:273 - Daily pipeline completed successfully in 0:01:17.193018
+2025-08-02 15:17:36.413 | INFO     | __main__:<module>:317 - ==================================================
+2025-08-02 15:17:36.417 | INFO     | __main__:<module>:318 - PIPELINE EXECUTION SUMMARY
+2025-08-02 15:17:36.418 | INFO     | __main__:<module>:319 - ==================================================
+2025-08-02 15:17:36.420 | INFO     | __main__:<module>:322 - ✓ Historical pipeline succeeded
+2025-08-02 15:17:36.421 | INFO     | __main__:<module>:327 - ✓ Daily pipeline succeeded
+2025-08-02 15:17:36.425 | INFO     | __main__:<module>:333 - 🎉 All pipelines completed successfully
+2025-08-02 15:17:36.425 | INFO     | __main__:<module>:346 - Pipeline script finished
+2025-08-02 15:18:12.953 | INFO     | __main__:<module>:299 - Pipeline script started
+2025-08-02 15:18:12.953 | INFO     | __main__:<module>:305 - ==================================================
+2025-08-02 15:18:12.953 | INFO     | __main__:<module>:306 - STARTING HISTORICAL PIPELINE
+2025-08-02 15:18:12.953 | INFO     | __main__:<module>:307 - ==================================================
+2025-08-02 15:18:12.953 | INFO     | __main__:run_pipeline_with_validation:252 - Starting historical pipeline at 2025-08-02 15:18:12.953838
+2025-08-02 15:18:12.958 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-02 15:18:12.959 | INFO     | __main__:run_pipeline:135 - Starting historical pipeline for 90 days
+2025-08-02 15:18:12.959 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-02, Buffer=3 days, End date=2025-07-30, Start date=2025-05-02
+2025-08-02 15:18:12.961 | INFO     | __main__:run_pipeline:167 - Processing historical data from 2025-05-02 to 2025-07-30 across 5 cities
+2025-08-02 15:18:12.961 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-05-02 to 2025-05-31
+2025-08-02 15:18:12.963 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-05-02 to 2025-05-31
+2025-08-02 15:18:14.118 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:18:14.120 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-05-02 to 2025-05-31
+2025-08-02 15:18:45.413 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:19:18.347 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:19:34.463 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:19:35.124 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-02 15:19:35.170 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-02 15:19:35.209 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:19:35.240 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-02 15:19:35.243 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-05-02 to 2025-05-31
+2025-08-02 15:19:36.534 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:19:36.534 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-05-02 to 2025-05-31
+2025-08-02 15:20:06.542 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:20:26.594 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-08-02 15:20:40.376 | WARNING  | data_fetcher:_make_request_with_retry:65 - HTTP error on attempt 3: 504 Server Error: Gateway Timeout for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=PJM&start=2025-05-02&end=2025-05-31&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc
+2025-08-02 15:21:12.385 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 4: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:21:28.461 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:21:29.092 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-02 15:21:29.120 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-02 15:21:29.154 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:21:29.172 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-02 15:21:29.174 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-05-02 to 2025-05-31
+2025-08-02 15:21:30.770 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:21:30.772 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-05-02 to 2025-05-31
+2025-08-02 15:21:56.022 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:21:56.435 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-02 15:21:56.563 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-02 15:21:56.672 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:21:56.697 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-02 15:21:56.698 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-05-02 to 2025-05-31
+2025-08-02 15:21:58.019 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:21:58.020 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-05-02 to 2025-05-31
+2025-08-02 15:22:28.024 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:23:01.666 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:23:34.978 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:23:45.482 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:23:45.868 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-02 15:23:45.901 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-02 15:23:45.995 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:23:46.053 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-02 15:23:46.053 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-05-02 to 2025-05-31
+2025-08-02 15:23:47.357 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:23:47.360 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-05-02 to 2025-05-31
+2025-08-02 15:24:12.839 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:24:13.017 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-02 15:24:13.047 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-02 15:24:13.091 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 63 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1512}}
+2025-08-02 15:24:13.113 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-02 15:24:15.117 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-06-01 to 2025-06-30
+2025-08-02 15:24:15.570 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-06-01 to 2025-06-30
+2025-08-02 15:24:16.861 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:24:16.864 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-06-01 to 2025-06-30
+2025-08-02 15:24:46.883 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:24:50.642 | WARNING  | data_fetcher:_make_request_with_retry:65 - HTTP error on attempt 2: 502 Server Error: Bad Gateway for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=NYIS&start=2025-06-01&end=2025-06-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc
+2025-08-02 15:25:22.674 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:25:30.924 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:25:31.435 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-02 15:25:31.456 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-02 15:25:31.497 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:25:31.526 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-02 15:25:31.530 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-06-01 to 2025-06-30
+2025-08-02 15:25:33.923 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:25:33.923 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-06-01 to 2025-06-30
+2025-08-02 15:25:43.271 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:25:43.842 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-02 15:25:43.868 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-02 15:25:43.923 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:25:43.953 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-02 15:25:43.955 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-06-01 to 2025-06-30
+2025-08-02 15:25:45.540 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:25:45.540 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-06-01 to 2025-06-30
+2025-08-02 15:26:04.849 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:26:04.970 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-02 15:26:05.044 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-02 15:26:05.331 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:26:05.360 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-02 15:26:05.364 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-06-01 to 2025-06-30
+2025-08-02 15:26:34.694 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:26:34.694 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-06-01 to 2025-06-30
+2025-08-02 15:27:04.704 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:27:37.725 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:28:04.949 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:28:06.000 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-02 15:28:06.129 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-02 15:28:06.292 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:28:06.346 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-02 15:28:06.346 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-06-01 to 2025-06-30
+2025-08-02 15:28:07.922 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:28:07.929 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-06-01 to 2025-06-30
+2025-08-02 15:28:32.424 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:28:33.231 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-02 15:28:33.369 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-02 15:28:33.551 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 33 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 792}}
+2025-08-02 15:28:33.633 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-02 15:28:35.637 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-07-01 to 2025-07-30
+2025-08-02 15:28:35.637 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-07-01 to 2025-07-30
+2025-08-02 15:28:36.936 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:28:36.936 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-07-01 to 2025-07-30
+2025-08-02 15:29:06.956 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:29:20.651 | WARNING  | data_fetcher:_make_request_with_retry:65 - HTTP error on attempt 2: 504 Server Error: Gateway Timeout for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=unZRhk4lvGG92fzy3jVSN1egvZt7ujkNcXHuqwck&frequency=daily&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=NYIS&start=2025-07-01&end=2025-07-30&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc
+2025-08-02 15:29:52.682 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:30:00.975 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:30:01.168 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 29 records
+2025-08-02 15:30:01.201 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-02 15:30:04.144 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Missing values in temperature_max: 1 (3.3%)', 'Missing values in temperature_min: 1 (3.3%)', 'Missing values in temperature_avg: 1 (3.3%)'], 'summary': {'total_rows': 30, 'missing_values': 3, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:30:04.223 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-02 15:30:04.223 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-07-01 to 2025-07-30
+2025-08-02 15:30:05.742 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:30:05.742 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-07-01 to 2025-07-30
+2025-08-02 15:30:29.179 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:30:29.549 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 29 records
+2025-08-02 15:30:29.621 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-02 15:30:29.783 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Missing values in temperature_max: 1 (3.3%)', 'Missing values in temperature_min: 1 (3.3%)', 'Missing values in temperature_avg: 1 (3.3%)'], 'summary': {'total_rows': 30, 'missing_values': 3, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:30:29.869 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-02 15:30:29.874 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-07-01 to 2025-07-30
+2025-08-02 15:30:31.157 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:30:31.158 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-07-01 to 2025-07-30
+2025-08-02 15:31:03.328 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:31:03.707 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-02 15:31:03.763 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-02 15:31:03.843 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': True, 'issues': [], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:31:03.884 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-02 15:31:03.888 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-07-01 to 2025-07-30
+2025-08-02 15:31:08.516 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:31:08.516 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-07-01 to 2025-07-30
+2025-08-02 15:31:38.526 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:32:11.910 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:32:45.250 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:32:45.537 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-02 15:32:45.579 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-02 15:32:45.665 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': True, 'issues': [], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:32:45.706 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-02 15:32:45.711 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-07-01 to 2025-07-30
+2025-08-02 15:32:46.976 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:32:46.977 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-07-01 to 2025-07-30
+2025-08-02 15:33:16.388 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:33:16.608 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-02 15:33:16.658 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-02 15:33:16.735 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': True, 'issues': [], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:33:16.767 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-02 15:33:16.767 | INFO     | __main__:run_pipeline:213 - Processing summary: 15/5 cities processed successfully
+2025-08-02 15:33:16.933 | INFO     | __main__:save_processed_data:107 - Saved quality report to data/processed\quality_report_historical_90days_2025-05-02_to_2025-07-30_20250802_153316.json
+2025-08-02 15:33:17.079 | INFO     | __main__:save_processed_data:120 - Saved data to data/processed\historical_90days_2025-05-02_to_2025-07-30_20250802_153316.csv: 450 records
+2025-08-02 15:33:17.300 | INFO     | __main__:save_processed_data:125 - Saved latest historical data to data/processed\latest_historical.csv
+2025-08-02 15:33:17.326 | INFO     | __main__:run_pipeline:228 - Historical pipeline completed with data from 15 cities
+2025-08-02 15:33:17.351 | INFO     | __main__:run_pipeline_with_validation:273 - Historical pipeline completed successfully in 0:15:04.397759
+2025-08-02 15:33:17.372 | INFO     | __main__:<module>:311 - ==================================================
+2025-08-02 15:33:17.391 | INFO     | __main__:<module>:312 - STARTING DAILY PIPELINE
+2025-08-02 15:33:17.404 | INFO     | __main__:<module>:313 - ==================================================
+2025-08-02 15:33:17.437 | INFO     | __main__:run_pipeline_with_validation:252 - Starting daily pipeline at 2025-08-02 15:33:17.437200
+2025-08-02 15:33:17.456 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-02 15:33:17.473 | INFO     | __main__:run_pipeline:135 - Starting daily pipeline for 90 days
+2025-08-02 15:33:17.473 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-02, Buffer=3 days, End date=2025-07-30, Start date=2025-07-30
+2025-08-02 15:33:17.473 | INFO     | __main__:run_pipeline:150 - Processing daily data for 2025-07-30 (with 3-day buffer from today)
+2025-08-02 15:33:17.479 | INFO     | __main__:run_pipeline:153 - Processing New York
+2025-08-02 15:33:17.488 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-07-30 to 2025-07-30
+2025-08-02 15:33:19.418 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-02 15:33:19.418 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-07-30 to 2025-07-30
+2025-08-02 15:33:50.507 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:34:24.142 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-02 15:34:24.188 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 1 records
+2025-08-02 15:34:24.241 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:34:24.259 | INFO     | __main__:process_city_data_safe:80 - Successfully processed New York for 2025-07-30: 1 records
+2025-08-02 15:34:24.261 | INFO     | __main__:run_pipeline:159 - Successfully processed data for New York: 1 records
+2025-08-02 15:34:24.261 | INFO     | __main__:run_pipeline:153 - Processing Chicago
+2025-08-02 15:34:24.264 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-07-30 to 2025-07-30
+2025-08-02 15:34:26.599 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-02 15:34:26.608 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-07-30 to 2025-07-30
+2025-08-02 15:34:56.653 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:35:30.198 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:36:03.223 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:36:20.023 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-02 15:36:20.198 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 1 records
+2025-08-02 15:36:20.725 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:36:20.861 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Chicago for 2025-07-30: 1 records
+2025-08-02 15:36:20.865 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Chicago: 1 records
+2025-08-02 15:36:20.865 | INFO     | __main__:run_pipeline:153 - Processing Houston
+2025-08-02 15:36:20.865 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-07-30 to 2025-07-30
+2025-08-02 15:36:23.295 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-02 15:36:23.297 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-07-30 to 2025-07-30
+2025-08-02 15:36:33.895 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-02 15:36:33.964 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 1 records
+2025-08-02 15:36:34.051 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 1 records
+2025-08-02 15:36:34.115 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:36:34.131 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Houston for 2025-07-30: 1 records
+2025-08-02 15:36:34.131 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Houston: 1 records
+2025-08-02 15:36:34.136 | INFO     | __main__:run_pipeline:153 - Processing Phoenix
+2025-08-02 15:36:34.136 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-07-30 to 2025-07-30
+2025-08-02 15:36:36.527 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-02 15:36:36.527 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-07-30 to 2025-07-30
+2025-08-02 15:37:07.591 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-02 15:37:07.732 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 1 records
+2025-08-02 15:37:07.770 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 1 records
+2025-08-02 15:37:07.827 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:37:07.875 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Phoenix for 2025-07-30: 1 records
+2025-08-02 15:37:07.877 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Phoenix: 1 records
+2025-08-02 15:37:07.877 | INFO     | __main__:run_pipeline:153 - Processing Seattle
+2025-08-02 15:37:07.877 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-07-30 to 2025-07-30
+2025-08-02 15:37:09.993 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-02 15:37:09.993 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-07-30 to 2025-07-30
+2025-08-02 15:37:40.004 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:38:13.282 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-02 15:38:47.671 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-02 15:38:47.764 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 1 records
+2025-08-02 15:38:47.814 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 1 records
+2025-08-02 15:38:49.562 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': True, 'issues': [], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 72}}
+2025-08-02 15:38:49.605 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Seattle for 2025-07-30: 1 records
+2025-08-02 15:38:49.612 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Seattle: 1 records
+2025-08-02 15:38:49.612 | INFO     | __main__:run_pipeline:213 - Processing summary: 5/5 cities processed successfully
+2025-08-02 15:38:49.950 | INFO     | __main__:save_processed_data:107 - Saved quality report to data/processed\quality_report_daily_2025-07-30_20250802_153849.json
+2025-08-02 15:38:49.998 | INFO     | __main__:save_processed_data:120 - Saved data to data/processed\daily_2025-07-30_20250802_153849.csv: 5 records
+2025-08-02 15:38:50.002 | INFO     | __main__:save_processed_data:125 - Saved latest daily data to data/processed\latest_daily.csv
+2025-08-02 15:38:50.004 | INFO     | __main__:run_pipeline:228 - Daily pipeline completed with data from 5 cities
+2025-08-02 15:38:50.004 | INFO     | __main__:run_pipeline_with_validation:273 - Daily pipeline completed successfully in 0:05:32.567239
+2025-08-02 15:38:50.004 | INFO     | __main__:<module>:317 - ==================================================
+2025-08-02 15:38:50.007 | INFO     | __main__:<module>:318 - PIPELINE EXECUTION SUMMARY
+2025-08-02 15:38:50.017 | INFO     | __main__:<module>:319 - ==================================================
+2025-08-02 15:38:50.018 | INFO     | __main__:<module>:322 - ✓ Historical pipeline succeeded
+2025-08-02 15:38:50.018 | INFO     | __main__:<module>:327 - ✓ Daily pipeline succeeded
+2025-08-02 15:38:50.018 | INFO     | __main__:<module>:333 - 🎉 All pipelines completed successfully
+2025-08-02 15:38:50.023 | INFO     | __main__:<module>:346 - Pipeline script finished

@@ -87,6 +87,7 @@ def process_city_data_safe(fetcher: DataFetcher, processor: DataProcessor,
         logger.error(f"Processing failed for {city.name} on {date_str}: {str(e)}")
         return None, create_quality_check_entry(city.name, str(e), date_str)
 
+
 def save_processed_data(config: Config, combined_df: pd.DataFrame, quality_checks: list,
                        file_prefix: str, date_info: str = "", allow_empty: bool = False) -> bool:
     """Save processed data and quality reports with consistent naming."""

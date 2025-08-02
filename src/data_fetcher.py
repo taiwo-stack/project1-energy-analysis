@@ -313,9 +313,3 @@ class DataFetcher:
         
         logger.info(f"Historical data fetch complete: {len(results)} city records")
         return results
-
-# Usage example:
-# from config import Config
-# config = Config.load("config/config.yaml")
-# fetcher = DataFetcher(config)
-# data = fetcher.fetch_historical_data(30)

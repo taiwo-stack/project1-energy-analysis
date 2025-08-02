@@ -1602,3 +1602,97 @@ titlefont
 2025-08-01 14:17:12.705 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
 2025-08-01 14:17:12.752 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
 2025-08-01 14:17:12.934 | INFO     | analysis:calculate_correlations:248 - Calculated 4 significant correlations. Range: 0.625 to 0.868
+2025-08-01 14:45:41.655 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-08-01 14:45:41.664 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-01 14:45:41.684 | INFO     | analysis:load_data:74 - Using specified date range: 2025-06-30 to 2025-07-30
+2025-08-01 14:45:41.703 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 150 records
+2025-08-01 14:45:41.716 | INFO     | analysis:load_data:137 - Final dataset: 150 records from 2025-06-30 to 2025-07-29 across 5 cities
+2025-08-01 14:45:41.782 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 14:45:41.972 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:45:41.976 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-01 14:45:41.977 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-01 14:45:41.980 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-01 14:45:42.048 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-01 14:45:42.080 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 14:45:42.474 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:45:42.564 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-01 14:45:42.564 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:45:42.768 | INFO     | analysis:calculate_correlations:248 - Calculated 4 significant correlations. Range: 0.625 to 0.868
+2025-08-01 14:46:52.883 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-08-01 14:46:52.883 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-08-01 14:46:52.889 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-01 14:46:52.889 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-01 14:46:52.914 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-01 to 2025-07-30
+2025-08-01 14:46:52.914 | INFO     | analysis:load_data:74 - Using specified date range: 2025-05-01 to 2025-07-30
+2025-08-01 14:46:52.922 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 450 records
+2025-08-01 14:46:52.922 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 450 records
+2025-08-01 14:46:52.932 | INFO     | analysis:load_data:137 - Final dataset: 450 records from 2025-05-01 to 2025-07-29 across 5 cities
+2025-08-01 14:46:52.932 | INFO     | analysis:load_data:137 - Final dataset: 450 records from 2025-05-01 to 2025-07-29 across 5 cities
+2025-08-01 14:46:53.020 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 14:46:53.020 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 14:46:53.292 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:46:53.292 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:46:53.300 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-01 14:46:53.300 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-01 14:46:53.303 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-01 14:46:53.303 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-01 14:46:53.325 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-01 14:46:53.325 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-01 14:46:53.469 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-01 14:46:53.469 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-01 14:46:53.808 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 14:46:53.808 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 14:46:54.955 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:46:54.955 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:46:55.058 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-01 14:46:55.058 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-01 14:46:55.072 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:46:55.072 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 14:46:55.266 | INFO     | analysis:calculate_correlations:248 - Calculated 5 significant correlations. Range: 0.550 to 0.927
+2025-08-01 14:46:55.266 | INFO     | analysis:calculate_correlations:248 - Calculated 5 significant correlations. Range: 0.550 to 0.927
+2025-08-01 15:36:23.184 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-08-01 15:36:23.342 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-01 15:36:23.342 | INFO     | analysis:load_data:74 - Using specified date range: 2025-06-30 to 2025-07-30
+2025-08-01 15:36:23.353 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 150 records
+2025-08-01 15:36:23.369 | INFO     | analysis:load_data:137 - Final dataset: 150 records from 2025-06-30 to 2025-07-29 across 5 cities
+2025-08-01 15:36:23.412 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 15:36:23.645 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 15:36:23.654 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-01 15:36:23.662 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-01 15:36:23.667 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-01 15:36:23.762 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-01 15:36:23.788 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 15:36:24.628 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 15:36:24.687 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-01 15:36:24.688 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 15:36:24.754 | INFO     | analysis:calculate_correlations:248 - Calculated 4 significant correlations. Range: 0.625 to 0.868
+2025-08-01 17:17:50.471 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-08-01 17:17:51.397 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-01 17:17:51.397 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-01 17:17:51.568 | INFO     | analysis:load_data:74 - Using specified date range: 2025-06-30 to 2025-07-30
+2025-08-01 17:17:51.568 | INFO     | analysis:load_data:74 - Using specified date range: 2025-06-30 to 2025-07-30
+2025-08-01 17:17:51.598 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 150 records
+2025-08-01 17:17:51.598 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 150 records
+2025-08-01 17:17:51.650 | INFO     | analysis:load_data:137 - Final dataset: 150 records from 2025-06-30 to 2025-07-29 across 5 cities
+2025-08-01 17:17:51.650 | INFO     | analysis:load_data:137 - Final dataset: 150 records from 2025-06-30 to 2025-07-29 across 5 cities
+2025-08-01 17:17:51.793 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 17:17:51.793 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 17:17:53.152 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 17:17:53.152 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 17:17:53.159 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-01 17:17:53.159 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-01 17:17:53.160 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-01 17:17:53.160 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-01 17:17:53.182 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-01 17:17:53.182 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-01 17:17:54.945 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-01 17:17:54.945 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-01 17:17:55.004 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 17:17:55.004 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-01 17:17:55.511 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 17:17:55.511 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 17:17:55.656 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-01 17:17:55.656 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-01 17:17:55.662 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 17:17:55.662 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-01 17:17:55.807 | INFO     | analysis:calculate_correlations:248 - Calculated 4 significant correlations. Range: 0.625 to 0.868
