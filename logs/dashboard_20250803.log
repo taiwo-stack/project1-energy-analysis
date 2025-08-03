@@ -1,0 +1,16 @@
+2025-08-03 01:21:15.694 | INFO     | analysis:load_data:52 - Loading data from: data\processed\latest_historical.csv
+2025-08-03 01:21:15.745 | INFO     | analysis:load_data:59 - Loaded 450 rows from data\processed\latest_historical.csv
+2025-08-03 01:21:15.771 | INFO     | analysis:load_data:74 - Using specified date range: 2025-07-02 to 2025-08-01
+2025-08-03 01:21:15.799 | INFO     | analysis:load_data:82 - Date filtering: 450 -> 140 records
+2025-08-03 01:21:15.806 | INFO     | analysis:load_data:137 - Final dataset: 140 records from 2025-07-02 to 2025-07-29 across 5 cities
+2025-08-03 01:21:15.851 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-03 01:21:16.175 | INFO     | analysis:calculate_usage_levels:368 - Processing usage levels for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-03 01:21:16.175 | INFO     | analysis:calculate_usage_levels:376 - Usage level calculation periods:
+2025-08-03 01:21:16.175 | INFO     | analysis:calculate_usage_levels:377 -   Baseline period: 2025-06-23 to 2025-07-22 (30 days)
+2025-08-03 01:21:16.175 | INFO     | analysis:calculate_usage_levels:378 -   Recent period: 2025-07-23 to 2025-07-29 (7 days)
+2025-08-03 01:21:16.220 | INFO     | analysis:calculate_usage_levels:458 - Calculated usage levels for 5 cities
+2025-08-03 01:21:16.246 | INFO     | visualization.data_manager:calculate_last_day_change:154 - Successfully calculated changes for 5 cities
+2025-08-03 01:21:16.657 | INFO     | analysis:calculate_regression:290 - Processing regression for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-03 01:21:16.711 | INFO     | analysis:calculate_regression:327 - Calculated regression stats for 5 cities
+2025-08-03 01:21:16.712 | INFO     | analysis:calculate_correlations:197 - Processing correlations for selected cities: ['New York', 'Chicago', 'Houston', 'Phoenix', 'Seattle']
+2025-08-03 01:21:16.777 | INFO     | analysis:calculate_correlations:248 - Calculated 4 significant correlations. Range: 0.632 to 0.867
