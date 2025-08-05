@@ -1,0 +1,227 @@
+2025-08-05 12:08:01.550 | INFO     | __main__:<module>:299 - Pipeline script started
+2025-08-05 12:08:01.553 | INFO     | __main__:<module>:305 - ==================================================
+2025-08-05 12:08:01.553 | INFO     | __main__:<module>:306 - STARTING HISTORICAL PIPELINE
+2025-08-05 12:08:01.555 | INFO     | __main__:<module>:307 - ==================================================
+2025-08-05 12:08:01.555 | INFO     | __main__:run_pipeline_with_validation:252 - Starting historical pipeline at 2025-08-05 12:08:01.555466
+2025-08-05 12:08:01.562 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-05 12:08:01.572 | INFO     | __main__:run_pipeline:135 - Starting historical pipeline for 90 days
+2025-08-05 12:08:01.573 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-05, Buffer=5 days, End date=2025-07-31, Start date=2025-05-03
+2025-08-05 12:08:01.574 | INFO     | __main__:run_pipeline:167 - Processing historical data from 2025-05-03 to 2025-07-31 across 5 cities
+2025-08-05 12:08:01.574 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-05-03 to 2025-06-01
+2025-08-05 12:08:01.586 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-05-03 to 2025-06-01
+2025-08-05 12:08:10.831 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-05 12:08:10.833 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-05-03 to 2025-06-01
+2025-08-05 12:08:45.392 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=30)
+2025-08-05 12:32:19.344 | INFO     | __main__:<module>:299 - Pipeline script started
+2025-08-05 12:32:19.344 | INFO     | __main__:<module>:305 - ==================================================
+2025-08-05 12:32:19.344 | INFO     | __main__:<module>:306 - STARTING HISTORICAL PIPELINE
+2025-08-05 12:32:19.344 | INFO     | __main__:<module>:307 - ==================================================
+2025-08-05 12:32:19.344 | INFO     | __main__:run_pipeline_with_validation:252 - Starting historical pipeline at 2025-08-05 12:32:19.344076
+2025-08-05 12:32:19.344 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-05 12:32:19.344 | INFO     | __main__:run_pipeline:135 - Starting historical pipeline for 90 days
+2025-08-05 12:32:19.344 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-05, Buffer=5 days, End date=2025-07-31, Start date=2025-05-03
+2025-08-05 12:32:19.344 | INFO     | __main__:run_pipeline:167 - Processing historical data from 2025-05-03 to 2025-07-31 across 5 cities
+2025-08-05 12:32:19.344 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-05-03 to 2025-06-01
+2025-08-05 12:32:19.344 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-05-03 to 2025-06-01
+2025-08-05 12:32:39.303 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-05 12:32:39.303 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-05-03 to 2025-06-01
+2025-08-05 12:32:47.464 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-05 12:32:50.002 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-05 12:32:50.046 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-05 12:32:50.243 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 65 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1560}}
+2025-08-05 12:32:50.262 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-05 12:32:50.263 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-05-03 to 2025-06-01
+2025-08-05 12:33:24.531 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-05 12:33:24.531 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-05-03 to 2025-06-01
+2025-08-05 12:33:32.133 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-05 12:33:32.283 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-05 12:33:32.313 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-05 12:33:32.386 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 65 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1560}}
+2025-08-05 12:33:32.459 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-05 12:33:32.459 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-05-03 to 2025-06-01
+2025-08-05 12:33:40.523 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-05 12:33:40.523 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-05-03 to 2025-06-01
+2025-08-05 12:33:44.799 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-05 12:33:44.890 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-05 12:33:44.917 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-05 12:33:44.989 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 65 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1560}}
+2025-08-05 12:33:45.017 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-05 12:33:45.019 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-05-03 to 2025-06-01
+2025-08-05 12:33:53.418 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-05 12:33:53.418 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-05-03 to 2025-06-01
+2025-08-05 12:33:57.790 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-05 12:33:57.962 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-05 12:33:57.993 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-05 12:33:58.070 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 65 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1560}}
+2025-08-05 12:33:58.090 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-05 12:33:58.091 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-05-03 to 2025-06-01
+2025-08-05 12:34:07.014 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-05 12:34:07.014 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-05-03 to 2025-06-01
+2025-08-05 12:34:12.322 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-05 12:34:12.452 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-05 12:34:12.462 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-05 12:34:12.487 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 65 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 1560}}
+2025-08-05 12:34:12.503 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-05 12:34:14.507 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-06-02 to 2025-07-01
+2025-08-05 12:34:14.510 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-06-02 to 2025-07-01
+2025-08-05 12:34:26.949 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-05 12:34:26.949 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-06-02 to 2025-07-01
+2025-08-05 12:34:32.033 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-05 12:34:32.099 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-05 12:34:32.115 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-05 12:34:32.146 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 35 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 840}}
+2025-08-05 12:34:32.146 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-05 12:34:32.146 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-06-02 to 2025-07-01
+2025-08-05 12:34:39.538 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-05 12:34:39.538 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-06-02 to 2025-07-01
+2025-08-05 12:34:44.731 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-05 12:34:44.801 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-05 12:34:44.817 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-05 12:34:44.848 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 35 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 840}}
+2025-08-05 12:34:44.864 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-05 12:34:44.864 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-06-02 to 2025-07-01
+2025-08-05 12:35:19.762 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-08-05 12:35:42.014 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-05 12:35:42.014 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-06-02 to 2025-07-01
+2025-08-05 12:35:46.458 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-05 12:35:46.524 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-05 12:35:47.764 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-05 12:35:47.826 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 35 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 840}}
+2025-08-05 12:35:47.856 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-05 12:35:47.894 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-06-02 to 2025-07-01
+2025-08-05 12:35:56.399 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-05 12:35:56.431 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-06-02 to 2025-07-01
+2025-08-05 12:36:09.166 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-05 12:36:09.254 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-05 12:36:09.285 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-05 12:36:09.316 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 35 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 840}}
+2025-08-05 12:36:09.332 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-05 12:36:09.332 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-06-02 to 2025-07-01
+2025-08-05 12:36:34.381 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-05 12:36:34.381 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-06-02 to 2025-07-01
+2025-08-05 12:36:41.383 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-05 12:36:41.447 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-05 12:36:41.463 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-05 12:36:41.556 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 35 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 840}}
+2025-08-05 12:36:41.588 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-05 12:36:43.602 | INFO     | __main__:run_pipeline:175 - Processing chunk: 2025-07-02 to 2025-07-31
+2025-08-05 12:36:43.602 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-07-02 to 2025-07-31
+2025-08-05 12:37:01.809 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-05 12:37:01.809 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-07-02 to 2025-07-31
+2025-08-05 12:37:12.418 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-05 12:37:12.507 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 30 records
+2025-08-05 12:37:12.523 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 30 records
+2025-08-05 12:37:12.554 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:37:12.586 | INFO     | __main__:run_pipeline:199 - Processed chunk for New York: 30 records
+2025-08-05 12:37:12.586 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-07-02 to 2025-07-31
+2025-08-05 12:37:19.831 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-05 12:37:19.831 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-07-02 to 2025-07-31
+2025-08-05 12:37:25.632 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-05 12:37:25.721 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 30 records
+2025-08-05 12:37:25.736 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 30 records
+2025-08-05 12:37:25.799 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:37:25.814 | INFO     | __main__:run_pipeline:199 - Processed chunk for Chicago: 30 records
+2025-08-05 12:37:25.814 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-07-02 to 2025-07-31
+2025-08-05 12:37:58.098 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 1: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-08-05 12:38:48.650 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 2: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-08-05 12:39:27.093 | WARNING  | data_fetcher:_make_request_with_retry:74 - Request error on attempt 3: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=30)
+2025-08-05 12:39:35.794 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-05 12:39:35.794 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-07-02 to 2025-07-31
+2025-08-05 12:39:39.946 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-05 12:39:40.007 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 30 records
+2025-08-05 12:39:40.022 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 30 records
+2025-08-05 12:39:40.054 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:39:40.069 | INFO     | __main__:run_pipeline:199 - Processed chunk for Houston: 30 records
+2025-08-05 12:39:40.069 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-07-02 to 2025-07-31
+2025-08-05 12:39:46.943 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-05 12:39:46.943 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-07-02 to 2025-07-31
+2025-08-05 12:39:51.930 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-05 12:39:52.003 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 30 records
+2025-08-05 12:39:52.019 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 30 records
+2025-08-05 12:39:52.050 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:39:52.065 | INFO     | __main__:run_pipeline:199 - Processed chunk for Phoenix: 30 records
+2025-08-05 12:39:52.065 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-07-02 to 2025-07-31
+2025-08-05 12:39:57.148 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-05 12:39:57.148 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-07-02 to 2025-07-31
+2025-08-05 12:40:03.871 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-05 12:40:03.958 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 30 records
+2025-08-05 12:40:03.989 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 30 records
+2025-08-05 12:40:04.020 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 30, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:40:04.036 | INFO     | __main__:run_pipeline:199 - Processed chunk for Seattle: 30 records
+2025-08-05 12:40:04.036 | INFO     | __main__:run_pipeline:213 - Processing summary: 15/5 cities processed successfully
+2025-08-05 12:40:04.051 | INFO     | __main__:save_processed_data:107 - Saved quality report to data/processed\quality_report_historical_90days_2025-05-03_to_2025-07-31_20250805_124004.json
+2025-08-05 12:40:04.083 | INFO     | __main__:save_processed_data:120 - Saved data to data/processed\historical_90days_2025-05-03_to_2025-07-31_20250805_124004.csv: 450 records
+2025-08-05 12:40:04.192 | INFO     | __main__:save_processed_data:125 - Saved latest historical data to data/processed\latest_historical.csv
+2025-08-05 12:40:04.255 | INFO     | __main__:run_pipeline:228 - Historical pipeline completed with data from 15 cities
+2025-08-05 12:40:04.255 | INFO     | __main__:run_pipeline_with_validation:273 - Historical pipeline completed successfully in 0:07:44.910965
+2025-08-05 12:40:04.255 | INFO     | __main__:<module>:311 - ==================================================
+2025-08-05 12:40:04.255 | INFO     | __main__:<module>:312 - STARTING DAILY PIPELINE
+2025-08-05 12:40:04.255 | INFO     | __main__:<module>:313 - ==================================================
+2025-08-05 12:40:04.255 | INFO     | __main__:run_pipeline_with_validation:252 - Starting daily pipeline at 2025-08-05 12:40:04.255041
+2025-08-05 12:40:04.286 | INFO     | config:validate:204 - Configuration validation passed successfully
+2025-08-05 12:40:04.286 | INFO     | __main__:run_pipeline:135 - Starting daily pipeline for 90 days
+2025-08-05 12:40:04.286 | INFO     | __main__:get_date_range:34 - Date range calculation: Today=2025-08-05, Buffer=5 days, End date=2025-07-31, Start date=2025-07-31
+2025-08-05 12:40:04.286 | INFO     | __main__:run_pipeline:150 - Processing daily data for 2025-07-31 (with 5-day buffer from today)
+2025-08-05 12:40:04.286 | INFO     | __main__:run_pipeline:153 - Processing New York
+2025-08-05 12:40:04.286 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094728 from 2025-07-31 to 2025-07-31
+2025-08-05 12:40:39.451 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094728
+2025-08-05 12:40:39.451 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for NYIS from 2025-07-31 to 2025-07-31
+2025-08-05 12:40:54.018 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for NYIS
+2025-08-05 12:40:54.053 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094728: 1 records
+2025-08-05 12:40:54.069 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for NYIS: 1 records
+2025-08-05 12:40:54.100 | INFO     | data_processor:process_city_data:207 - Quality report for New York: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:40:54.115 | INFO     | __main__:process_city_data_safe:80 - Successfully processed New York for 2025-07-31: 1 records
+2025-08-05 12:40:54.131 | INFO     | __main__:run_pipeline:159 - Successfully processed data for New York: 1 records
+2025-08-05 12:40:54.131 | INFO     | __main__:run_pipeline:153 - Processing Chicago
+2025-08-05 12:40:54.147 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00094846 from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:00.485 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00094846
+2025-08-05 12:41:00.485 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for PJM from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:14.990 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for PJM
+2025-08-05 12:41:15.017 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00094846: 1 records
+2025-08-05 12:41:15.032 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for PJM: 1 records
+2025-08-05 12:41:15.064 | INFO     | data_processor:process_city_data:207 - Quality report for Chicago: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:41:15.079 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Chicago for 2025-07-31: 1 records
+2025-08-05 12:41:15.079 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Chicago: 1 records
+2025-08-05 12:41:15.079 | INFO     | __main__:run_pipeline:153 - Processing Houston
+2025-08-05 12:41:15.079 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00012960 from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:17.364 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00012960
+2025-08-05 12:41:17.364 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for ERCO from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:25.683 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for ERCO
+2025-08-05 12:41:25.686 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00012960: 1 records
+2025-08-05 12:41:25.717 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for ERCO: 1 records
+2025-08-05 12:41:25.749 | INFO     | data_processor:process_city_data:207 - Quality report for Houston: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:41:25.764 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Houston for 2025-07-31: 1 records
+2025-08-05 12:41:25.764 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Houston: 1 records
+2025-08-05 12:41:25.764 | INFO     | __main__:run_pipeline:153 - Processing Phoenix
+2025-08-05 12:41:25.764 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00023183 from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:33.814 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00023183
+2025-08-05 12:41:33.814 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for AZPS from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:38.256 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for AZPS
+2025-08-05 12:41:38.266 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00023183: 1 records
+2025-08-05 12:41:38.391 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for AZPS: 1 records
+2025-08-05 12:41:38.423 | INFO     | data_processor:process_city_data:207 - Quality report for Phoenix: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:41:38.438 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Phoenix for 2025-07-31: 1 records
+2025-08-05 12:41:38.438 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Phoenix: 1 records
+2025-08-05 12:41:38.438 | INFO     | __main__:run_pipeline:153 - Processing Seattle
+2025-08-05 12:41:38.438 | INFO     | data_fetcher:fetch_noaa_data:101 - Fetching NOAA data for station GHCND:USW00024233 from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:43.755 | INFO     | data_fetcher:fetch_noaa_data:121 - Successfully fetched NOAA data for GHCND:USW00024233
+2025-08-05 12:41:43.755 | INFO     | data_fetcher:fetch_eia_data:147 - Fetching EIA data for SCL from 2025-07-31 to 2025-07-31
+2025-08-05 12:41:54.585 | INFO     | data_fetcher:fetch_eia_data:162 - Successfully fetched EIA data for SCL
+2025-08-05 12:41:54.620 | INFO     | data_processor:process_noaa_data:89 - Processed NOAA data for GHCND:USW00024233: 1 records
+2025-08-05 12:41:54.636 | INFO     | data_processor:process_eia_data:152 - Processed EIA data for SCL: 1 records
+2025-08-05 12:41:54.667 | INFO     | data_processor:process_city_data:207 - Quality report for Seattle: {'passed': False, 'issues': ['Data is stale: 5 days old (threshold: 3 days)'], 'summary': {'total_rows': 1, 'missing_values': 0, 'outliers': 0, 'data_freshness_hours': 120}}
+2025-08-05 12:41:54.683 | INFO     | __main__:process_city_data_safe:80 - Successfully processed Seattle for 2025-07-31: 1 records
+2025-08-05 12:41:54.683 | INFO     | __main__:run_pipeline:159 - Successfully processed data for Seattle: 1 records
+2025-08-05 12:41:54.683 | INFO     | __main__:run_pipeline:213 - Processing summary: 5/5 cities processed successfully
+2025-08-05 12:41:54.683 | INFO     | __main__:save_processed_data:107 - Saved quality report to data/processed\quality_report_daily_2025-07-31_20250805_124154.json
+2025-08-05 12:41:54.683 | INFO     | __main__:save_processed_data:120 - Saved data to data/processed\daily_2025-07-31_20250805_124154.csv: 5 records
+2025-08-05 12:41:54.698 | INFO     | __main__:save_processed_data:125 - Saved latest daily data to data/processed\latest_daily.csv
+2025-08-05 12:41:54.698 | INFO     | __main__:run_pipeline:228 - Daily pipeline completed with data from 5 cities
+2025-08-05 12:41:54.698 | INFO     | __main__:run_pipeline_with_validation:273 - Daily pipeline completed successfully in 0:01:50.443598
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:317 - ==================================================
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:318 - PIPELINE EXECUTION SUMMARY
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:319 - ==================================================
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:322 - ✓ Historical pipeline succeeded
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:327 - ✓ Daily pipeline succeeded
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:333 - 🎉 All pipelines completed successfully
+2025-08-05 12:41:54.698 | INFO     | __main__:<module>:346 - Pipeline script finished

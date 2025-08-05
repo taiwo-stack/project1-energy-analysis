@@ -1,0 +1,6 @@
+date,station_id,temperature_max,temperature_min,temperature_avg,data_source,processed_at,energy_demand,eia_region,city,day_of_week,is_weekend
+2025-07-29,GHCND:USW00094728,97.0,78.0,87.5,NOAA,2025-08-03 01:39:50.432885,613515,New York Independent System Operator,New York,Tuesday,False
+2025-07-29,GHCND:USW00094846,93.0,70.0,81.5,NOAA,2025-08-03 01:40:05.027842,3114391,"PJM Interconnection, LLC",Chicago,Tuesday,False
+2025-07-29,GHCND:USW00012960,99.0,80.0,89.5,NOAA,2025-08-03 01:40:20.959938,1640643,"Electric Reliability Council of Texas, Inc.",Houston,Tuesday,False
+2025-07-29,GHCND:USW00023183,110.0,88.0,99.0,NOAA,2025-08-03 01:40:35.724053,144610,Arizona Public Service Company,Phoenix,Tuesday,False
+2025-07-29,GHCND:USW00024233,85.0,57.0,71.0,NOAA,2025-08-03 01:40:49.196826,24950,Seattle City Light,Seattle,Tuesday,False

@@ -159,7 +159,7 @@ class HistoricalTableDisplay:
                     column_config={
                         '📅 Date': st.column_config.TextColumn('📅 Date', width='medium'),
                         '🏙️ City': st.column_config.TextColumn('🏙️ City', width='medium'),
-                        '🌡️ Temp (°F)': st.column_config.TextColumn('🌡️ Temp (°F)', width='small'),
+                        '🌡️ Temp (°F)': st.column_config.TextColumn('🌡️Avg. Temp (°F)', width='small'),
                         '⚡ Energy (MWh)': st.column_config.TextColumn('⚡ Energy (MWh)', width='medium'),
                         '📊 Day': st.column_config.TextColumn('📊 Day', width='small'),
                         '📈 Weekend': st.column_config.TextColumn('📈 Weekend', width='small'),
@@ -356,7 +356,7 @@ class SummaryMetrics:
                 if weather_changes:
                     st.markdown("---")  # Add separator between energy and weather sections
                     st.markdown(f'<div class="small-metrics-header">🌡️ Latest Weather Records ({latest_date})</div>', unsafe_allow_html=True)
-                    st.markdown('<div class="metric-annotation">Latest weather recorded data and temperature changes</div>', unsafe_allow_html=True)
+                    st.markdown('<div class="metric-annotation">Latest weather recorded data and Avg. temperature changes</div>', unsafe_allow_html=True)
                     
                     # Show top 5 weather changes
                     sorted_weather_changes = sorted(
@@ -379,7 +379,7 @@ class SummaryMetrics:
                                 f"{weather_data['latest_temp']:.1f}°F",
                                 delta=delta_text,
                                 delta_color="normal",
-                                help=f"Temperature change from {weather_data['previous_date']} to {weather_data['latest_date']}"
+                                help=f"Avg. Temperature change from {weather_data['previous_date']} to {weather_data['latest_date']}"
                             )
 
                
@@ -390,8 +390,8 @@ class SummaryMetrics:
                         weather_df = pd.DataFrame([
                             {
                                 'City': city,
-                                'Latest Temp (°F)': f"{data['latest_temp']:.1f}",
-                                'Previous Temp (°F)': f"{data['previous_temp']:.1f}",
+                                'Latest Avg. Temp (°F)': f"{data['latest_temp']:.1f}",
+                                'Previous Avg. Temp (°F)': f"{data['previous_temp']:.1f}",
                                 'Change (°F)': f"{data['temp_change']:+.1f}",
                                 'Latest Date': data['latest_date'],
                                 'Previous Date': data['previous_date']

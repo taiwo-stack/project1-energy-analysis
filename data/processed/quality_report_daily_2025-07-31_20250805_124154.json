@@ -1,0 +1,17 @@
+{
+  "total_datasets_checked": 5,
+  "datasets_passed": 0,
+  "pass_rate_percent": 0.0,
+  "total_data_rows": 5,
+  "total_missing_values": 0,
+  "total_outliers": 0,
+  "all_issues": [
+    "Data is stale: 5 days old (threshold: 3 days)",
+    "Data is stale: 5 days old (threshold: 3 days)",
+    "Data is stale: 5 days old (threshold: 3 days)",
+    "Data is stale: 5 days old (threshold: 3 days)",
+    "Data is stale: 5 days old (threshold: 3 days)"
+  ],
+  "unique_issue_types": 1,
+  "generated_at": "2025-08-05T12:41:54.683002"
+}

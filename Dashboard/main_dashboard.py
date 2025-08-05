@@ -93,12 +93,12 @@ class Dashboard:
             st.plotly_chart(map_fig, use_container_width=True)
         
         with tab2:
-            st.markdown("### 📈 Temperature & Energy Timeline")
+            st.markdown("### 📈 Avg. Temperature & Energy Timeline")
             ts_fig = self.chart_generator.create_time_series(filtered_data, self.selected_cities)
             st.plotly_chart(ts_fig, use_container_width=True)
         
         with tab3:
-            st.markdown("### 📊 Temperature vs Energy Correlation")
+            st.markdown("### 📊 Avg. Temperature vs Energy Correlation")
             corr_fig = self.chart_generator.create_correlation_plot(
                 filtered_data, 
                 self.selected_cities,
@@ -107,7 +107,7 @@ class Dashboard:
             st.plotly_chart(corr_fig, use_container_width=True)
         
         with tab4:
-            st.markdown("### 🔥 Energy Usage Patterns by Temperature & Day")
+            st.markdown("### 🔥 Energy Usage Patterns by Avg. Temperature & Day")
             st.info(f"📋 Displaying heatmap for {len(self.selected_cities)} selected cities with day-of-week labels")
             heatmap_fig = self.chart_generator.create_heatmap(filtered_data, self.selected_cities)
             st.plotly_chart(heatmap_fig, use_container_width=True)
@@ -157,7 +157,7 @@ class DashboardManager:
                     st.session_state.manual_refresh = True
                     st.rerun()
         
-        # Initialize and display the main dashboard
+        # Initialize and display the main dashboardnnn
         try:
             dashboard = Dashboard(self.config)
             dashboard.display()

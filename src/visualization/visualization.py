@@ -158,7 +158,7 @@ class ChartGenerator:
             # Update layout with better styling
             fig.update_layout(
                 title=dict(
-                    text=f'🔥 Energy Usage Patterns by Temperature & Day ({num_cities} Cities)',
+                    text=f'🔥 Energy Usage Patterns by Avg. Temperature & Day ({num_cities} Cities)',
                     x=0.5,
                     font=dict(size=18, color='#1f77b4')
                 ),
@@ -241,7 +241,7 @@ class ChartGenerator:
                     hovertemplate=(
                         f'<b>{city}</b><br>'
                         '<b>Date:</b> %{text}<br>'
-                        '<b>Temperature:</b> %{x:.1f}°F<br>'
+                        '<b>Avg. Temperature:</b> %{x:.1f}°F<br>'
                         '<b>Energy Demand:</b> %{y:,.0f} MWh<br>'
                         '<extra></extra>'
                     )
@@ -369,7 +369,7 @@ class ChartGenerator:
             # Enhanced layout with dark theme
             fig.update_layout(
                 title=dict(
-                    text='📊 Temperature vs. Energy Demand - Correlation Analysis',
+                    text='📊Avg. Temperature vs. Energy Demand - Correlation Analysis',
                     x=0.5,
                     font=dict(size=20, color='#00d4ff', family='Arial Black')
                 ),
@@ -445,10 +445,10 @@ class ChartGenerator:
                 fig.add_trace(go.Scatter(
                     x=city_df['date'],
                     y=city_df['temperature_avg'],
-                    name=f'{city} Temperature',
+                    name=f'{city} Avg. Temperature',
                     line=dict(color=color, width=2),
                     yaxis='y1',
-                    hovertemplate=f'<b>{city}</b><br>Date: %{{x}}<br>Temperature: %{{y:.1f}}°F<extra></extra>'
+                    hovertemplate=f'<b>{city}</b><br>Date: %{{x}}<br>Avg. Temperature: %{{y:.1f}}°F<extra></extra>'
                 ))
                 
                 # Energy line (dashed)
@@ -472,12 +472,12 @@ class ChartGenerator:
             
             fig.update_layout(
                 title=dict(
-                    text='📈 Temperature and Energy Demand Timeline',
+                    text='📈 Avg. Temperature and Energy Demand Timeline',
                     x=0.5,
                     font=dict(size=18, color='#1f77b4')
                 ),
                 xaxis_title='📅 Date',
-                yaxis=dict(title='🌡️ Temperature (°F)', color='#d62728', side='left'),
+                yaxis=dict(title='🌡️ Avg. Temperature (°F)', color='#d62728', side='left'),
                 yaxis2=dict(title='⚡ Energy Demand (MWh)', color='#ff7f0e', overlaying='y', side='right'),
                 legend=dict(x=0.01, y=1.05, orientation='h'),
                 height=500,
